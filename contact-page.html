@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<title>Order</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240407093839" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240407093839" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header_order">
+			<div class="header__bg">
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a data-lang="header__title-1" href="index.html" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-2" href="#accommodation" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-3" href="" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-4" href="#offer" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-5" href="" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-6" href="" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-7" href="" class="menu__link"></a>
+							</li>
+						</ul>
+					</nav>
+					<a data-lang="header__title-8" href="book.html" type="submit" class="menu__button button"></a>
+					<div class="menu__translate _icon-arrow-btn">
+						<span class="menu__target-lang"></span>
+						<div class="menu__sub-menu sub-menu">
+							<ul class="sub-menu__list">
+								<li data-btn="ru" class="sub-menu__item">RU</li>
+								<li data-btn="en" class="sub-menu__item">EN</li>
+								<li data-btn="de" class="sub-menu__item">DE</li>
+							</ul>
+						</div>
+					</div>
+					<div class="menu__social social">
+						<ul class="social__list">
+							<li class="social__item">
+								<a target="_blank" href="https://web.telegram.org/" class="social__link"><img src="img/header/telegram.svg" alt="" /></a>
+							</li>
+							<li class="social__item">
+								<a target="_blank" href="https://web.whatsapp.com/" class="social__link"><img src="img/header/whatsapp.svg" alt="" /></a>
+							</li>
+							<li class="social__item">
+								<a target="_blank" href="https://instagram.com/" class="social__link"><img src="img/header/instagram.svg" alt="" /></a>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="menu__icon icon-menu">
+						<span></span>
+					</button>
+				</div>
+			</div>
+			<div class="header__container">
+				<div class="header__content">
+					<img src="img/header/logo.svg" alt="Logo" />
+				</div>
+			</div>
+		</header>
+		<main class="contact-page">
+			<div class="contact-page__container">
+				<div class="contact-page__inforamtion information-contact-page">
+					<h2 class="information-contact-page__title title-block">Contact information</h2>
+					<form class="information-contact-page__form form form_border-none form_contact">
+						<div class="form__name">
+							<div class="form__line form__line_mb-none">
+								<label data-lang="" for="name" class="form__label">First Name</label>
+								<input id="name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
+							</div>
+							<div class="form__line form__line_mb-none">
+								<label data-lang="" for="second" class="form__label">Second Name</label>
+								<input id="second" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
+							</div>
+						</div>
+						<div class="form__email">
+							<div class="form__line">
+								<label data-lang="" for="email" class="form__label">Email</label>
+								<input id="email" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
+							</div>
+						</div>
+						<div class="form__phone-number">
+							<div class="form__line">
+								<label data-lang="" for="email" class="form__label">Phone Number</label>
+								<input id="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
+							</div>
+						</div>
+						<div class="form__text">
+							By clicking <span>Agree and continue</span>, you agree to the Mindori
+							<a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+						</div>
+						<a href="request-page.html" class="button form__button">Agree and Continue</a>
+					</form>
+				</div>
+				<div class="contact-page__card card-contact-page">
+					<h2 class="card-contact-page__title title-block">Summary</h2>
+					<div class="card-contact-page__content">
+						<div class="card-contact-page__item item-contact-page">
+							<div class="item-contact-page__top">
+								<div class="item-contact-page__picture">
+									<picture><source srcset="img/contact-page/home-1.webp" type="image/webp"><img src="img/contact-page/home-1.jpeg" alt="" /></picture>
+								</div>
+								<div class="item-contact-page__info">
+									<div class="item-contact-page__title">Glamping dome</div>
+									<div class="item-contact-page__date">Oct 17 - 19, 2 guests</div>
+								</div>
+							</div>
+							<ul class="item-contact-page__list">
+								<li class="item-contact-page__item">
+									<div class="item-contact-page__text">100$ x 1 night</div>
+									<div class="item-contact-page__price">200$</div>
+								</li>
+								<li class="item-contact-page__item">
+									<div class="item-contact-page__text">Service Fee</div>
+									<div class="item-contact-page__price">30$</div>
+								</li>
+								<li class="item-contact-page__item">
+									<div class="item-contact-page__text">Breakfast</div>
+									<div class="item-contact-page__price">50$</div>
+								</li>
+							</ul>
+							<div class="item-contact-page__footer">
+								<div class="item-contact-page__result">
+									<div class="item-contact-page__total">Total</div>
+									<div class="item-contact-page__price item-contact-page__price_final">280$</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="contacts">
+				<div class="contacts__container">
+					<h2 data-lang="contacts-title" class="contacts__title title-block"></h2>
+					<div class="contacts__content">
+						<div class="contacts__text">
+							<p data-lang="contacts-text-1"></p>
+							<p data-lang="contacts-text-2"></p>
+							<p>41.869560 44.448465</p>
+							<p data-lang="contacts-text-3"></p>
+							<p data-lang="contacts-text-4"></p>
+						</div>
+						<div class="contacts__social">
+							<a href="" class="contacts__instagram _icon-instagram"></a>
+							<a href="" class="contacts__telegram _icon-telegram"></a>
+							<a href="" class="contacts__whatsapp _icon-whatsapp"></a>
+						</div>
+						<iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2971.0830324289163!2d44.44589007688265!3d41.86955997124271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDUyJzEwLjQiTiA0NMKwMjYnNTQuNSJF!5e0!3m2!1sru!2sru!4v1707481654689!5m2!1sru!2sru" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__logo">
+						<img src="img/footer/logo-footer.svg" alt="Logo">
+					</div>
+					<div class="footer__links links-footer">
+						<div class="links-footer__column">
+							<div data-lang="footer-link-1" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+							<div data-lang="footer-link-2" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+							<div data-lang="footer-link-3" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+							<div data-lang="footer-link-4" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+						</div>
+						<div class="links-footer__column">
+							<div data-lang="footer-link-5" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+							<div data-lang="footer-link-6" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+							<div data-lang="footer-link-7" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+						</div>
+					</div>
+					<div class="footer__info info-footer">
+						<div class="info-footer__block">
+							<div data-lang="footer-sub-title-1" class="info-footer__sub-title"></div>
+							<div data-lang="footer-sub-text-1" class="info-footer__text"></div>
+						</div>
+						<div class="info-footer__block">
+							<div data-lang="footer-sub-title-2" class="info-footer__sub-title"></div>
+							<div class="info-footer__text">+ 0000000000000</div>
+						</div>
+						<div class="info-footer__block">
+							<div data-lang="footer-sub-title-3" class="info-footer__sub-title"></div>
+							<div class="info-footer__text">email@gmail.com</div>
+						</div>
+					</div>
+					<div class="footer__social">
+						<a href="" class="footer__instagram _icon-instagram"></a>
+						<a href="" class="footer__telegram _icon-telegram"></a>
+						<a href="" class="footer__whatsapp _icon-whatsapp"></a>
+					</div>
+					<div class="footer__qrcode">
+						<img src="img/footer/qrcode.svg" alt="QR-Code">
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20240407093839"></script>
+</body>
+
+</html>
