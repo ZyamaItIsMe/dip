@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 
 <head>
@@ -6,9 +6,8 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240407093839" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240505115254" />
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240407093839" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -20,17 +19,32 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a data-lang="header__title-1" href="index.html" class="menu__link"></a></li>
-							<li class="menu__item"><a data-lang="header__title-2" href="#accommodation" class="menu__link"></a></li>
-							<li class="menu__item"><a data-lang="header__title-3" href="" class="menu__link"></a></li>
-							<li class="menu__item"><a data-lang="header__title-4" href="#offer" class="menu__link"></a></li>
-							<li class="menu__item"><a data-lang="header__title-5" href="" class="menu__link"></a></li>
-							<li class="menu__item"><a data-lang="header__title-6" href="" class="menu__link"></a></li>
-							<li class="menu__item"><a data-lang="header__title-7" href="" class="menu__link"></a></li>
+							<li class="menu__item">
+								<a data-lang="header__title-1" href="index.html" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-2" href="#accommodation" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-3" href="" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-4" href="#offer" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-5" href="" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-6" href="" class="menu__link"></a>
+							</li>
+							<li class="menu__item">
+								<a data-lang="header__title-7" href="" class="menu__link"></a>
+							</li>
 						</ul>
 					</nav>
 					<a data-lang="header__title-8" href="book.html" type="submit" class="menu__button button"></a>
-					<div class="menu__translate _icon-arrow-btn"><span class="menu__target-lang"></span>
+					<div class="menu__translate _icon-arrow-btn">
+						<span class="menu__target-lang"></span>
 						<div class="menu__sub-menu sub-menu">
 							<ul class="sub-menu__list">
 								<li data-btn="ru" class="sub-menu__item">RU</li>
@@ -41,9 +55,15 @@
 					</div>
 					<div class="menu__social social">
 						<ul class="social__list">
-							<li class="social__item"><a target="_blank" href="https://web.telegram.org/" class="social__link"><img src="img/header/telegram.svg" alt=""></a></li>
-							<li class="social__item"><a target="_blank" href="https://web.whatsapp.com/" class="social__link"><img src="img/header/whatsapp.svg" alt=""></a></li>
-							<li class="social__item"><a target="_blank" href="https://instagram.com/" class="social__link"><img src="img/header/instagram.svg" alt=""></a></li>
+							<li class="social__item">
+								<a target="_blank" href="https://web.telegram.org/" class="social__link"><img src="img/header/telegram.svg" alt="" /></a>
+							</li>
+							<li class="social__item">
+								<a target="_blank" href="https://web.whatsapp.com/" class="social__link"><img src="img/header/whatsapp.svg" alt="" /></a>
+							</li>
+							<li class="social__item">
+								<a target="_blank" href="https://instagram.com/" class="social__link"><img src="img/header/instagram.svg" alt="" /></a>
+							</li>
 						</ul>
 					</div>
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
@@ -51,7 +71,7 @@
 			</div>
 			<div class="header__container">
 				<div class="header__content">
-					<img src="img/header/logo.svg" alt="Logo">
+					<img src="img/header/logo.svg" alt="Logo" />
 				</div>
 			</div>
 		</header>
@@ -59,7 +79,7 @@
 			<div class="support-block">
 				<div class="support-block__container">
 					<div class="support-block__message">
-						<img src="img/page-booking/icons/message.svg" alt="">
+						<img src="img/page-booking/icons/message.svg" alt="" />
 					</div>
 				</div>
 			</div>
@@ -67,18 +87,18 @@
 				<div class="search-reserve__container">
 					<div class="search-reserve__content">
 						<div class="search-reserve__line _icon-calendar-input">
-							<label class="search-reserve__label ">Check-in date</label>
-							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-calendar placeholder="" class="search-reserve__input" />
+							<label class="search-reserve__label" data-lang="form-in-date"></label>
+							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-calendar-start placeholder="" class="search-reserve__input" />
 						</div>
 						<div class="search-reserve__line _icon-calendar-input">
-							<label class="search-reserve__label">Check-out date</label>
-							<input id="secondRangeInput" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-calendar placeholder="" class="search-reserve__input" />
+							<label class="search-reserve__label" data-lang="form-out-date"></label>
+							<input id="secondRangeInput" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-calendar-end placeholder="" class="search-reserve__input" />
 						</div>
 						<div class="search-reserve__line">
-							<label class="search-reserve__label">Number of guests</label>
+							<label class="search-reserve__label" data-lang="form-number-guests"></label>
 							<input autocomplete="off" type="number" name="form[]" data-error="Ошибка" placeholder="" class="search-reserve__input" />
 						</div>
-						<button type="submit" class="search-reserve__button button">Search</button>
+						<button type="submit" class="search-reserve__button button" data-lang="form-btn"></button>
 					</div>
 				</div>
 			</div>
@@ -87,565 +107,174 @@
 					<div id="booking-cards" class="cards-block__content">
 						<div class="cards-block__card card-booking">
 							<div class="card-booking__picture">
-								<picture><source srcset="img/accommodation/home-1.webp" type="image/webp"><img src="img/accommodation/home-1.png" alt="Картинка"></picture>
+								<picture><source srcset="img/accommodation/home-1.webp" type="image/webp"><img src="img/accommodation/home-1.png" alt="Картинка" /></picture>
 								<div class="card-booking__name-card">
-									<h4 data-lang="" class="card-booking__title-card">Geodesic dome</h4>
+									<h4 class="card-booking__title-card" data-lang="card-geodesic-dome-title"></h4>
 								</div>
 							</div>
 							<div class="card-booking__content">
 								<div class="card-booking__convenience convenience-card">
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/guests.svg" alt="">
-										<div class="convenience-card__text">2 guest</div>
+										<img src="img/page-booking/icons/guests.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-guests-1"></div>
 									</div>
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/area.svg" alt="">
-										<div class="convenience-card__text">50 m² area</div>
+										<img src="img/page-booking/icons/area.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-area-1"></div>
 									</div>
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/king.svg" alt="">
-										<div class="convenience-card__text">king size</div>
+										<img src="img/page-booking/icons/king.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-size-1"></div>
 									</div>
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bed.svg" alt="">
-										<div class="convenience-card__text">extra bed</div>
+										<img src="img/page-booking/icons/bed.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-bed-1"></div>
 									</div>
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/furako.svg" alt="">
-										<div class="convenience-card__text">furako</div>
+										<img src="img/page-booking/icons/furako.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-furako"></div>
 									</div>
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bbq.svg" alt="">
-										<div class="convenience-card__text">BBQ</div>
+										<img src="img/page-booking/icons/bbq.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-bbq"></div>
 									</div>
 								</div>
 								<ul class="card-booking__list list-card-booking">
-									<li class="list-card-booking__item list-card-booking__item_dotted">Double bed: King size</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Toilet and shower</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Heating: indoor air conditioning unit and fireplaces in winter</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Drinking water, tea, dishes, glasses, cutlery, etc.</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Bonfire area with a view of the hills</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Details Chest of drawers, hangers, towels, mirror</li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-geodesic-dome-list-item-1"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-geodesic-dome-list-item-2"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-geodesic-dome-list-item-3"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-geodesic-dome-list-item-4"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-geodesic-dome-list-item-5"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-geodesic-dome-list-item-6"></li>
 								</ul>
 								<div class="card-booking__order">
-									<div class="card-booking__price">from 100$</div>
-									<a href="card-page.html" class="card-booking__button button">Choose</a>
+									<div class="card-booking__price" data-lang="card-geodesic-dome-price"></div>
+									<a href="card-page.html" class="card-booking__button button" data-lang="card-geodesic-dome-btn"></a>
 								</div>
 							</div>
 						</div>
 						<div class="cards-block__card card-booking">
 							<div class="card-booking__picture">
-								<picture><source srcset="img/page-booking/home-2.webp" type="image/webp"><img src="img/page-booking/home-2.png" alt="Картинка"></picture>
+								<picture><source srcset="img/page-booking/home-2.webp" type="image/webp"><img src="img/page-booking/home-2.png" alt="Картинка" /></picture>
 								<div class="card-booking__name-card">
-									<h4 data-lang="" class="card-booking__title-card">Sauna</h4>
+									<h4 class="card-booking__title-card" data-lang="card-sauna-title"></h4>
 								</div>
 							</div>
 							<div class="card-booking__content">
 								<div class="card-booking__convenience convenience-card">
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/guests.svg" alt="">
-										<div class="convenience-card__text">2 guest</div>
+										<img src="img/page-booking/icons/guests.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-guests-2"></div>
 									</div>
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/area.svg" alt="">
-										<div class="convenience-card__text">50 m² area</div>
+										<img src="img/page-booking/icons/area.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-area-2"></div>
 									</div>
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/king.svg" alt="">
-										<div class="convenience-card__text">king size</div>
+										<img src="img/page-booking/icons/king.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-size-2"></div>
 									</div>
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bed.svg" alt="">
-										<div class="convenience-card__text">extra bed</div>
+										<img src="img/page-booking/icons/bed.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-bed-2"></div>
 									</div>
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/sauna.svg" alt="">
-										<div class="convenience-card__text">sauna</div>
+										<img src="img/page-booking/icons/sauna.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-sauna"></div>
 									</div>
 									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/food.svg" alt="">
-										<div class="convenience-card__text">food</div>
+										<img src="img/page-booking/icons/food.svg" alt="" />
+										<div class="convenience-card__text" data-lang="card-convenience-food"></div>
 									</div>
 								</div>
 								<ul class="card-booking__list list-card-booking">
-									<li class="list-card-booking__item list-card-booking__item_dotted">2 Double beds: King size, mattress Snow White linens</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Heating: heat gun</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Campfire area with a beautiful view of the hills</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">On the territory of the glamping in common use:</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron, dishes, etc.)</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">lounge with open fire</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">shower (hot, cold water), toilet</li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-sauna-list-item-1"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-sauna-list-item-2"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-sauna-list-item-3"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-sauna-list-item-4"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-sauna-list-item-5"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-sauna-list-item-6"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-sauna-list-item-7"></li>
+									<li class="list-card-booking__item list-card-booking__item_dotted" data-lang="card-sauna-list-item-8"></li>
 								</ul>
 								<div class="card-booking__order">
-									<div class="card-booking__price">from 100$</div>
-									<button type="submit" class="card-booking__button button">Choose</button>
+									<div class="card-booking__price" data-lang="card-sauna-price"></div>
+									<button type="submit" class="card-booking__button button" data-lang="card-sauna-btn"></button>
 								</div>
 							</div>
 						</div>
-						<div class="cards-block__card card-booking">
-							<div class="card-booking__picture">
-								<picture><source srcset="img/accommodation/home-1.webp" type="image/webp"><img src="img/accommodation/home-1.png" alt="Картинка"></picture>
-								<div class="card-booking__name-card">
-									<h4 data-lang="" class="card-booking__title-card">Geodesic dome</h4>
-								</div>
-							</div>
-							<div class="card-booking__content">
-								<div class="card-booking__convenience convenience-card">
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/guests.svg" alt="">
-										<div class="convenience-card__text">2 guest</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/area.svg" alt="">
-										<div class="convenience-card__text">50 m² area</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/king.svg" alt="">
-										<div class="convenience-card__text">king size</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bed.svg" alt="">
-										<div class="convenience-card__text">extra bed</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/furako.svg" alt="">
-										<div class="convenience-card__text">furako</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bbq.svg" alt="">
-										<div class="convenience-card__text">BBQ</div>
-									</div>
-								</div>
-								<ul class="card-booking__list list-card-booking">
-									<li class="list-card-booking__item list-card-booking__item_dotted">Double bed: King size</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Toilet and shower</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Heating: indoor air conditioning unit and fireplaces in winter</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Drinking water, tea, dishes, glasses, cutlery, etc.</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Bonfire area with a view of the hills</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Details Chest of drawers, hangers, towels, mirror</li>
-								</ul>
-								<div class="card-booking__order">
-									<div class="card-booking__price">from 100$</div>
-									<button type="submit" class="card-booking__button button">Choose</button>
-								</div>
-							</div>
-						</div>
-						<div class="cards-block__card card-booking">
-							<div class="card-booking__picture">
-								<picture><source srcset="img/page-booking/home-2.webp" type="image/webp"><img src="img/page-booking/home-2.png" alt="Картинка"></picture>
-								<div class="card-booking__name-card">
-									<h4 data-lang="" class="card-booking__title-card">Sauna</h4>
-								</div>
-							</div>
-							<div class="card-booking__content">
-								<div class="card-booking__convenience convenience-card">
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/guests.svg" alt="">
-										<div class="convenience-card__text">2 guest</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/area.svg" alt="">
-										<div class="convenience-card__text">50 m² area</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/king.svg" alt="">
-										<div class="convenience-card__text">king size</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bed.svg" alt="">
-										<div class="convenience-card__text">extra bed</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/sauna.svg" alt="">
-										<div class="convenience-card__text">sauna</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/food.svg" alt="">
-										<div class="convenience-card__text">food</div>
-									</div>
-								</div>
-								<ul class="card-booking__list list-card-booking">
-									<li class="list-card-booking__item list-card-booking__item_dotted">2 Double beds: King size, mattress Snow White linens</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Heating: heat gun</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Campfire area with a beautiful view of the hills</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">On the territory of the glamping in common use:</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron, dishes, etc.)</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">lounge with open fire</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">shower (hot, cold water), toilet</li>
-								</ul>
-								<div class="card-booking__order">
-									<div class="card-booking__price">from 100$</div>
-									<button type="submit" class="card-booking__button button">Choose</button>
-								</div>
-							</div>
-						</div>
-						<div class="cards-block__card card-booking">
-							<div class="card-booking__picture">
-								<picture><source srcset="img/accommodation/home-1.webp" type="image/webp"><img src="img/accommodation/home-1.png" alt="Картинка"></picture>
-								<div class="card-booking__name-card">
-									<h4 data-lang="" class="card-booking__title-card">Geodesic dome</h4>
-								</div>
-							</div>
-							<div class="card-booking__content">
-								<div class="card-booking__convenience convenience-card">
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/guests.svg" alt="">
-										<div class="convenience-card__text">2 guest</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/area.svg" alt="">
-										<div class="convenience-card__text">50 m² area</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/king.svg" alt="">
-										<div class="convenience-card__text">king size</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bed.svg" alt="">
-										<div class="convenience-card__text">extra bed</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/furako.svg" alt="">
-										<div class="convenience-card__text">furako</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bbq.svg" alt="">
-										<div class="convenience-card__text">BBQ</div>
-									</div>
-								</div>
-								<ul class="card-booking__list list-card-booking">
-									<li class="list-card-booking__item list-card-booking__item_dotted">Double bed: King size</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Toilet and shower</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Heating: indoor air conditioning unit and fireplaces in winter</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Drinking water, tea, dishes, glasses, cutlery, etc.</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Bonfire area with a view of the hills</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Details Chest of drawers, hangers, towels, mirror</li>
-								</ul>
-								<div class="card-booking__order">
-									<div class="card-booking__price">from 100$</div>
-									<button type="submit" class="card-booking__button button">Choose</button>
-								</div>
-							</div>
-						</div>
-						<div class="cards-block__card card-booking">
-							<div class="card-booking__picture">
-								<picture><source srcset="img/page-booking/home-2.webp" type="image/webp"><img src="img/page-booking/home-2.png" alt="Картинка"></picture>
-								<div class="card-booking__name-card">
-									<h4 data-lang="" class="card-booking__title-card">Sauna</h4>
-								</div>
-							</div>
-							<div class="card-booking__content">
-								<div class="card-booking__convenience convenience-card">
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/guests.svg" alt="">
-										<div class="convenience-card__text">2 guest</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/area.svg" alt="">
-										<div class="convenience-card__text">50 m² area</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/king.svg" alt="">
-										<div class="convenience-card__text">king size</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bed.svg" alt="">
-										<div class="convenience-card__text">extra bed</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/sauna.svg" alt="">
-										<div class="convenience-card__text">sauna</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/food.svg" alt="">
-										<div class="convenience-card__text">food</div>
-									</div>
-								</div>
-								<ul class="card-booking__list list-card-booking">
-									<li class="list-card-booking__item list-card-booking__item_dotted">2 Double beds: King size, mattress Snow White linens</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Heating: heat gun</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Campfire area with a beautiful view of the hills</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">On the territory of the glamping in common use:</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron, dishes, etc.)</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">lounge with open fire</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">shower (hot, cold water), toilet</li>
-								</ul>
-								<div class="card-booking__order">
-									<div class="card-booking__price">from 100$</div>
-									<button type="submit" class="card-booking__button button">Choose</button>
-								</div>
-							</div>
-						</div>
-						<div class="cards-block__card card-booking">
-							<div class="card-booking__picture">
-								<picture><source srcset="img/accommodation/home-1.webp" type="image/webp"><img src="img/accommodation/home-1.png" alt="Картинка"></picture>
-								<div class="card-booking__name-card">
-									<h4 data-lang="" class="card-booking__title-card">Geodesic dome</h4>
-								</div>
-							</div>
-							<div class="card-booking__content">
-								<div class="card-booking__convenience convenience-card">
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/guests.svg" alt="">
-										<div class="convenience-card__text">2 guest</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/area.svg" alt="">
-										<div class="convenience-card__text">50 m² area</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/king.svg" alt="">
-										<div class="convenience-card__text">king size</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bed.svg" alt="">
-										<div class="convenience-card__text">extra bed</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/furako.svg" alt="">
-										<div class="convenience-card__text">furako</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bbq.svg" alt="">
-										<div class="convenience-card__text">BBQ</div>
-									</div>
-								</div>
-								<ul class="card-booking__list list-card-booking">
-									<li class="list-card-booking__item list-card-booking__item_dotted">Double bed: King size</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Toilet and shower</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Heating: indoor air conditioning unit and fireplaces in winter</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Drinking water, tea, dishes, glasses, cutlery, etc.</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Bonfire area with a view of the hills</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Details Chest of drawers, hangers, towels, mirror</li>
-								</ul>
-								<div class="card-booking__order">
-									<div class="card-booking__price">from 100$</div>
-									<button type="submit" class="card-booking__button button">Choose</button>
-								</div>
-							</div>
-						</div>
-						<div class="cards-block__card card-booking">
-							<div class="card-booking__picture">
-								<picture><source srcset="img/page-booking/home-2.webp" type="image/webp"><img src="img/page-booking/home-2.png" alt="Картинка"></picture>
-								<div class="card-booking__name-card">
-									<h4 data-lang="" class="card-booking__title-card">Sauna</h4>
-								</div>
-							</div>
-							<div class="card-booking__content">
-								<div class="card-booking__convenience convenience-card">
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/guests.svg" alt="">
-										<div class="convenience-card__text">2 guest</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/area.svg" alt="">
-										<div class="convenience-card__text">50 m² area</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/king.svg" alt="">
-										<div class="convenience-card__text">king size</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bed.svg" alt="">
-										<div class="convenience-card__text">extra bed</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/sauna.svg" alt="">
-										<div class="convenience-card__text">sauna</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/food.svg" alt="">
-										<div class="convenience-card__text">food</div>
-									</div>
-								</div>
-								<ul class="card-booking__list list-card-booking">
-									<li class="list-card-booking__item list-card-booking__item_dotted">2 Double beds: King size, mattress Snow White linens</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Heating: heat gun</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Campfire area with a beautiful view of the hills</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">On the territory of the glamping in common use:</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron, dishes, etc.)</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">lounge with open fire</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">shower (hot, cold water), toilet</li>
-								</ul>
-								<div class="card-booking__order">
-									<div class="card-booking__price">from 100$</div>
-									<button type="submit" class="card-booking__button button">Choose</button>
-								</div>
-							</div>
-						</div>
-						<div class="cards-block__card card-booking">
-							<div class="card-booking__picture">
-								<picture><source srcset="img/accommodation/home-1.webp" type="image/webp"><img src="img/accommodation/home-1.png" alt="Картинка"></picture>
-								<div class="card-booking__name-card">
-									<h4 data-lang="" class="card-booking__title-card">Geodesic dome</h4>
-								</div>
-							</div>
-							<div class="card-booking__content">
-								<div class="card-booking__convenience convenience-card">
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/guests.svg" alt="">
-										<div class="convenience-card__text">2 guest</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/area.svg" alt="">
-										<div class="convenience-card__text">50 m² area</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/king.svg" alt="">
-										<div class="convenience-card__text">king size</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bed.svg" alt="">
-										<div class="convenience-card__text">extra bed</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/furako.svg" alt="">
-										<div class="convenience-card__text">furako</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bbq.svg" alt="">
-										<div class="convenience-card__text">BBQ</div>
-									</div>
-								</div>
-								<ul class="card-booking__list list-card-booking">
-									<li class="list-card-booking__item list-card-booking__item_dotted">Double bed: King size</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Toilet and shower</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Heating: indoor air conditioning unit and fireplaces in winter</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Drinking water, tea, dishes, glasses, cutlery, etc.</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Bonfire area with a view of the hills</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Details Chest of drawers, hangers, towels, mirror</li>
-								</ul>
-								<div class="card-booking__order">
-									<div class="card-booking__price">from 100$</div>
-									<button type="submit" class="card-booking__button button">Choose</button>
-								</div>
-							</div>
-						</div>
-						<div class="cards-block__card card-booking">
-							<div class="card-booking__picture">
-								<picture><source srcset="img/page-booking/home-2.webp" type="image/webp"><img src="img/page-booking/home-2.png" alt="Картинка"></picture>
-								<div class="card-booking__name-card">
-									<h4 data-lang="" class="card-booking__title-card">Sauna</h4>
-								</div>
-							</div>
-							<div class="card-booking__content">
-								<div class="card-booking__convenience convenience-card">
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/guests.svg" alt="">
-										<div class="convenience-card__text">2 guest</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/area.svg" alt="">
-										<div class="convenience-card__text">50 m² area</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/king.svg" alt="">
-										<div class="convenience-card__text">king size</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/bed.svg" alt="">
-										<div class="convenience-card__text">extra bed</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/sauna.svg" alt="">
-										<div class="convenience-card__text">sauna</div>
-									</div>
-									<div class="convenience-card__item">
-										<img src="img/page-booking/icons/food.svg" alt="">
-										<div class="convenience-card__text">food</div>
-									</div>
-								</div>
-								<ul class="card-booking__list list-card-booking">
-									<li class="list-card-booking__item list-card-booking__item_dotted">2 Double beds: King size, mattress Snow White linens</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Heating: heat gun</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">Campfire area with a beautiful view of the hills</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">On the territory of the glamping in common use:</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron, dishes, etc.)</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">lounge with open fire</li>
-									<li class="list-card-booking__item list-card-booking__item_dotted">shower (hot, cold water), toilet</li>
-								</ul>
-								<div class="card-booking__order">
-									<div class="card-booking__price">from 100$</div>
-									<button type="submit" class="card-booking__button button">Choose</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="pagination" class="cards-block__pagination pagination-cards">
-					</div>
-				</div>
-			</div>
-			<section class="contacts">
-				<div class="contacts__container">
-					<h2 data-lang="contacts-title" class="contacts__title title-block"></h2>
-					<div class="contacts__content">
-						<div class="contacts__text">
-							<p data-lang="contacts-text-1"></p>
-							<p data-lang="contacts-text-2"></p>
-							<p>41.869560 44.448465</p>
-							<p data-lang="contacts-text-3"></p>
-							<p data-lang="contacts-text-4"></p>
-						</div>
-						<div class="contacts__social">
-							<a href="" class="contacts__instagram _icon-instagram"></a>
-							<a href="" class="contacts__telegram _icon-telegram"></a>
-							<a href="" class="contacts__whatsapp _icon-whatsapp"></a>
-						</div>
-						<iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2971.0830324289163!2d44.44589007688265!3d41.86955997124271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDUyJzEwLjQiTiA0NMKwMjYnNTQuNSJF!5e0!3m2!1sru!2sru!4v1707481654689!5m2!1sru!2sru" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-					</div>
-				</div>
-			</section>
 
-		</main>
-		<footer class="footer">
-			<div class="footer__container">
-				<div class="footer__content">
-					<div class="footer__logo">
-						<img src="img/footer/logo-footer.svg" alt="Logo">
 					</div>
-					<div class="footer__links links-footer">
-						<div class="links-footer__column">
-							<div data-lang="footer-link-1" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-							<div data-lang="footer-link-2" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-							<div data-lang="footer-link-3" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-							<div data-lang="footer-link-4" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-						</div>
-						<div class="links-footer__column">
-							<div data-lang="footer-link-5" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-							<div data-lang="footer-link-6" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-							<div data-lang="footer-link-7" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-						</div>
-					</div>
-					<div class="footer__info info-footer">
-						<div class="info-footer__block">
-							<div data-lang="footer-sub-title-1" class="info-footer__sub-title"></div>
-							<div data-lang="footer-sub-text-1" class="info-footer__text"></div>
-						</div>
-						<div class="info-footer__block">
-							<div data-lang="footer-sub-title-2" class="info-footer__sub-title"></div>
-							<div class="info-footer__text">+ 0000000000000</div>
-						</div>
-						<div class="info-footer__block">
-							<div data-lang="footer-sub-title-3" class="info-footer__sub-title"></div>
-							<div class="info-footer__text">email@gmail.com</div>
-						</div>
-					</div>
-					<div class="footer__social">
-						<a href="" class="footer__instagram _icon-instagram"></a>
-						<a href="" class="footer__telegram _icon-telegram"></a>
-						<a href="" class="footer__whatsapp _icon-whatsapp"></a>
-					</div>
-					<div class="footer__qrcode">
-						<img src="img/footer/qrcode.svg" alt="QR-Code">
-					</div>
+					<div id="pagination" class="cards-block__pagination pagination-cards"></div>
 				</div>
 			</div>
-		</footer>
+	</div>
+	<section class="contacts">
+		<div class="contacts__container">
+			<h2 data-lang="contacts-title" class="contacts__title title-block"></h2>
+			<div class="contacts__content">
+				<div class="contacts__text">
+					<p data-lang="contacts-text-1"></p>
+					<p data-lang="contacts-text-2"></p>
+					<p>41.869560 44.448465</p>
+					<p data-lang="contacts-text-3"></p>
+					<p data-lang="contacts-text-4"></p>
+				</div>
+				<div class="contacts__social">
+					<a href="" class="contacts__instagram _icon-instagram"></a>
+					<a href="" class="contacts__telegram _icon-telegram"></a>
+					<a href="" class="contacts__whatsapp _icon-whatsapp"></a>
+				</div>
+				<iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2971.0830324289163!2d44.44589007688265!3d41.86955997124271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDUyJzEwLjQiTiA0NMKwMjYnNTQuNSJF!5e0!3m2!1sru!2sru!4v1707481654689!5m2!1sru!2sru" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+	</section>
+
+	</main>
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__content">
+				<div class="footer__logo">
+					<img src="img/footer/logo-footer.svg" alt="Logo">
+				</div>
+				<div class="footer__links links-footer">
+					<div class="links-footer__column">
+						<div data-lang="footer-link-1" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+						<div data-lang="footer-link-2" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+						<div data-lang="footer-link-3" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+						<div data-lang="footer-link-4" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+					</div>
+					<div class="links-footer__column">
+						<div data-lang="footer-link-5" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+						<div data-lang="footer-link-6" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+						<div data-lang="footer-link-7" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
+					</div>
+				</div>
+				<div class="footer__info info-footer">
+					<div class="info-footer__block">
+						<div data-lang="footer-sub-title-1" class="info-footer__sub-title"></div>
+						<div data-lang="footer-sub-text-1" class="info-footer__text"></div>
+					</div>
+					<div class="info-footer__block">
+						<div data-lang="footer-sub-title-2" class="info-footer__sub-title"></div>
+						<div class="info-footer__text">+ 0000000000000</div>
+					</div>
+					<div class="info-footer__block">
+						<div data-lang="footer-sub-title-3" class="info-footer__sub-title"></div>
+						<div class="info-footer__text">email@gmail.com</div>
+					</div>
+				</div>
+				<div class="footer__social">
+					<a href="" class="footer__instagram _icon-instagram"></a>
+					<a href="" class="footer__telegram _icon-telegram"></a>
+					<a href="" class="footer__whatsapp _icon-whatsapp"></a>
+				</div>
+				<div class="footer__qrcode">
+					<img src="img/footer/qrcode.svg" alt="QR-Code">
+				</div>
+			</div>
+		</div>
+	</footer>
 	</div>
 	<!-- <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
@@ -657,7 +286,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20240407093839"></script>
+	<script src="js/app.min.js?_v=20240505115254"></script>
 </body>
 
 </html>

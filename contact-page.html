@@ -2,13 +2,12 @@
 <html lang="ru">
 
 <head>
-	<title>Order</title>
+	<title>Contact-page</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240407093839" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240505115254" />
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240407093839" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -81,27 +80,27 @@
 		<main class="contact-page">
 			<div class="contact-page__container">
 				<div class="contact-page__inforamtion information-contact-page">
-					<h2 class="information-contact-page__title title-block">Contact information</h2>
+					<h2 data-lang="contact-inforamation" class="information-contact-page__title title-block"></h2>
 					<form class="information-contact-page__form form form_border-none form_contact">
 						<div class="form__name">
 							<div class="form__line form__line_mb-none">
-								<label data-lang="" for="name" class="form__label">First Name</label>
+								<label data-lang="form-first" for="name" class="form__label"></label>
 								<input id="name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
 							</div>
 							<div class="form__line form__line_mb-none">
-								<label data-lang="" for="second" class="form__label">Second Name</label>
+								<label data-lang="form-second" for="second" class="form__label"></label>
 								<input id="second" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
 							</div>
 						</div>
 						<div class="form__email">
 							<div class="form__line">
-								<label data-lang="" for="email" class="form__label">Email</label>
+								<label data-lang="form-email" for="email" class="form__label"></label>
 								<input id="email" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
 							</div>
 						</div>
 						<div class="form__phone-number">
 							<div class="form__line">
-								<label data-lang="" for="email" class="form__label">Phone Number</label>
+								<label data-lang="form-phone" for="email" class="form__label"></label>
 								<input id="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
 							</div>
 						</div>
@@ -109,11 +108,11 @@
 							By clicking <span>Agree and continue</span>, you agree to the Mindori
 							<a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
 						</div>
-						<a href="request-page.html" class="button form__button">Agree and Continue</a>
+						<a data-lang="form-btn" href="request-page.html" class="button form__button"></a>
 					</form>
 				</div>
 				<div class="contact-page__card card-contact-page">
-					<h2 class="card-contact-page__title title-block">Summary</h2>
+					<h2 data-lang="service-summary-title" class="card-contact-page__title title-block"></h2>
 					<div class="card-contact-page__content">
 						<div class="card-contact-page__item item-contact-page">
 							<div class="item-contact-page__top">
@@ -121,27 +120,29 @@
 									<picture><source srcset="img/contact-page/home-1.webp" type="image/webp"><img src="img/contact-page/home-1.jpeg" alt="" /></picture>
 								</div>
 								<div class="item-contact-page__info">
-									<div class="item-contact-page__title">Glamping dome</div>
+									<div data-lang="card-title-1" class="item-contact-page__title"></div>
 									<div class="item-contact-page__date">Oct 17 - 19, 2 guests</div>
 								</div>
 							</div>
 							<ul class="item-contact-page__list">
 								<li class="item-contact-page__item">
-									<div class="item-contact-page__text">100$ x 1 night</div>
+									<div class="item-contact-page__text">
+										100$ x 1 <span data-lang="form-night">night</span>
+									</div>
 									<div class="item-contact-page__price">200$</div>
 								</li>
 								<li class="item-contact-page__item">
-									<div class="item-contact-page__text">Service Fee</div>
+									<div data-lang="form-service-fee" class="item-contact-page__text"></div>
 									<div class="item-contact-page__price">30$</div>
 								</li>
 								<li class="item-contact-page__item">
-									<div class="item-contact-page__text">Breakfast</div>
+									<div data-lang="form-breakfast" class="item-contact-page__text"></div>
 									<div class="item-contact-page__price">50$</div>
 								</li>
 							</ul>
 							<div class="item-contact-page__footer">
 								<div class="item-contact-page__result">
-									<div class="item-contact-page__total">Total</div>
+									<div data-lang="form-total" class="item-contact-page__total"></div>
 									<div class="item-contact-page__price item-contact-page__price_final">280$</div>
 								</div>
 							</div>
@@ -226,7 +227,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20240407093839"></script>
+	<script src="js/app.min.js?_v=20240505115254"></script>
 </body>
 
 </html>

@@ -2,13 +2,12 @@
 <html lang="ru">
 
 <head>
-	<title>Order</title>
+	<title>Request</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240407093839" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240505115254" />
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240407093839" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -81,21 +80,21 @@
 		<main class="request-page">
 			<div class="request-page__container">
 				<div class="request-page__booking booking-request">
-					<h2 class="booking-request__title title-block">Request booking</h2>
+					<h2 data-lang="card-title-1" class="booking-request__title title-block"></h2>
 					<form action="" class="booking-request__form form form_border-none form_contact">
 						<div class="form__name-card">
 							<div class="form__line form__line_mb-none">
-								<label data-lang="" for="card" class="form__label">Card</label>
+								<label data-lang="form-card" for="card" class="form__label"></label>
 								<input id="card" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
 							</div>
 							<div class="form__line">
-								<label data-lang="" for="name-card" class="form__label">Name on Card</label>
+								<label data-lang="form-name-card" for="name-card" class="form__label"></label>
 								<input id="name-card" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
 							</div>
 						</div>
 						<div class="form__date-card">
 							<div class="form__line form__line_mb-none">
-								<label data-lang="" for="date" class="form__label">Expiration Date</label>
+								<label data-lang="form-expiration" for="date" class="form__label"></label>
 								<input id="date" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="MM/YY" class="form__input" />
 							</div>
 							<div class="form__line">
@@ -104,20 +103,18 @@
 							</div>
 						</div>
 						<div class="form__gift">
-							<h3 class="form__sub-title">Use a gift card/promo code</h3>
+							<h3 data-lang="card-gift-code-title" class="form__sub-title"></h3>
 							<div class="form__line form__line_mb-none">
-								<label data-lang="" for="date" class="form__label">Expiration Date</label>
+								<label data-lang="form-gift-code" for="date" class="form__label"></label>
 								<input id="date" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="XXXX-XXXX-XXXX" class="form__input" />
 							</div>
-							<div class="form__info">
-								Gift cards are non-refundable if the host accepts your booking
-							</div>
+							<div data-lang="gift-text" class="form__info"></div>
 						</div>
-						<a href="" class="form__button button">Request booking</a>
+						<a data-lang="form-btn" href="" class="form__button button"></a>
 					</form>
 				</div>
 				<div class="request-page__card card-contact-page">
-					<h2 class="card-contact-page__title title-block">Summary</h2>
+					<h2 data-lang="service-summary-title" class="card-contact-page__title title-block"></h2>
 					<div class="card-contact-page__content">
 						<div class="card-contact-page__item item-contact-page">
 							<div class="item-contact-page__top">
@@ -125,27 +122,29 @@
 									<picture><source srcset="img/contact-page/home-1.webp" type="image/webp"><img src="img/contact-page/home-1.jpeg" alt="" /></picture>
 								</div>
 								<div class="item-contact-page__info">
-									<div class="item-contact-page__title">Glamping dome</div>
+									<div data-lang="card-title-1" class="item-contact-page__title"></div>
 									<div class="item-contact-page__date">Oct 17 - 19, 2 guests</div>
 								</div>
 							</div>
 							<ul class="item-contact-page__list">
 								<li class="item-contact-page__item">
-									<div class="item-contact-page__text">100$ x 1 night</div>
+									<div class="item-contact-page__text">
+										100$ x 1 <span data-lang="form-night">t</span>
+									</div>
 									<div class="item-contact-page__price">200$</div>
 								</li>
 								<li class="item-contact-page__item">
-									<div class="item-contact-page__text">Service Fee</div>
+									<div data-lang="form-service-fee" class="item-contact-page__text"></div>
 									<div class="item-contact-page__price">30$</div>
 								</li>
 								<li class="item-contact-page__item">
-									<div class="item-contact-page__text">Breakfast</div>
+									<div data-lang="form-breakfast" class="item-contact-page__text"></div>
 									<div class="item-contact-page__price">50$</div>
 								</li>
 							</ul>
 							<div class="item-contact-page__footer">
 								<div class="item-contact-page__result">
-									<div class="item-contact-page__total">Total</div>
+									<div data-lang="form-total" class="item-contact-page__total"></div>
 									<div class="item-contact-page__price item-contact-page__price_final">280$</div>
 								</div>
 							</div>
@@ -230,7 +229,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20240407093839"></script>
+	<script src="js/app.min.js?_v=20240505115254"></script>
 </body>
 
 </html>

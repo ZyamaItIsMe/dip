@@ -6,9 +6,8 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240407093839" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240505115254" />
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240407093839" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -82,52 +81,49 @@
 			<div class="order-page__container">
 				<div class="order-page__content">
 					<div class="order-page__my-booking my-booking-order">
-						<h3 class="my-booking-order__title title-block">My Booking</h3>
+						<h3 data-lang="block-title" class="my-booking-order__title title-block"></h3>
 						<div class="my-booking-order__card card-order">
 							<div class="card-order__picture">
 								<picture><source srcset="img/order/home-1.webp" type="image/webp"><img src="img/order/home-1.jpeg" alt="" /></picture>
 							</div>
 							<div class="card-order__info">
-								<h4 class="card-order__title">Geodesic Dome</h4>
+								<h4 data-lang="card-title-1" class="card-order__title"></h4>
 								<div class="card-order__items">
 									<div class="card-order__item">
 										<img src="img/order/icons/guests.svg" alt="" />
-										<div class="card-order__text">2 guests</div>
+										<div data-lang="card-convenience-guests-1" class="card-order__text"></div>
 									</div>
 									<div class="card-order__item">
 										<img src="img/order/icons/area.svg" alt="" />
-										<div class="card-order__text">50 m² area</div>
+										<div data-lang="card-convenience-area" class="card-order__text"></div>
 									</div>
 									<div class="card-order__item">
 										<img src="img/order/icons/king.svg" alt="" />
-										<div class="card-order__text">king size</div>
+										<div data-lang="card-convenience-bed" class="card-order__text"></div>
 									</div>
 									<div class="card-order__item">
 										<img src="img/order/icons/bed.svg" alt="" />
-										<div class="card-order__text">extra bed</div>
+										<div data-lang="card-convenience-bed-1" class="card-order__text"></div>
 									</div>
 								</div>
 								<div class="card-order__footer">
 									<div class="card-order__price">200$</div>
-									<a href="#" class="card-order__link">More</a>
+									<a data-lang="link-more" href="#" class="card-order__link"></a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="order-page__services services-order">
-						<h3 class="services-order__title title-block">Extra Services</h3>
+						<h3 data-lang="service-title" class="services-order__title title-block"></h3>
 						<div class="services-order__card card-services">
 							<div class="card-services__picture">
 								<picture><source srcset="img/order/home-1.webp" type="image/webp"><img src="img/order/home-1.jpeg" alt="" /></picture>
 							</div>
 							<div class="card-services__info">
-								<h4 class="card-services__title">Breakfast</h4>
-								<div class="card-services__text">
-									Yogurt with fruits, croissant, sandwich with salmon, cereals, eggs, fruits, tea
-									or coffee, juice, milk
-								</div>
+								<h4 data-lang="service-card-title" class="card-services__title"></h4>
+								<div data-lang="service-card-text" class="card-services__text"></div>
 								<div class="card-services__guest card-services__guest_firts">
-									<p class="card-services__name">Guests</p>
+									<p data-lang="service-card-guests-1" class="card-services__name"></p>
 									<div class="card-services__table">
 										<button class="card-services__minus"></button>
 										<div class="card-services__number">2</div>
@@ -136,7 +132,7 @@
 								</div>
 								<div data-da=".card-services__guest_firts, 767.98, first" class="card-services__footer">
 									<div class="card-services__price">50$</div>
-									<button type="submit" class="card-services__button button">Add</button>
+									<button data-lang="service-card-btn-1" type="submit" class="card-services__button button"></button>
 								</div>
 							</div>
 						</div>
@@ -147,10 +143,10 @@
 								<picture><source srcset="img/order/home-1.webp" type="image/webp"><img src="img/order/home-1.jpeg" alt="" /></picture>
 							</div>
 							<div class="card-services__info">
-								<h4 class="card-services__title">Full Pacage</h4>
-								<div class="card-services__text">Breakfast, sauna, BBQ, Furako, jacuzzi</div>
+								<h3 data-lang="service-package-title" class="card-services__title"></h3>
+								<div data-lang="service-package-text" class="card-services__text"></div>
 								<div class="card-services__guest card-services__guest_two">
-									<p class="card-services__name">Guests</p>
+									<p data-lang="service-card-guests-2" class="card-services__name"></p>
 									<div class="card-services__table">
 										<button class="card-services__minus"></button>
 										<div class="card-services__number">2</div>
@@ -159,51 +155,54 @@
 								</div>
 								<div data-da=".card-services__guest_two, 767.98, first" class="card-services__footer">
 									<div class="card-services__price">90$</div>
-									<button type="submit" class="card-services__button button">Add</button>
+									<button data-lang="service-card-btn-2" type="submit" class="card-services__button button"></button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="order-page__summary summary-card-page">
-					<h3 class="summary-card-page__title title-block">Summary</h3>
+					<h3 data-lang="service-summary-title" class="summary-card-page__title title-block"></h3>
 					<form action="" class="summary-card-page__form form form_summary">
 						<div class="form__date-guests">
 							<div class="form__line">
-								<label data-lang="how-to-buy-form-label-1" for="date-1" class="form__label">Check-in</label>
+								<label data-lang="form-in-date" for="date-1" class="form__label"></label>
 								<input id="date-1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
 							</div>
 							<div class="form__line">
-								<label data-lang="how-to-buy-form-label-2" for="date-2" class="form__label">Check-out</label>
+								<label data-lang="form-out-date" for="date-2" class="form__label"></label>
 								<input id="date-2" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
 							</div>
 							<div class="form__line form__line_column">
-								<label data-lang="how-to-buy-form-label-2" for="guests" class="form__label">Guests</label>
+								<label data-lang="form-number-guests" for="guests" class="form__label"></label>
 								<input id="guests" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
 							</div>
 							<div class="form__nights">
-								<p>stay: <span>2</span> nights</p>
+								<p>
+									<span data-lang="form-stay">stay:</span> <span>2</span>
+									<span data-lang="form-nights">nights</span>
+								</p>
 							</div>
 						</div>
 						<div class="form__price">
 							<div class="form__one-nights">
-								<p>100$ x 1 night</p>
+								<p>100$ x 1 <span data-lang="form-night">night</span></p>
 								<p class="form__sum">200$</p>
 							</div>
 							<div class="form__service">
-								<p>Service Fee</p>
+								<p data-lang="form-service-fee"></p>
 								<p class="form__sum">30$</p>
 							</div>
 							<div class="form__breakfast">
-								<p>Breakfast</p>
+								<p data-lang="form-breakfast"></p>
 								<p class="form__sum">50$</p>
 							</div>
 						</div>
 						<div class="form__total">
-							<p>Total</p>
+							<p data-lang="form-total"></p>
 							<p class="form__sum form__sum_all">230$</p>
 						</div>
-						<a href="contact-page.html" type="submit" class="form__button button">Book</a>
+						<a data-lang="form-btn" href="contact-page.html" type="submit" class="form__button button"></a>
 					</form>
 				</div>
 			</div>
@@ -284,7 +283,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20240407093839"></script>
+	<script src="js/app.min.js?_v=20240505115254"></script>
 </body>
 
 </html>
