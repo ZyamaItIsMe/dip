@@ -6514,10 +6514,15 @@
         const currentPathName = window.location.pathname;
         const lastSegmentIndex = currentPathName.lastIndexOf("/");
         const currentFileName = currentPathName.substring(lastSegmentIndex + 1);
+        console.log(currentFileName);
         let currentText = {};
         function checkPagePathName() {
             switch (currentFileName) {
               case "index.html":
+                currentText = indexPage;
+                break;
+
+              case "":
                 currentText = indexPage;
                 break;
 
