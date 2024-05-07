@@ -4346,207 +4346,207 @@
         da.init();
         const indexPage = {
             "header__btn-subMenu": {
-                ru: "RU",
+                fr: "FR",
                 en: "EN",
                 de: "DE"
             },
             "header__title-1": {
-                ru: "Главная",
+                fr: "Accueil",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "header__title-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "header__title-3": {
-                ru: "Достопримечательности",
+                fr: "Attractions Touristiques",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "header__title-4": {
-                ru: "Специальные предложения",
+                fr: "Offres Spéciales",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "header__title-5": {
-                ru: "Атмосфера",
+                fr: "Ambiance",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "header__title-6": {
-                ru: "Вопросы",
+                fr: "FAQ",
                 en: "FAQ",
                 de: "Fragen"
             },
             "header__title-7": {
-                ru: "Контакты",
+                fr: "Coordonnées",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "header__title-8": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
             "header__title-9": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
             "header__text-1": {
-                ru: "Дайте волю своему приключению: лучшее место для гламурного отдыха в Джорджии",
-                en: "Unleash Your Adventure: Georgia's Premier Glamping Haven ",
+                fr: "Libérez Votre Aventure: Le Premier Refuge De Glamping De Géorgie",
+                en: "Unleash Your Adventure: Georgia's Premier Glamping Haven",
                 de: "Lassen Sie Ihrem Abenteuer freien Lauf: Der beste Ort für einen glamourösen Urlaub in Georgia"
             },
             "header__text-2": {
-                ru: "Воссоединитесь с природой и заново откройте себя",
+                fr: "Renouez avec la Nature et Redécouvrez-vous",
                 en: "Reconnect with Nature and Rediscover Yourself",
                 de: "Vereinige dich mit der Natur und entdecke dich neu"
             },
             hello__title: {
-                ru: "Здравствуй, дорогой уважаемый Гость!",
+                fr: "Bonjour, cher Invité Estimé!",
                 en: "Hello, dear Esteemed Guest!",
                 de: "Hallo, sehr geehrter Gast!"
             },
             "hello__text-1": {
-                ru: "Добро пожаловать на наше захватывающее дух место для глэмпинга, расположенное в самом сердце природной красоты Грузии.",
-                en: "Welcome to our breathtaking glamping site nestled in the heart of Georgia's natural beauty. ",
+                fr: "Bienvenue sur notre site de glamping à couper le souffle niché au cœur de la beauté naturelle de la Géorgie.",
+                en: "Welcome to our breathtaking glamping site nestled in the heart of Georgia's natural beauty.",
                 de: "Willkommen in unserem atemberaubenden Glamping-Ort im Herzen der natürlichen Schönheit Georgiens."
             },
             "hello__text-2": {
-                ru: "Приготовьтесь создать незабываемые воспоминания и пробудить в себе дух приключений.",
+                fr: "Préparez-vous à créer des souvenirs inoubliables et à éveiller votre esprit aventureux.",
                 en: "Get ready to create lasting memories and awaken your adventurous spirit.",
-                de: " Bereiten Sie sich darauf vor, unvergessliche Erinnerungen zu schaffen und den Geist des Abenteuers zu wecken."
+                de: "Bereiten Sie sich darauf vor, unvergessliche Erinnerungen zu schaffen und den Geist des Abenteuers zu wecken."
             },
             "hello__text-3": {
-                ru: "Мы здесь для того, чтобы сделать ваш отдых в глэмпинге исключительным во всех отношениях.",
+                fr: "Nous sommes là pour rendre votre escapade de glamping exceptionnelle à tous points de vue.",
                 en: "We are here to make your glamping getaway exceptional in every way.",
                 de: "Wir sind hier, um Ihren Urlaub in Glamping in jeder Hinsicht außergewöhnlich zu machen."
             },
             offer__title: {
-                ru: "Что мы предлагаем",
+                fr: "Ce Que Nous Offrons",
                 en: "What We Offer",
                 de: "Was wir anbieten"
             },
             "offer__item-title-1": {
-                ru: "Геодезические купола",
+                fr: "Dômes Géodésiques",
                 en: "Geodesic Domes",
                 de: "Geodätische Kuppeln"
             },
             "offer__item-text-1": {
-                ru: "Каждый купол отделен от другого и расположен на другом расстоянии, так что никто не помешает вашему пребыванию",
+                fr: "Chaque dôme est séparé des autres et situé à une autre distance afin que personne ne vienne perturber votre séjour",
                 en: "Each dome is separated from other and located another distance so no one will disturb your stay ",
                 de: "Jede Kuppel ist von der anderen getrennt und befindet sich in einer anderen Entfernung, so dass niemand Ihren Aufenthalt stören wird"
             },
             "offer__item-title-2": {
-                ru: "Зона для костров",
+                fr: "Zone d'Incendie",
                 en: "Fire Zone",
                 de: "Feuerzone"
             },
             "offer__item-text-2": {
-                ru: "В каждой комнате есть своя каминная зона, а также большой камин в общей зоне для семьи и друзей",
+                fr: "Chaque chambre a sa propre zone de feu, ainsi qu'un grand feu dans l'espace commun pour la famille et les amis",
                 en: "Each room has its own fire zone, as well as a large fire at the common area for family and friends",
                 de: "Jedes Zimmer hat eine eigene Feuerzone sowie ein großes Feuer im Gemeinschaftsbereich für Familie und Freunde"
             },
             "offer__item-title-3": {
-                ru: "Местная эко-еда",
+                fr: "Nourriture Écologique Locale",
                 en: "Local Eco Food",
                 de: "Lokales Öko-Essen"
             },
             "offer__item-text-3": {
-                ru: "Вы можете заказать завтрак, закуски и напитки. Большинство блюд готовят на месте, в ближайших деревнях",
-                en: "You can order breakfast, snacks and drinks. Most of the meals are produced locally in the nearest villages ",
+                fr: "Vous pouvez commander le petit-déjeuner, des collations et des boissons. La plupart des repas sont produits localement dans les villages les plus proches",
+                en: "You can order breakfast, snacks and drinks. Most of the meals are produced locally in the nearest villages",
                 de: "Sie können Frühstück, Snacks und Getränke bestellen. Die meisten Mahlzeiten werden vor Ort in den nächstgelegenen Dörfern hergestellt"
             },
             "offer__item-title-4": {
-                ru: "Экологически чистый",
+                fr: "Respectueux de l'Environnement",
                 en: "Eco Friendly",
                 de: "Umweltfreundlich"
             },
             "offer__item-text-4": {
-                ru: "Мы уделяем приоритетное внимание природе, внедряя раздельный сбор отходов",
+                fr: "Nous donnons la priorité à la nature en mettant en place une collecte séparée des déchets",
                 en: "We prioritize nature by implementing separate waste collection",
                 de: "Wir priorisieren die Natur, indem wir getrennte Abfallsammlung implementieren"
             },
             "offer__item-title-5": {
-                ru: "Технологии",
+                fr: "Technologies",
                 en: "Technologies",
                 de: "Technologie"
             },
             "offer__item-text-5": {
-                ru: "Удаленная регистрация с использованием кода, взаимодействие с персоналом через мессенджеры",
+                fr: "Enregistrement à distance à l'aide d'un code, interaction avec le personnel via des messageries instantanées",
                 en: "Remote check-in using a code, interaction with staff via instant messengers",
                 de: "Remote-Check-in mit einem Code, Interaktion mit dem Personal über Instant Messenger"
             },
             "offer__item-title-6": {
-                ru: "Сауна, Фурако",
+                fr: "Sauna, Salle de Bain",
                 en: "Sauna, Furako",
                 de: "Sauna, Furako"
             },
             "offer__item-text-6": {
-                ru: "Наслаждайтесь легким паром и холодным погружением, ощущая тепло и снимая стресс",
-                en: "Enjoy light steam and cold plunge, feeling the warmth and letting go of stress ",
+                fr: "Profitez de la vapeur légère et du plongeon froid, ressentez la chaleur et évacuez le stress",
+                en: "Enjoy light steam and cold plunge, feeling the warmth and letting go of stress",
                 de: "Genießen Sie leichten Dampf und kaltes Eintauchen, spüren Sie die Wärme und lassen Sie Stress los"
             },
             "offer__item-title-7": {
-                ru: "Собачий друг",
+                fr: "Chien Amical",
                 en: "Dog Friendly",
                 de: "Hundefreundlich"
             },
             "offer__item-text-7": {
-                ru: "Мы приветствуем гостей с хорошо воспитанными домашними животными",
+                fr: "Nous accueillons les invités avec des animaux bien élevés",
                 en: "We welcome guests with well-mannered  pets",
                 de: "Wir begrüßen Gäste mit wohlerzogenen Haustieren"
             },
             "offer__item-title-8": {
-                ru: "Пресная вода",
+                fr: "Eau Douce",
                 en: "Fresh Water",
                 de: "Süßwasser"
             },
             "offer__item-text-8": {
-                ru: "Чистейшая вода из подземного колодца",
+                fr: "L'eau la plus pure d'un puits souterrain",
                 en: "The purest water from an underground well",
                 de: "Reinstes Wasser aus einem unterirdischen Brunnen"
             },
             "offer__item-title-9": {
-                ru: "Достопримечательности",
+                fr: "Attractions Touristiques",
                 en: "Attractions",
                 de: "Sehensw"
             },
             "offer__item-text-9": {
-                ru: "Исследуйте близлежащие памятники, монастыри и холмы",
+                fr: "Explorez les monuments, monastères et collines à proximité",
                 en: "Explore nearby monuments, monasteries and hills",
                 de: "Erkunden Sie nahegelegene Denkmäler, Klöster und Hügel"
             },
             "offer__text-picture-1": {
-                ru: " откройте заново",
+                fr: "redécouvrir",
                 en: "rediscover",
                 de: "Wiederentdeckung"
             },
             "offer__text-picture-2": {
-                ru: "Вашу",
+                fr: "Votre",
                 en: "Your",
                 de: "Ihrer"
             },
             "offer__text-picture-3": {
-                ru: "Душу",
+                fr: "Âme",
                 en: "Soul",
                 de: "Seele"
             },
             "accommodation-coming": {
-                ru: "Скоро",
+                fr: "Bientôt disponible",
                 en: "Coming soon",
                 de: "Kommt bald"
             },
             "accommodation-title": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Unterk"
             },
             "accommodation__card-picture-name-1": {
-                ru: "Геодезический купол",
+                fr: "Dôme géodésique",
                 en: "Geodesic dome",
                 de: "Geodätische Kuppel"
             },
@@ -4556,1874 +4556,1924 @@
                 de: "Genießen Sie die Natur, Sonnenuntergänge und Sterne bequem von Ihrem Bett aus"
             },
             "accommodation__card1-itemText-1": {
-                ru: "Двуспальная кровать: King-size, мягкие и приятные хлопчатобумажные простыни",
+                fr: "Profitez de la nature, des couchers de soleil et des étoiles dans le confort de votre lit",
                 en: "Double bed: King size, soft and pleasant cotton sheets",
                 de: "Doppelbett: Kingsize, weiche und angenehme Baumwollbettwäsche"
             },
             "accommodation__card1-itemText-2": {
-                ru: "Туалет и душ: отдыхайте на природе в домиках, как дома",
+                fr: "Toilettes et douche: restez dans la nature avec des cabines comme à la maison",
                 en: "Toilet and shower: stay in nature with cabins like at home",
                 de: "Toilette und Dusche: Bleiben Sie in der Natur mit Kabinen wie zu Hause"
             },
             "accommodation__card1-itemText-3": {
-                ru: "Отопление: кондиционер в помещении и камины зимой",
+                fr: "Chauffage: unité de climatisation intérieure et cheminées en hiver",
                 en: "Heating: indoor air conditioning unit and fireplaces in winter",
                 de: "Heizung: Innenklimaanlage und Kamine im Winter"
             },
             "accommodation__card1-itemText-4": {
-                ru: "Питьевая вода, чай, посуда, стаканы, столовые приборы и т.д.",
+                fr: "Eau potable, thé, vaisselle, verres, couverts, etc.",
                 en: "Drinking water, tea, dishes, glasses, cutlery, etc.",
                 de: "Trinkwasser, Tee, Geschirr, Gläser, Besteck usw."
             },
             "accommodation__card1-itemText-5": {
-                ru: "Площадка для разведения костра с видом на холмы",
+                fr: "Zone de feu de joie avec vue sur les collines",
                 en: "Bonfire area with a view of the hills",
                 de: "Lagerfeuerplatz mit Blick auf die Hügel"
             },
             "accommodation__card1-itemText-6": {
-                ru: "Детали Комод, вешалки, полотенца, зеркало",
+                fr: "Détails Commode, cintres, serviettes, miroir",
                 en: "Details Chest of drawers, hangers, towels, mirror",
                 de: "Details Kommode, Kleiderbügel, Handtücher, Spiegel"
             },
             "accommodation__card1-itemList-1": {
-                ru: "Возможно размещение трех человек",
+                fr: "Possibilité d'hébergement pour trois personnes",
                 en: "Possible three-person accommodation",
                 de: "Mögliche Drei-Personen-Unterkunft"
             },
             "accommodation__card1-itemList-2": {
-                ru: "Дети в возрасте до 6 лет размещаются бесплатно",
+                fr: "Les enfants de moins de 6 ans séjournent gratuitement",
                 en: "Сhildren under the age of 6 stay free of charge",
                 de: "Kinder unter 6 Jahren übernachten kostenlos"
             },
             "accommodation__card1-itemList-3": {
-                ru: "Заезд в 14:00, выезд в 12:00",
+                fr: "Arrivée à 14h00, départ à 12h00",
                 en: "Check-in at 14:00, check-out at 12:00",
                 de: "Anreise um 14:00 Uhr, Abreise um 12:00 Uhr"
             },
             "accommodation__card1-btn": {
-                ru: "Забранировать",
+                fr: "Réservez maintenant",
                 en: "Book now",
                 de: "Jetzt buchen"
             },
             "accommodation__card-picture-name-2": {
-                ru: "Кабина / палатка с А-образной рамой",
+                fr: "Cabine/tente à cadre en A",
                 en: "A-Frame cabin/tent",
                 de: "Kabine /Zelt mit A-Rahmen"
             },
             "accommodation__card-picture-text-2": {
-                ru: "Погрузитесь в природу с деревенским шармом и современным комфортом",
+                fr: "Immergez-vous dans la nature avec un charme rustique et un confort moderne",
                 en: "Immerse yourself in nature with rustic charm and modern comfort",
                 de: "Eintauchen in die Natur mit rustikalem Charme und modernem Komfort"
             },
             "accommodation__card2-itemText-1": {
-                ru: "2 двуспальные кровати: King-size, матрас, белоснежное постельное белье",
+                fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
                 en: "2 Double beds: King size, mattress Snow White linens",
                 de: "2 Doppelbetten: Kingsize, Matratze Schneeweiße Bettwäsche"
             },
             "accommodation__card2-itemText-2": {
-                ru: "Отопление: тепловая пушка",
+                fr: "Chauffage: pistolet à air chaud",
                 en: "Heating: heat gun",
                 de: "Heizung: Heißluftpistole"
             },
             "accommodation__card2-itemText-3": {
-                ru: "Чайный сервиз, питьевая вода, чай, посуда, стаканы, столовые приборы и т.д. вы можете взять с собой - БЕЗ дополнительной оплаты",
+                fr: "Un service à thé Eau potable, thé, vaisselle, verres, couverts, etc. vous pouvez prendre - PAS de frais supplémentaires",
                 en: "A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges",
                 de: "Ein Teeservice Trinkwasser, Tee, Geschirr, Gläser, Besteck usw. sie können nehmen - KEINE zusätzlichen Gebühren"
             },
             "accommodation__card2-itemText-4": {
-                ru: "Площадка для разведения костра с прекрасным видом на холмы",
+                fr: "Coin feu de camp avec une belle vue sur les collines",
                 en: "Campfire area with a beautiful view of the hills",
                 de: "Lagerfeuerplatz mit schöner Aussicht auf die Hügel"
             },
             "accommodation__card2-itemText-5": {
-                ru: "На территории глэмпинга общего пользования:",
+                fr: "Sur le territoire du glamping en usage commun:",
                 en: "On the territory of the glamping in common use:",
                 de: "Auf dem Territorium des Glamping im gemeinsamen Gebrauch:"
             },
             "accommodation__card2-itemText-6": {
-                ru: "Летняя кухня (микроволновая печь, холодильник, плита, гриль-барбекю, казан, посуда и т.д.)",
+                fr: "Cuisine d'été (micro-ondes, réfrigérateur, cuisinière, barbecue grill, chaudron, vaisselle, etc.)",
                 en: "Summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron, dishes, etc.)",
                 de: "sommerküche (Mikrowelle, Kühlschrank, Herd, Grill, Kessel, Geschirr usw.).)"
             },
             "accommodation__card2-itemText-7": {
-                ru: "Гостиная с открытым камином",
+                fr: "Salon avec feu ouvert",
                 en: "Lounge with open fire",
                 de: "Lounge mit offenem Kamin"
             },
             "accommodation__card2-itemText-8": {
-                ru: "Душ (горячая, холодная вода), туалет",
+                fr: "Douche (eau chaude et froide), toilettes",
                 en: "Shower (hot, cold water), toilet",
                 de: "Susche (warmes, kaltes Wasser), WC"
             },
             "accommodation__card2-itemList-1": {
-                ru: "Возможно размещение трех человек",
+                fr: "Possibilité d'hébergement pour trois personnes",
                 en: "Possible three-person accommodation",
                 de: "Mögliche Drei-Personen-Unterkunft"
             },
             "accommodation__card2-itemList-2": {
-                ru: "Дети в возрасте до 6 лет размещаются бесплатно",
+                fr: "Les enfants de moins de 6 ans séjournent gratuitement",
                 en: "Сhildren under the age of 6 stay free of charge",
                 de: "Kinder unter 6 Jahren übernachten kostenlos"
             },
             "accommodation__card2-itemList-3": {
-                ru: "Заезд в 14:00, выезд в 12:00",
+                fr: "Arrivée à 14h00, départ à 12h00",
                 en: "Check-in at 14:00, check-out at 12:00",
                 de: "Anreise um 14:00 Uhr, Abreise um 12:00 Uhr"
             },
             "accommodation__card2-btn": {
-                ru: "Забранировать",
+                fr: "Réservez maintenant",
                 en: "Book now",
                 de: "Jetzt buchen"
             },
             "accommodation__card-picture-name-3": {
-                ru: "Сауна, Фурако",
+                fr: "Sauna, Salle de Bain",
                 en: "Sauna, Furako",
                 de: "Sauna in Furaco"
             },
             "accommodation__card-picture-text-3": {
-                ru: "Встретьте тепло и расслабление в совершенной гармонии природы",
+                fr: "Rencontrez la chaleur de la détente dans la parfaite harmonie de la nature",
                 en: "Meet warmth relaxation in the perfect harmony of nature",
                 de: "Treffen Sie Wärme Entspannung in der perfekten Harmonie der Natur"
             },
             "accommodation__card3-itemText-1": {
-                ru: "Уютная ванна с панорамным окном",
+                fr: "Salle de bain confortable avec une fenêtre panoramique",
                 en: "Cozy bath with a panoramic window",
                 de: "Gemütliches Bad mit Panoramafenster"
             },
             "accommodation__card3-itemText-2": {
-                ru: "Туалет и душевая кабина",
+                fr: "Toilette et douche",
                 en: "Toilet and shower",
                 de: "Toilette und Dusche"
             },
             "accommodation__card3-itemText-3": {
-                ru: "Чайная зона и вкусный травяной чай",
+                fr: "Espace thé et délicieuse tisane",
                 en: "Tea area and delicious herbal tea",
                 de: "Teebereich und köstlicher Kräutertee"
             },
             "accommodation__card3-itemText-4": {
-                ru: "Раздевалка",
+                fr: "Vestiaire",
                 en: "Locker room",
                 de: "Umkleidekabine"
             },
             "accommodation__card3-itemText-5": {
-                ru: "Купель с горячей или холодной водой (по запросу)",
+                fr: "Fonte à l'eau chaude ou froide (sur demande)",
                 en: "Font with hot or cold water (on request)",
                 de: "Brunnen mit heißem oder kaltem Wasser (auf Anfrage)"
             },
             "accommodation__card3-itemText-6": {
-                ru: "Место для костра и барбекю",
+                fr: "Feu de camp et espace barbecue",
                 en: "Campfire and bbq area",
                 de: "Lagerfeuer- und Grillplatz"
             },
             "accommodation__card3-nameList": {
-                ru: "Что делать в спа-центре запрещено:",
+                fr: "Que faire dans l'espace SPA n'est pas autorisé:",
                 en: "What to do in the SPA area is not allowed:",
                 de: "Was im Wellnessbereich zu tun ist, ist nicht erlaubt:"
             },
             "accommodation__card3-itemList-1": {
-                ru: "Поверните ручки для регулировки нагрева обогревателя",
+                fr: "Tournez les boutons pour régler le chauffage de l'appareil de chauffage",
                 en: "Turn the knobs for adjusting the heating of the heater",
                 de: "Drehen Sie die Knöpfe zum Einstellen der Heizung der Heizung"
             },
             "accommodation__card3-itemList-2": {
-                ru: "Обильно поливайте камни и используйте ароматические масла и соли",
+                fr: "Arrosez abondamment les pierres et utilisez des huiles aromatiques et des sels",
                 en: "Plentifully water the stones and use aroma oils and salts",
                 de: "Gießen Sie die Steine reichlich und verwenden Sie Aromaöle und Salze"
             },
             "accommodation__card3-itemList-3": {
-                ru: "Находиться в состоянии алкогольного опьянения",
+                fr: "Être sous l'influence de l'alcool",
                 en: "Be under the influence of alcohol",
                 de: "Unter dem Einfluss von Alkohol stehen"
             },
             "accommodation__card3-itemList-4": {
-                ru: "Оставлять детей без присмотра",
+                fr: "Laisser les enfants sans surveillance",
                 en: "Leave children unattended",
                 de: "Kinder unbeaufsichtigt lassen"
             },
             "accommodation__card3-itemList-5": {
-                ru: "Длительное пребывание в термальной зоне",
+                fr: "Séjour prolongé dans la zone thermale",
                 en: "Stay long in the thermal zone",
                 de: "Bleiben Sie lange in der Thermalzone"
             },
             "accommodation__card3-btn": {
-                ru: "Забранировать",
+                fr: "Réserver",
                 en: "Book now",
                 de: "Jetzt buchen"
             },
             "vibe-title": {
-                ru: "Атмосфера",
+                fr: "Atmosphère",
                 en: "Vibe",
                 de: "Vibe"
             },
             "notes-title": {
-                ru: "Важные примечания",
+                fr: " Notes importantes",
                 en: "Important notes",
                 de: "Wichtige Hinweise"
             },
             "block-concept-title": {
-                ru: "Концепция",
+                fr: "Concept",
                 en: "Concept",
                 de: "Konzept"
             },
             "block-concept-text": {
-                ru: "Глэмпинг - это место, где городской комфорт встречается с первозданной природой. Мы отдыхаем душой, просыпаясь от пения птиц, попивая кофе на верандах, общаясь с друзьями и семьей, сидя у камина, дегустируя вино, занимаясь йогой, готовя еду и катаясь на велосипеде. Формат нашего глэмпинга предполагает экологически чистое отношение к природе и другим людям, мы за тишину и атмосферу добрососедства.",
+                fr: "Glamping est un endroit où le confort urbain rencontre la nature vierge. Nous nous reposons l'âme en nous réveillant du chant des oiseaux, en buvant du café sur les vérandas, en discutant avec les amis et la famille, en nous asseyant près de la cheminée, en dégustant du vin, en faisant du yoga, en préparant des repas et en faisant du vélo. Le format de notre Glamping implique une attitude respectueuse de l'environnement envers la nature et les autres, nous sommes pour le silence et l'atmosphère de bon voisinage.",
                 en: "Glamping is a place where urban comfort meets pristine nature. We relax our souls by waking up from birdsong, drinking coffee on the verandas, chatting with friends and family sitting by the fire, tasting wine, doing yoga, cooking and cycling. The format of our glamping involves an environmentally friendly attitude towards nature and other people, we are for silence and an atmosphere of good neighborliness.",
                 de: "Glamping ist ein Ort, an dem urbaner Komfort auf unberührte Natur trifft. Wir entspannen unsere Seelen, indem wir vom Vogelgezwitscher aufwachen, Kaffee auf den Veranden trinken, mit Freunden und Familie am Feuer sitzen, Wein probieren, Yoga machen, kochen und Radfahren. Das Format unseres Glampings beinhaltet eine umweltfreundliche Haltung gegenüber der Natur und anderen Menschen, wir stehen für Stille und eine Atmosphäre guter Nachbarschaft."
             },
             "area-block-title": {
-                ru: "Что находится в зоне общего пользования:",
+                fr: "Ce qui est dans la zone commune:",
                 en: "What is in the common area:",
                 de: "Was ist im Gemeinschaftsbereich:"
             },
             "notes__item-title-1": {
-                ru: "Кухня с посудой",
+                fr: "Cuisine avec ustensiles",
                 en: "Kitchen with utensils",
                 de: "Küche mit Geschirr"
             },
             "notes__item-text-1": {
-                ru: "Холодильник, электрическая плита, микроволновая печь, зона для приготовления барбекю и казан",
+                fr: "Réfrigérateur, cuisinière électrique, four micro-ondes, barbecue et chaudron",
                 en: "Refrigerator, electric stove, microwave, barbecue grill area and cauldron",
                 de: "Refrigerator, electric stove, microwave, barbecue grill area and cauldron"
             },
             "notes__item-title-2": {
-                ru: "Костер на открытом воздухе",
+                fr: "Feu de camp en plein air",
                 en: "Outdoor campfire",
                 de: "Lagerfeuer im Freien"
             },
             "notes__item-text-2": {
-                ru: "Внимание! По соображениям безопасности пользуйтесь сайтом только в безветренную погоду",
+                fr: "Attention! Pour des raisons de sécurité, utilisez le site uniquement par temps sans vent",
                 en: "Attention! For safety reasons, use the site only in calm weather",
                 de: "Achtung! Benutzen Sie den Platz aus Sicherheitsgründen nur bei ruhigem Wetter"
             },
             "notes__item-title-3": {
-                ru: "Парковка",
+                fr: "Parking",
                 en: "Parking",
                 de: "Parkplatz"
             },
             "notes__item-text-3": {
-                ru: "Для всех гостей предусмотрено парковочное место с видеонаблюдением",
+                fr: "Une place de parking avec vidéosurveillance est disponible pour tous les clients",
                 en: "For all guests there is a parking space with video surveillance",
                 de: "Für alle Gäste gibt es einen Parkplatz mit Videoüberwachung"
             },
             "notes__item-title-4": {
-                ru: "Веранда",
+                fr: "Véranda",
                 en: "Veranda",
                 de: "Veranda"
             },
             "notes__item-text-4": {
-                ru: "Удобное место для празднования особых мероприятий с семьей и друзьями",
+                fr: "Un endroit pratique pour célébrer des événements spéciaux avec la famille et les amis",
                 en: "Comfortable place for celebration special events with family and friends  ",
                 de: "Gemütlicher Ort zum Feiern von besonderen Anlässen mit Familie und Freunden"
             },
             "notesr__item-title-5": {
-                ru: "Плавательный бассейн",
+                fr: "Piscine",
                 en: "Swimming pool",
                 de: "Pool"
             },
             "notes__item-text-5": {
-                ru: "Летом открыт девятиметровый бассейн с чистой водой и шезлонгами",
+                fr: "En été, une piscine de neuf mètres de haut avec de l'eau claire et des chaises longues est ouverte",
                 en: "A nine-meter pool with clean water and sunbeds  are open in summer",
                 de: "Ein neun Meter langer Pool mit sauberem Wasser und Sonnenliegen ist im Sommer geöffnet"
             },
             "notes__item-title-6": {
-                ru: "Игровая площадка",
+                fr: "Aire de jeux",
                 en: "Playground",
                 de: "Kinderspielplatz"
             },
             "notes__item-text-6": {
-                ru: "На территории есть экологичная и современная игровая площадка для детей",
+                fr: "L'établissement dispose d'une aire de jeux écologique et moderne pour les enfants",
                 en: "The territory has an ecological and modern playground for children",
                 de: "Das Gebiet verfügt über einen ökologischen und modernen Spielplatz für Kinder"
             },
             "plannin-block-title": {
-                ru: "Что я должен учитывать при планировании вашего визита:",
+                fr: "Que dois-je considérer lors de la planification de votre visite:",
                 en: "What should I consider when planning your visit:",
                 de: "Was sollte ich bei der Planung Ihres Besuchs beachten:"
             },
             "plannin-block-text": {
-                ru: "Для нас важно не нарушать хрупкий экологический баланс этого района. Поэтому мы убедительно просим вас:",
+                fr: "Il est important pour nous de ne pas perturber le fragile équilibre écologique de la région. Par conséquent, nous vous demandons fortement:",
                 en: "It is important for us not to disturb the fragile ecological balance of the area. Therefore, we kindly ask you:",
                 de: "Es ist uns wichtig, das fragile ökologische Gleichgewicht der Region nicht zu stören. Deshalb bitten wir Sie:"
             },
             "plannin-block-list-item-1": {
-                ru: "не мешайте другим гостям и соблюдайте тишину",
+                fr: "ne pas déranger les autres invités et garder le silence",
                 en: "don’t disturb other guests, and keep quiet",
                 de: "stören Sie andere Gäste nicht und bleiben Sie ruhig"
             },
             "plannin-block-list-item-2": {
-                ru: "не трогайте чужих животных",
+                fr: "ne touchez pas les animaux étrangers",
                 en: "don’t touch other people's animals",
                 de: "berühre keine Tiere anderer Leute"
             },
             "plannin-block-list-item-3": {
-                ru: "присматривайте за своими детьми и животными",
+                fr: "prenez soin de vos enfants et animaux",
                 en: "watch over your children and animals",
                 de: "pass auf deine Kinder und Tiere auf"
             },
             "plannin-block-list-item-4": {
-                ru: "не курить",
+                fr: "ne pas fumer",
                 en: "no smoking",
                 de: "nichtraucher"
             },
             "plannin-block-list-item-5": {
-                ru: "соблюдайте культуру употребления алкоголя",
+                fr: "respectez la culture de la consommation d'alcool",
                 en: "observe the culture of drinking alcohol",
                 de: "beobachten Sie die Kultur des Alkoholkonsums"
             },
             "plannin-block-list-item-6": {
-                ru: "будьте осторожны с огнем",
+                fr: "soyez prudent avec le feu",
                 en: "be careful with fire",
                 de: "sei vorsichtig mit Feuer"
             },
             "plannin-block-list-item-7": {
-                ru: "не мусорьте",
+                fr: "ne pas ordures",
                 en: "don’t litter",
                 de: "nicht wegwerfen"
             },
             "plannin-block-list-item-8": {
-                ru: "заботьтесь обо всех природных объектах",
+                fr: "prenez soin de tous les objets naturels",
                 en: "take care of all natural objects",
                 de: "kümmere dich um alle natürlichen Gegenstände"
             },
             "spoller-title-1": {
-                ru: "Можно ли прийти к вам с собакой?",
+                fr: "Est-il possible de venir à vous avec le chien?",
                 en: "Is it possible to come to you with a dog?",
                 de: "Ist es möglich, mit einem Hund zu Ihnen zu kommen?"
             },
             "spoller-title-2": {
-                ru: "Во сколько производится регистрация заезда и отъезда?",
+                fr: "À quelle heure s'effectue l'enregistrement et le départ?",
                 en: "What time is check in and check out?",
                 de: "Wann ist Check-in und Check-out?"
             },
             "spoller-title-3": {
-                ru: "Что я должен взять с собой?",
+                fr: "Que dois-je prendre avec moi?",
                 en: "What should I bring with me?",
                 de: "Was soll ich mitbringen?"
             },
             "spoller-title-4": {
-                ru: "Как далеко друг от друга расположены купола?",
+                fr: "À quelle distance se trouvent les dômes?",
                 en: "How far apart are the domes?  ",
                 de: "Wie weit sind die Kuppeln voneinander entfernt?"
             },
             "spoller-title-5": {
-                ru: "Удобна ли дорога к глэмпингу?",
+                fr: "La route vers Glamping est-elle confortable?",
                 en: "Is the road to the glamping convenient?",
                 de: "Ist der Weg zum Glamping bequem?"
             },
             "spoller-title-6": {
-                ru: "Что мне делать, если моя поездка отменяется?",
+                fr: "Que dois-je faire si mon voyage est annulé?",
                 en: "What should I do if my trip is cancelled?",
                 de: "Was soll ich tun, wenn meine Reise storniert wird?"
             },
             "spoller-title-7": {
-                ru: "Как я могу добраться до глэмпинга?",
+                fr: "Comment puis-je arriver au Glamping?",
                 en: "How can I get to glamping?",
                 de: "Wie komme ich zum Glamping?"
             },
             "contacts-title": {
-                ru: "Контакты.",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakt"
             },
             "contacts-text-1": {
-                ru: "Наш глэмпинг расположен в 30 км от Тбилиси.",
+                fr: "Notre Glamping est situé à 30 km de Tbilissi.",
                 en: "Our glamping is located 30 km from Tbilisi.",
                 de: "Unser Glamping liegt 30 km von Tiflis entfernt."
             },
             "contacts-text-2": {
-                ru: "Адрес: Грузия,Внутренняя Картли, муниципалитет Каспи, Кавтисхеви,",
+                fr: "Adresse: Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi,",
                 en: "Adress: Georgia,Inner Kartli, KaspiMunicipality, Kavtiskhevi,",
                 de: "Adresse: Georgien,Inneres Kartli, Gemeinde Kaspi, Kavt'iskhevi,"
             },
             "contacts-text-3": {
-                ru: "Номер телефона:",
+                fr: "Numéro de téléphone:",
                 en: "Phone number:",
                 de: "Telefonnummer:"
             },
             "contacts-text-4": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "Email:",
                 de: "Email:"
             },
             "footer-link-1": {
-                ru: "Главная",
+                fr: "Principale",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "footer-link-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "footer-link-3": {
-                ru: "Достопримечательности",
+                fr: "Curiosités",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "footer-link-4": {
-                ru: "Спецаильные предложения",
+                fr: "Offre spéciale",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "footer-link-5": {
-                ru: "Атмосфера",
+                fr: "Atmosphère",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "footer-link-6": {
-                ru: "Вопросы",
+                fr: "Questions",
                 en: "FAQ",
                 de: "Fragen"
             },
             "footer-link-7": {
-                ru: "Контакты",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "footer-sub-title-1": {
-                ru: "Адрес",
+                fr: "Adresse",
                 en: "Adress",
                 de: "Anschrift"
             },
             "footer-sub-title-2": {
-                ru: "Номер телефона",
+                fr: "Numéro de téléphone",
                 en: "Phone number",
                 de: "Telefonnummer"
             },
             "footer-sub-title-3": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "E-mail:",
                 de: "E-mail:"
             },
             "footer-sub-text-1": {
-                ru: "Грузия, Внутренняя Картли, муниципалитет Каспи,Кавтисхеви, 41.869560 44.448465",
+                fr: "Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi, 41.869560 44.448465",
                 en: "Georgia, Inner Kartli, Kaspi Municipality,Kavtiskhevi, 41.869560 44.448465",
                 de: "Georgien, Innere Kartlien, Kaspi Gemeinde,Kawtischewi, 41.869560 44.448465"
             }
         };
         const certificatesPage = {
             "header__btn-subMenu": {
-                ru: "RU",
+                fr: "FR",
                 en: "EN",
                 de: "DE"
             },
             "header__title-1": {
-                ru: "Главная",
+                fr: "Accueil",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "header__title-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "header__title-3": {
-                ru: "Достопримечательности",
+                fr: "Attractions Touristiques",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "header__title-4": {
-                ru: "Специальные предложения",
+                fr: "Offres Spéciales",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "header__title-5": {
-                ru: "Атмосфера",
+                fr: "Ambiance",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "header__title-6": {
-                ru: "Вопросы",
+                fr: "FAQ",
                 en: "FAQ",
                 de: "Fragen"
             },
             "header__title-7": {
-                ru: "Контакты",
+                fr: "Coordonnées",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "header__title-8": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
             "header__title-9": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
             "header__text-1": {
-                ru: "Подарочные сертификаты",
+                fr: "Chèques-cadeaux",
                 en: "Gift certificates",
                 de: "Geschenkbescheinigungen"
             },
             "footer-link-1": {
-                ru: "Главная",
+                fr: "Principale",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "footer-link-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "footer-link-3": {
-                ru: "Достопримечательности",
+                fr: "Curiosités",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "footer-link-4": {
-                ru: "Спецаильные предложения",
+                fr: "Offre spéciale",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "footer-link-5": {
-                ru: "Атмосфера",
+                fr: "Atmosphère",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "footer-link-6": {
-                ru: "Вопросы",
+                fr: "Questions",
                 en: "FAQ",
                 de: "Fragen"
             },
             "footer-link-7": {
-                ru: "Контакты",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "footer-sub-title-1": {
-                ru: "Адрес",
+                fr: "Adresse",
                 en: "Adress",
                 de: "Anschrift"
             },
             "footer-sub-title-2": {
-                ru: "Номер телефона",
+                fr: "Numéro de téléphone",
                 en: "Phone number",
                 de: "Telefonnummer"
             },
             "footer-sub-title-3": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "E-mail:",
                 de: "E-mail:"
             },
             "footer-sub-text-1": {
-                ru: "Грузия, Внутренняя Картли, муниципалитет Каспи,Кавтисхеви, 41.869560 44.448465",
+                fr: "Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi, 41.869560 44.448465",
                 en: "Georgia, Inner Kartli, Kaspi Municipality,Kavtiskhevi, 41.869560 44.448465",
                 de: "Georgien, Innere Kartlien, Kaspi Gemeinde,Kawtischewi, 41.869560 44.448465"
             },
             "block-text-1": {
-                ru: "Подарочный сертификат glamping - это воплощение идеального подарка для любителей приключений и отдыха.",
+                fr: "Un certificat-cadeau de glamping est la quintessence d'un cadeau parfait pour les amateurs d'aventure et de détente.",
                 en: "A glamping gift certificate is the epitome of a perfect present for adventure and relaxation enthusiasts.",
                 de: "Ein Glamping-Geschenkgutschein ist der Inbegriff eines perfekten Geschenks für Abenteuer- und Entspannungsbegeisterte."
             },
             "block-text-2": {
-                ru: "Это возможность воссоединиться с природой в комфорте и стиле, создавая заветные воспоминания в захватывающих дух природных условиях. С подарочным сертификатом glamping вы дарите радость прогулок на свежем воздухе и роскошь уютных уединений - все в одной восхитительной упаковке",
+                fr: "C'est un billet pour renouer avec la nature dans le confort et le style, en créant des souvenirs précieux dans des décors naturels à couper le souffle. Avec un certificat-cadeau de glamping, vous offrez la joie des escapades en plein air et le luxe des retraites confortables, le tout dans un seul et délicieux forfait",
                 en: "It's a ticket to reconnect with nature in comfort and style, creating cherished memories in breathtaking natural settings. With a glamping gift certificate, you're gifting the joy of outdoor escapades and the luxury of cozy retreats, all in one delightful package",
                 de: "Es ist eine Eintrittskarte, um sich mit Komfort und Stil wieder mit der Natur zu verbinden und wertvolle Erinnerungen in atemberaubender Naturlandschaft zu schaffen. Mit einem Glamping-Geschenkgutschein schenken Sie die Freude an Outdoor-Eskapaden und den Luxus gemütlicher Rückzugsorte in einem entzückenden Paket"
             },
             "what-certificates-title": {
-                ru: "Какие сертификаты у нас есть",
+                fr: "Quels certificats nous avons",
                 en: "What certificates we have",
                 de: "Welche Zertifikate wir haben"
             },
             "how-to-use-title": {
-                ru: "Как использовать сертификат",
+                fr: "Comment utiliser le certificat",
                 en: "How to use the certificate",
                 de: "So verwenden Sie das Zertifikat"
             },
             "mindori-title": {
-                ru: "Что делать в Мидори",
+                fr: "Que faire à Midori",
                 en: "What to do at Mindori",
                 de: "Was tun bei Midori"
             },
             "mindori-text-card-1": {
-                ru: "Расслабьтесь и восстановите силы с помощью безмятежных занятий йогой на лоне природы",
+                fr: "Détendez-vous et ressourcez-vous avec des séances de yoga sereines au milieu de la nature",
                 en: "Relax and rejuvenate with serene yoga sessions amidst nature",
                 de: "Entspannen und regenerieren Sie sich bei ruhigen Yoga-Sitzungen inmitten der Natur"
             },
             "mindori-text-card-2": {
-                ru: "Отправляйтесь в захватывающие велосипедные приключения",
-                en: "Embark on thrilling biking adventures ",
+                fr: "Embarquez pour des aventures passionnantes à vélo",
+                en: "Embark on thrilling biking adventures",
                 de: "Begeben Sie sich auf aufregende Bike-Abenteuer"
             },
             "mindori-text-card-3": {
-                ru: "Побалуйте себя абсолютным расслаблением в окружении спокойствия природы",
+                fr: "Offrez-vous une détente ultime, entouré par la tranquillité de la nature",
                 en: "Indulge in ultimate relaxation, surrounded by nature's tranquility",
                 de: "Gönnen Sie sich ultimative Entspannung, umgeben von der Ruhe der Natur"
             },
             "mindori-text-card-4": {
-                ru: "Соберитесь вокруг и насладитесь настольными играми и дартсом",
+                fr: "Соберитесь вокруг и насладитесь настольными играми и дартсом",
                 en: "Gather around and enjoy board games and darts",
                 de: "Versammeln Sie sich und genießen Sie Brettspiele und Darts"
             },
             "mindori-text-card-5": {
-                ru: "Насладитесь обжигающими блюдами барбекю под открытым небом",
+                fr: "Rassemblez-vous et profitez des jeux de société et des fléchettes",
                 en: "Delight in sizzling BBQ feasts  under the open sky",
                 de: "Genießen Sie brutzelnde Grillfeste unter freiem Himmel"
             },
             "mindori-text-card-change-1": {
-                ru: "Расслабляющие занятия йогой",
+                fr: "Séances de yoga relaxant",
                 en: "Relax yoga sessions",
                 de: "Entspannungs-Yoga-Sitzungen"
             },
             "mindori-text-card-change-2": {
-                ru: "Отправляйтесь в захватывающие велосипедные приключения",
-                en: "Embark on thrilling biking adventures ",
+                fr: "Embarquez pour des aventures passionnantes à vélo",
+                en: "Embark on thrilling biking adventures",
                 de: "Begeben Sie sich auf aufregende Bike-Abenteuer"
             },
             "mindori-text-card-change-3": {
-                ru: "Почувствуйте природу",
+                fr: "Sentez la nature",
                 en: "Feel the nature",
                 de: "Spüren Sie die Natur"
             },
             "mindori-text-card-change-4": {
-                ru: "Наслаждайтесь настольными играми",
+                fr: "Profitez des jeux de société",
                 en: "Enjoy board games",
                 de: "Genießen Sie Brettspiele"
             },
             "mindori-text-card-change-5": {
-                ru: "Насладитесь обжигающим барбекю",
+                fr: "Délice au BARBECUE grésillant",
                 en: "Delight in sizzling BBQ",
                 de: "Genießen Sie brutzelndes BBQ"
             },
             "how-to-buy-title": {
-                ru: "Как купить сертификат",
+                fr: "Comment acheter un certificat",
                 en: "How to buy a certificate",
                 de: "So kaufen Sie ein Zertifikat"
             },
             "how-to-buy-text-1": {
-                ru: "Пожалуйста, выберите сумму, на которую вы хотите приобрести сертификат.",
+                fr: "Veuillez choisir le montant pour lequel vous souhaitez acheter un certificat.",
                 en: "Please  choose the amount for which you want to buy a certificate.",
                 de: "Bitte wählen Sie den Betrag, für den Sie ein Zertifikat kaufen möchten."
             },
             "how-to-buy-text-2": {
-                ru: "Сертификат действителен в течение 1 года.",
+                fr: "Le certificat est valable 1 an.",
                 en: "The certificate is valid for 1 year.",
                 de: "Das Zertifikat ist 1 Jahr gültig."
             },
             "how-to-buy-text-3": {
-                ru: "Если у вас есть какие-либо вопросы, заполните контактную форму, и наши менеджеры свяжутся с вами в ближайшее время.",
+                fr: "Si vous avez des questions, remplissez le formulaire de contact et nos responsables vous contacteront sous peu.",
                 en: "If you have any questions, fill in the contact form, and our managers will contact you shortly.",
                 de: "Wenn Sie Fragen haben, füllen Sie das Kontaktformular aus und unsere Manager werden sich in Kürze mit Ihnen in Verbindung setzen."
             },
             "how-to-buy-text-4": {
-                ru: "Мы обсудим информацию о наилучших вариантах с учетом ваших предпочтений и требований.",
+                fr: "Nous discuterons des informations sur les meilleures options adaptées à vos préférences et exigences.",
                 en: "We'll discuss the information about the best options tailored to your preferences and requirements.",
                 de: "Wir besprechen die Informationen über die besten Optionen, die auf Ihre Vorlieben und Anforderungen zugeschnitten sind."
             },
             "how-to-buy-choose-ammount": {
-                ru: "Выберите сумму",
+                fr: "Choisissez le montant",
                 en: "Choose the amount",
                 de: "Wählen Sie den Betrag"
             },
             "how-to-buy-certificate": {
-                ru: "Купите сертификат",
+                fr: "Acheter un certificat",
                 en: "Buy a certificate",
                 de: "Kaufen Sie ein Zertifikat"
             },
             "how-to-buy-form-label-1": {
-                ru: "Имя",
+                fr: "Nom",
                 en: "Name",
                 de: "Name"
             },
             "how-to-buy-form-label-2": {
-                ru: "Номер телефона",
+                fr: "Numéro de téléphone",
                 en: "Phone number",
                 de: "Telefonnummer"
             },
             "how-to-buy-form-btn": {
-                ru: "Отправить форму",
+                fr: "Envoyer un formulaire",
                 en: "Send a form",
                 de: "Senden Sie ein Formular"
             },
             "contacts-title": {
-                ru: "Контакты.",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakt"
             },
             "contacts-text-1": {
-                ru: "Наш глэмпинг расположен в 30 км от Тбилиси.",
+                fr: "Notre Glamping est situé à 30 km de Tbilissi.",
                 en: "Our glamping is located 30 km from Tbilisi.",
                 de: "Unser Glamping liegt 30 km von Tiflis entfernt."
             },
             "contacts-text-2": {
-                ru: "Адрес: Грузия,Внутренняя Картли, муниципалитет Каспи, Кавтисхеви,",
+                fr: "Adresse: Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi,",
                 en: "Adress: Georgia,Inner Kartli, KaspiMunicipality, Kavtiskhevi,",
                 de: "Adresse: Georgien,Inneres Kartli, Gemeinde Kaspi, Kavt'iskhevi,"
             },
             "contacts-text-3": {
-                ru: "Номер телефона:",
+                fr: "Numéro de téléphone:",
                 en: "Phone number:",
                 de: "Telefonnummer:"
             },
             "contacts-text-4": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "Email:",
                 de: "Email:"
             }
         };
         const bookingPage = {
             "header__btn-subMenu": {
-                ru: "RU",
+                fr: "FR",
                 en: "EN",
                 de: "DE"
             },
             "header__title-1": {
-                ru: "Главная",
+                fr: "Accueil",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "header__title-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "header__title-3": {
-                ru: "Достопримечательности",
+                fr: "Attractions Touristiques",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "header__title-4": {
-                ru: "Специальные предложения",
+                fr: "Offres Spéciales",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "header__title-5": {
-                ru: "Атмосфера",
+                fr: "Ambiance",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "header__title-6": {
-                ru: "Вопросы",
+                fr: "FAQ",
                 en: "FAQ",
                 de: "Fragen"
             },
             "header__title-7": {
-                ru: "Контакты",
+                fr: "Coordonnées",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "header__title-8": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
             "header__title-9": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
+            "header__text-1": {
+                fr: "Libérez Votre Aventure: Le Premier Refuge De Glamping De Géorgie",
+                en: "Unleash Your Adventure: Georgia's Premier Glamping Haven",
+                de: "Lassen Sie Ihrem Abenteuer freien Lauf: Der beste Ort für einen glamourösen Urlaub in Georgia"
+            },
+            "header__text-2": {
+                fr: "Renouez avec la Nature et Redécouvrez-vous",
+                en: "Reconnect with Nature and Rediscover Yourself",
+                de: "Vereinige dich mit der Natur und entdecke dich neu"
+            },
             "footer-link-1": {
-                ru: "Главная",
+                fr: "Principale",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "footer-link-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "footer-link-3": {
-                ru: "Достопримечательности",
+                fr: "Curiosités",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "footer-link-4": {
-                ru: "Спецаильные предложения",
+                fr: "Offre spéciale",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "footer-link-5": {
-                ru: "Атмосфера",
+                fr: "Atmosphère",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "footer-link-6": {
-                ru: "Вопросы",
+                fr: "Questions",
                 en: "FAQ",
                 de: "Fragen"
             },
             "footer-link-7": {
-                ru: "Контакты",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "footer-sub-title-1": {
-                ru: "Адрес",
+                fr: "Adresse",
                 en: "Adress",
                 de: "Anschrift"
             },
             "footer-sub-title-2": {
-                ru: "Номер телефона",
+                fr: "Numéro de téléphone",
                 en: "Phone number",
                 de: "Telefonnummer"
             },
             "footer-sub-title-3": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "E-mail:",
                 de: "E-mail:"
             },
             "footer-sub-text-1": {
-                ru: "Грузия, Внутренняя Картли, муниципалитет Каспи,Кавтисхеви, 41.869560 44.448465",
+                fr: "Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi, 41.869560 44.448465",
                 en: "Georgia, Inner Kartli, Kaspi Municipality,Kavtiskhevi, 41.869560 44.448465",
                 de: "Georgien, Innere Kartlien, Kaspi Gemeinde,Kawtischewi, 41.869560 44.448465"
             },
             "contacts-title": {
-                ru: "Контакты.",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakt"
             },
             "contacts-text-1": {
-                ru: "Наш глэмпинг расположен в 30 км от Тбилиси.",
+                fr: "Notre Glamping est situé à 30 km de Tbilissi.",
                 en: "Our glamping is located 30 km from Tbilisi.",
                 de: "Unser Glamping liegt 30 km von Tiflis entfernt."
             },
             "contacts-text-2": {
-                ru: "Адрес: Грузия,Внутренняя Картли, муниципалитет Каспи, Кавтисхеви,",
+                fr: "Adresse: Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi,",
                 en: "Adress: Georgia,Inner Kartli, KaspiMunicipality, Kavtiskhevi,",
                 de: "Adresse: Georgien,Inneres Kartli, Gemeinde Kaspi, Kavt'iskhevi,"
             },
             "contacts-text-3": {
-                ru: "Номер телефона:",
+                fr: "Numéro de téléphone:",
                 en: "Phone number:",
                 de: "Telefonnummer:"
             },
             "contacts-text-4": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "Email:",
                 de: "Email:"
             },
             "form-in-date": {
-                ru: "Дата заезда",
+                fr: "Date d'arrivée",
                 en: "Check-in date",
                 de: "Anreisedatum"
             },
             "form-out-date": {
-                ru: "Дата выезда",
+                fr: "Date de départ",
                 en: "Check-out date",
                 de: "Abreisedatum"
             },
             "form-number-guests": {
-                ru: "Число гостей",
+                fr: "Nombre d'invités",
                 en: "Number of guests",
                 de: "Anzahl der Gäste"
             },
             "form-btn": {
-                ru: "Поиск",
+                fr: "Chercher",
                 en: "Search",
                 de: "Suche"
             },
             "card-geodesic-dome-title": {
-                ru: "Геодезический купол",
+                fr: "Dôme géodésique",
                 en: "Geodesic dome",
                 de: "Geodätische Kuppel"
             },
             "card-convenience-guests-1": {
-                ru: "2 гостя",
+                fr: "2 invités",
                 en: "2 guest",
                 de: "2 gäste"
             },
             "card-convenience-area-1": {
-                ru: "Пл. 50 м2",
+                fr: "sur. 50 m2",
                 en: "50 m² area",
                 de: "50 m2 Fl"
             },
             "card-convenience-size-1": {
-                ru: "king size",
+                fr: "taille roi",
                 en: "king size",
                 de: "king size"
             },
             "card-convenience-bed-1": {
-                ru: "Дп кровать",
+                fr: "lit suppl.",
                 en: "extra bed",
                 de: "Zustellbett"
             },
             "card-convenience-furako": {
-                ru: "Фурако",
+                fr: "furako",
                 en: "furako",
                 de: "furako"
             },
             "card-convenience-bbq": {
-                ru: "Барбекю",
+                fr: "BBQ",
                 en: "BBQ",
                 de: "BBQ"
             },
             "card-geodesic-dome-list-item-1": {
-                ru: "Двуспальная кровать: King size",
+                fr: "Lit double: Très grand lit",
                 en: "Double bed: King size",
                 de: "Doppelbett: Kingsize"
             },
             "card-geodesic-dome-list-item-2": {
-                ru: "Туалет и душевая кабина",
+                fr: "Toilette et douche",
                 en: "Toilet and shower",
                 de: "Toilette und Dusche"
             },
             "card-geodesic-dome-list-item-3": {
-                ru: "Отопление: внутренний блок кондиционирования воздуха и камины в зимнее время",
+                fr: "Chauffage: unité de climatisation intérieure et cheminées en hiver",
                 en: "Heating: indoor air conditioning unit and fireplaces in winter",
                 de: "Heizung: Innenklimaanlage und Kamine im Winter"
             },
             "card-geodesic-dome-list-item-4": {
-                ru: "Питьевая вода, чай, посуда, стаканы, столовые приборы и т.д.",
+                fr: "Eau potable, thé, vaisselle, verres, couverts, etc.",
                 en: "Drinking water, tea, dishes, glasses, cutlery, etc.",
                 de: "Trinkwasser, Tee, Geschirr, Gläser, Besteck usw."
             },
             "card-geodesic-dome-list-item-5": {
-                ru: "Площадка для разведения костра с видом на холмы",
+                fr: "Zone de feu de joie avec vue sur les collines",
                 en: "Bonfire area with a view of the hills",
                 de: "Lagerfeuerplatz mit Blick auf die Hügel"
             },
             "card-geodesic-dome-list-item-6": {
-                ru: "Детали Комод, вешалки, полотенца, зеркало",
+                fr: "Détails Commode, cintres, serviettes, miroir",
                 en: "Details Chest of drawers, hangers, towels, mirror",
                 de: "Details Kommode, Kleiderbügel, Handtücher, Spiegel"
             },
             "card-geodesic-dome-btn": {
-                ru: "Выбор",
+                fr: "Choisir",
                 en: "Choose",
                 de: "Choose"
             },
             "card-geodesic-dome-price": {
-                ru: "от 100 долларов",
+                fr: "à partir de 100$",
                 en: "from 100$",
                 de: "from 100$"
             },
             "card-sauna-title": {
-                ru: "Сауна",
+                fr: "Le Sauna",
                 en: "Sauna",
                 de: "Sauna"
             },
             "card-convenience-guests-2": {
-                ru: "2 гостя",
+                fr: "2 invités",
                 en: "2 guest",
                 de: "2 gäste"
             },
             "card-convenience-area-2": {
-                ru: "Пл. 50 м2",
+                fr: "sur. 50 m2",
                 en: "50 m² area",
                 de: "50 m2 Fl"
             },
             "card-convenience-size-2": {
-                ru: "Бл кровать",
+                fr: "taille roi",
                 en: "king size",
                 de: "Kingsize"
             },
             "card-convenience-bed-2": {
-                ru: "Дп кровать",
+                fr: "lit suppl.",
                 en: "extra bed",
                 de: "Zustellbett"
             },
             "card-convenience-sauna": {
-                ru: "Сауна",
+                fr: "le sauna",
                 en: "sauna",
                 de: "sauna"
             },
             "card-convenience-food": {
-                ru: "Еда",
+                fr: "nourriture",
                 en: "food",
                 de: "Lebensmittel"
             },
             "card-sauna-list-item-1": {
-                ru: "2 Двуспальные кровати: King size, матрас, белоснежное постельное белье",
+                fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
                 en: "2 Double beds: King size, mattress Snow White linens",
                 de: "2 Doppelbetten: Kingsize, Matratze Schneeweiße Bettwäsche"
             },
             "card-sauna-list-item-2": {
-                ru: "Отопление: тепловая пушка",
+                fr: "Chauffage: pistolet à air chaud",
                 en: "Heating: heat gun",
                 de: "Heizung: Heißluftpistole"
             },
             "card-sauna-list-item-3": {
-                ru: "Чайный набор, питьевая вода, чай, посуда, стаканы, столовые приборы и т.д. вы можете взять с собой - БЕЗ дополнительной оплаты",
+                fr: "Un service à thé Eau potable, thé, vaisselle, verres, couverts, etc. vous pouvez prendre - PAS de frais supplémentaires",
                 en: "A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges",
                 de: "Ein Teeservice Trinkwasser, Tee, Geschirr, Gläser, Besteck usw. sie können nehmen - KEINE zusätzlichen Gebühren"
             },
             "card-sauna-list-item-4": {
-                ru: "Площадка для разведения костра с прекрасным видом на холмы",
+                fr: "Coin feu de camp avec une belle vue sur les collines",
                 en: "Campfire area with a beautiful view of the hills",
                 de: "Lagerfeuerplatz mit schöner Aussicht auf die Hügel"
             },
             "card-sauna-list-item-5": {
-                ru: "На территории глэмпинга общего пользования:",
+                fr: "Sur le territoire du glamping en usage commun:",
                 en: "On the territory of the glamping in common use:",
                 de: "Auf dem Territorium des Glamping im gemeinsamen Gebrauch:"
             },
             "card-sauna-list-item-6": {
-                ru: "летняя кухня (микроволновая печь, холодильник, плита, мангал, казан, посуда и т.д.)",
+                fr: "cuisine d'été (micro-ondes, réfrigérateur, cuisinière, barbecue grill, chaudron, vaisselle, etc.)",
                 en: "summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron,dishes, etc.)",
                 de: "sommerküche (Mikrowelle, Kühlschrank, Herd, Grill, Kessel, Geschirr usw.).)"
             },
             "card-sauna-list-item-7": {
-                ru: "гостиная с открытым камином",
+                fr: "salon avec feu ouvert",
                 en: "lounge with open fire",
                 de: "lounge mit offenem Kamin"
             },
             "card-sauna-list-item-8": {
-                ru: "душевая кабина (горячая, холодная вода), туалет",
+                fr: "douche (eau chaude et froide), toilettes",
                 en: "shower (hot, cold water), toilet",
                 de: "dusche (warmes, kaltes Wasser), WC"
             },
             "card-sauna-btn": {
-                ru: "Выбор",
+                fr: "Choisir",
                 en: "Choose",
                 de: "Choose"
             },
             "card-sauna-price": {
-                ru: "от 100 долларов",
+                fr: "à partir de 100$",
                 en: "from 100$",
                 de: "from 100$"
             }
         };
         const cardPage = {
             "header__btn-subMenu": {
-                ru: "RU",
+                fr: "FR",
                 en: "EN",
                 de: "DE"
             },
             "header__title-1": {
-                ru: "Главная",
+                fr: "Accueil",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "header__title-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "header__title-3": {
-                ru: "Достопримечательности",
+                fr: "Attractions Touristiques",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "header__title-4": {
-                ru: "Специальные предложения",
+                fr: "Offres Spéciales",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "header__title-5": {
-                ru: "Атмосфера",
+                fr: "Ambiance",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "header__title-6": {
-                ru: "Вопросы",
+                fr: "FAQ",
                 en: "FAQ",
                 de: "Fragen"
             },
             "header__title-7": {
-                ru: "Контакты",
+                fr: "Coordonnées",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "header__title-8": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
             "header__title-9": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
+            "header__text-1": {
+                fr: "Libérez Votre Aventure: Le Premier Refuge De Glamping De Géorgie",
+                en: "Unleash Your Adventure: Georgia's Premier Glamping Haven",
+                de: "Lassen Sie Ihrem Abenteuer freien Lauf: Der beste Ort für einen glamourösen Urlaub in Georgia"
+            },
+            "header__text-2": {
+                fr: "Renouez avec la Nature et Redécouvrez-vous",
+                en: "Reconnect with Nature and Rediscover Yourself",
+                de: "Vereinige dich mit der Natur und entdecke dich neu"
+            },
             "footer-link-1": {
-                ru: "Главная",
+                fr: "Principale",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "footer-link-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "footer-link-3": {
-                ru: "Достопримечательности",
+                fr: "Curiosités",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "footer-link-4": {
-                ru: "Спецаильные предложения",
+                fr: "Offre spéciale",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "footer-link-5": {
-                ru: "Атмосфера",
+                fr: "Atmosphère",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "footer-link-6": {
-                ru: "Вопросы",
+                fr: "Questions",
                 en: "FAQ",
                 de: "Fragen"
             },
             "footer-link-7": {
-                ru: "Контакты",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "footer-sub-title-1": {
-                ru: "Адрес",
+                fr: "Adresse",
                 en: "Adress",
                 de: "Anschrift"
             },
             "footer-sub-title-2": {
-                ru: "Номер телефона",
+                fr: "Numéro de téléphone",
                 en: "Phone number",
                 de: "Telefonnummer"
             },
             "footer-sub-title-3": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "E-mail:",
                 de: "E-mail:"
             },
             "footer-sub-text-1": {
-                ru: "Грузия, Внутренняя Картли, муниципалитет Каспи,Кавтисхеви, 41.869560 44.448465",
+                fr: "Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi, 41.869560 44.448465",
                 en: "Georgia, Inner Kartli, Kaspi Municipality,Kavtiskhevi, 41.869560 44.448465",
                 de: "Georgien, Innere Kartlien, Kaspi Gemeinde,Kawtischewi, 41.869560 44.448465"
             },
             "contacts-title": {
-                ru: "Контакты.",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakt"
             },
             "contacts-text-1": {
-                ru: "Наш глэмпинг расположен в 30 км от Тбилиси.",
+                fr: "Notre Glamping est situé à 30 km de Tbilissi.",
                 en: "Our glamping is located 30 km from Tbilisi.",
                 de: "Unser Glamping liegt 30 km von Tiflis entfernt."
             },
             "contacts-text-2": {
-                ru: "Адрес: Грузия,Внутренняя Картли, муниципалитет Каспи, Кавтисхеви,",
+                fr: "Adresse: Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi,",
                 en: "Adress: Georgia,Inner Kartli, KaspiMunicipality, Kavtiskhevi,",
                 de: "Adresse: Georgien,Inneres Kartli, Gemeinde Kaspi, Kavt'iskhevi,"
             },
             "contacts-text-3": {
-                ru: "Номер телефона:",
+                fr: "Numéro de téléphone:",
                 en: "Phone number:",
                 de: "Telefonnummer:"
             },
             "contacts-text-4": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "Email:",
                 de: "Email:"
             },
             "card-title-1": {
-                ru: "Геодезический купол",
+                fr: "Dôme Géodésique:",
                 en: "Geodesic Dome:",
                 de: "Geodätische Kuppel"
             },
             "card-convenience-bed": {
-                ru: "King size",
-                en: "King size bed",
+                fr: "taille roi",
+                en: "King size",
                 de: "Kingsize-Bett"
             },
             "card-convenience-area": {
-                ru: "Пл. 50 м2",
+                fr: "sur. 50 m2",
                 en: "50 m² area",
                 de: "50 m2 Fl"
             },
             "card-convenience-smoking": {
-                ru: "Не курить",
+                fr: "Non fumeur",
                 en: "No smoking",
                 de: "Nichtraucher"
             },
             "card-convenience-pet": {
-                ru: "С животными",
+                fr: "Animaux acceptés",
                 en: "Pet friendly",
                 de: "Tierfreundliche"
             },
             "card-convenience-parking": {
-                ru: "Парковка",
+                fr: "Stationnement gratuit",
                 en: "Free parking",
                 de: "Kostenloser Parkplatz"
             },
             "card-convenience-bath": {
-                ru: "Ванна",
+                fr: "Stationnement gratuit",
                 en: "Free parking",
-                de: "Bad"
+                de: "Free parking"
             },
             "card-information-title": {
-                ru: "Информация",
+                fr: "Informations",
                 en: "Information",
                 de: "Information"
             },
             "card-information-text-1": {
-                ru: "Наши геодезические купола, вдохновленные элегантностью природы, являются архитектурными чудесами. Зайдя внутрь, вы обнаружите гармоничное пространство, в котором роскошь сочетается с дикой природой. Вас ждут приключения в окружении инноваций и комфорта.",
+                fr: "Nos coupoles géodésiques, inspirées de l'élégance de la nature, sont des merveilles architecturales. Entrez à l'intérieur et vous trouverez un espace harmonieux qui équilibre le luxe avec la nature sauvage. L'aventure vous attend, enveloppée dans l'étreinte de l'innovation et du confort.",
                 en: "Our geodesic domes, inspired by nature's elegance, are architectural marvels. Step inside, and you'll find a harmonious space that balances luxury with the wilderness. Adventure awaits, wrapped in the embrace of innovation and comfort.",
                 de: "Unsere geodätischen Kuppeln, inspiriert von der Eleganz der Natur, sind architektonische Wunderwerke. Treten Sie ein und Sie werden einen harmonischen Raum finden, der Luxus mit der Wildnis in Einklang bringt. Abenteuer erwartet Sie, eingehüllt in Innovation und Komfort."
             },
             "card-geodesic-dome-list-item-1": {
-                ru: "Двуспальная кровать: King size",
+                fr: "Lit double: Très grand lit",
                 en: "Double bed: King size",
                 de: "Doppelbett: Kingsize"
             },
             "card-geodesic-dome-list-item-2": {
-                ru: "Туалет и душевая кабина",
+                fr: "WC et douche",
                 en: "Toilet and shower",
                 de: "Toilette und Dusche"
             },
             "card-geodesic-dome-list-item-3": {
-                ru: "Отопление: внутренний блок кондиционирования воздуха и камины в зимнее время",
+                fr: "Chauffage: unité de climatisation intérieure et cheminées en hiver",
                 en: "Heating: indoor air conditioning unit and fireplaces in winter",
                 de: "Heizung: Innenklimaanlage und Kamine im Winter"
             },
             "card-geodesic-dome-list-item-4": {
-                ru: "Питьевая вода, чай, посуда, стаканы, столовые приборы и т.д.",
+                fr: "Eau potable, thé, vaisselle, verres, couverts, etc.",
                 en: "Drinking water, tea, dishes, glasses, cutlery, etc.",
                 de: "Trinkwasser, Tee, Geschirr, Gläser, Besteck usw."
             },
             "card-geodesic-dome-list-item-5": {
-                ru: "Площадка для разведения костра с видом на холмы",
+                fr: "Zone de feu de joie avec vue sur les collines",
                 en: "Bonfire area with a view of the hills",
                 de: "Lagerfeuerplatz mit Blick auf die Hügel"
             },
             "card-geodesic-dome-list-item-6": {
-                ru: "Детали Комод, вешалки, полотенца, зеркало",
+                fr: "Détails Commode, cintres, serviettes, miroir",
                 en: "Details Chest of drawers, hangers, towels, mirror",
                 de: "Details Kommode, Kleiderbügel, Handtücher, Spiegel"
             },
             "card-information-under-text-1-1": {
-                ru: "Экономьте по-крупному и делайте это просто!",
+                fr: "Économisez gros et restez simple!",
                 en: "Save big and keep it simple!",
                 de: "Sparen Sie viel und halten Sie es einfach!"
             },
             "card-information-under-text-1-2": {
-                ru: "Забронируйте полный пакет услуг онлайн по сниженной цене. Воспользуйтесь лучшим соотношением цены и качества для вашего незабываемого глэмпинга, не беспокоясь о дополнительных расходах во время вашего отпуска. Сэкономьте по-крупному и сделайте это просто!",
+                fr: "Réservez notre forfait complet en ligne à un tarif réduit. Profitez du meilleur rapport qualité-prix pour votre aventure de glamping inoubliable sans vous soucier des coûts supplémentaires pendant votre escapade. Économisez gros et restez simple!",
                 en: "Book our full package online at a discounted rate. Embrace the best value for your unforgettable glamping adventure without worrying about extra costs during your getaway. Save big and keep it simple!",
                 de: "Buchen Sie unser Komplettpaket online zu einem ermäßigten Preis. Genießen Sie das beste Preis-Leistungs-Verhältnis für Ihr unvergessliches Glamping-Abenteuer, ohne sich während Ihres Urlaubs um zusätzliche Kosten sorgen zu müssen. Sparen Sie viel und halten Sie es einfach!"
             },
             "form-in-date": {
-                ru: "Дата заезда",
+                fr: "Date d'arrivée",
                 en: "Check-in date",
                 de: "Anreisedatum"
             },
             "form-out-date": {
-                ru: "Дата выезда",
+                fr: "Date de départ",
                 en: "Check-out date",
                 de: "Abreisedatum"
             },
             "form-number-guests": {
-                ru: "Гости",
+                fr: "Invités",
                 en: "Guests",
                 de: "Gäste"
             },
             "form-btn": {
-                ru: "Бронировать",
+                fr: "Livre",
                 en: "Book",
                 de: "Buch"
             },
             "form-stay": {
-                ru: "остаться на",
+                fr: "séjour",
                 en: "stay",
                 de: "Aufenthalt"
             },
             "form-nights": {
-                ru: "ночи",
+                fr: "nuits",
                 en: "nights",
                 de: "bernachtungen"
             },
             "form-service": {
-                ru: "Плата за обслуживание",
+                fr: "Frais de Service",
                 en: "Service Fee",
                 de: "Servicegebühr"
             },
             "form-nights-price": {
-                ru: "ночь",
+                fr: "nuit",
                 en: "night",
                 de: "bernachtungen"
             },
             "form-total": {
-                ru: "Общая стоимость",
+                fr: "Total des Dépenses",
                 en: "Total",
                 de: "Insgesamt"
             }
         };
         const orderPage = {
             "header__btn-subMenu": {
-                ru: "RU",
+                fr: "FR",
                 en: "EN",
                 de: "DE"
             },
             "header__title-1": {
-                ru: "Главная",
+                fr: "Accueil",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "header__title-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "header__title-3": {
-                ru: "Достопримечательности",
+                fr: "Attractions Touristiques",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "header__title-4": {
-                ru: "Специальные предложения",
+                fr: "Offres Spéciales",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "header__title-5": {
-                ru: "Атмосфера",
+                fr: "Ambiance",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "header__title-6": {
-                ru: "Вопросы",
+                fr: "FAQ",
                 en: "FAQ",
                 de: "Fragen"
             },
             "header__title-7": {
-                ru: "Контакты",
+                fr: "Coordonnées",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "header__title-8": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
             "header__title-9": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
+            "header__text-1": {
+                fr: "Libérez Votre Aventure: Le Premier Refuge De Glamping De Géorgie",
+                en: "Unleash Your Adventure: Georgia's Premier Glamping Haven",
+                de: "Lassen Sie Ihrem Abenteuer freien Lauf: Der beste Ort für einen glamourösen Urlaub in Georgia"
+            },
+            "header__text-2": {
+                fr: "Renouez avec la Nature et Redécouvrez-vous",
+                en: "Reconnect with Nature and Rediscover Yourself",
+                de: "Vereinige dich mit der Natur und entdecke dich neu"
+            },
             "footer-link-1": {
-                ru: "Главная",
+                fr: "Principale",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "footer-link-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "footer-link-3": {
-                ru: "Достопримечательности",
+                fr: "Curiosités",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "footer-link-4": {
-                ru: "Спецаильные предложения",
+                fr: "Offre spéciale",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "footer-link-5": {
-                ru: "Атмосфера",
+                fr: "Atmosphère",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "footer-link-6": {
-                ru: "Вопросы",
+                fr: "Questions",
                 en: "FAQ",
                 de: "Fragen"
             },
             "footer-link-7": {
-                ru: "Контакты",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "footer-sub-title-1": {
-                ru: "Адрес",
+                fr: "Adresse",
                 en: "Adress",
                 de: "Anschrift"
             },
             "footer-sub-title-2": {
-                ru: "Номер телефона",
+                fr: "Numéro de téléphone",
                 en: "Phone number",
                 de: "Telefonnummer"
             },
             "footer-sub-title-3": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "E-mail:",
                 de: "E-mail:"
             },
             "footer-sub-text-1": {
-                ru: "Грузия, Внутренняя Картли, муниципалитет Каспи,Кавтисхеви, 41.869560 44.448465",
+                fr: "Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi, 41.869560 44.448465",
                 en: "Georgia, Inner Kartli, Kaspi Municipality,Kavtiskhevi, 41.869560 44.448465",
                 de: "Georgien, Innere Kartlien, Kaspi Gemeinde,Kawtischewi, 41.869560 44.448465"
             },
             "contacts-title": {
-                ru: "Контакты.",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakt"
             },
             "contacts-text-1": {
-                ru: "Наш глэмпинг расположен в 30 км от Тбилиси.",
+                fr: "Notre Glamping est situé à 30 km de Tbilissi.",
                 en: "Our glamping is located 30 km from Tbilisi.",
                 de: "Unser Glamping liegt 30 km von Tiflis entfernt."
             },
             "contacts-text-2": {
-                ru: "Адрес: Грузия,Внутренняя Картли, муниципалитет Каспи, Кавтисхеви,",
+                fr: "Adresse: Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi,",
                 en: "Adress: Georgia,Inner Kartli, KaspiMunicipality, Kavtiskhevi,",
                 de: "Adresse: Georgien,Inneres Kartli, Gemeinde Kaspi, Kavt'iskhevi,"
             },
             "contacts-text-3": {
-                ru: "Номер телефона:",
+                fr: "Numéro de téléphone:",
                 en: "Phone number:",
                 de: "Telefonnummer:"
             },
             "contacts-text-4": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "Email:",
                 de: "Email:"
             },
             "block-title": {
-                ru: "Мой заказ",
+                fr: "Ma Réservation",
                 en: "My Booking",
                 de: "Meine Buchung"
             },
             "card-title-1": {
-                ru: "Геодезический купол",
+                fr: "Dôme Géodésique",
                 en: "Geodesic Dome",
                 de: "Geodätische Kuppel"
             },
             "card-convenience-bed": {
-                ru: "King size",
+                fr: "Taille roi",
                 en: "King size",
                 de: "Kingsize-Bett"
             },
             "card-convenience-area": {
-                ru: "Пл. 50 м2",
+                fr: "sur. 50 m2",
                 en: "50 m² area",
                 de: "50 m2 Fl"
             },
             "card-convenience-guests-1": {
-                ru: "2 гостя",
+                fr: "2 invités",
                 en: "2 guest",
                 de: "2 gäste"
             },
             "card-convenience-bed-1": {
-                ru: "Дп кровать",
+                fr: "lit suppl.",
                 en: "extra bed",
                 de: "Zustellbett"
             },
             "link-more": {
-                ru: "Еще",
+                fr: "Plus",
                 en: "More",
                 de: "Mehr"
             },
             "service-title": {
-                ru: "Дополнительные услуги",
+                fr: "Services Supplémentaires",
                 en: "Extra Services",
                 de: "Zusatzleistungen"
             },
             "service-card-title": {
-                ru: "Завтрак",
+                fr: "Petit Déjeuner",
                 en: "Breakfast",
                 de: "Breakfast"
             },
             "service-card-text": {
-                ru: "Йогурт с фруктами, круассан, сэндвич с лососем, хлопья, яйца, фрукты, чай или кофе, сок, молоко",
+                fr: "Yaourt aux fruits, croissant, sandwich au saumon, céréales, œufs, fruits, thé ou café, jus de fruits, lait",
                 en: "Yogurt with fruits, croissant, sandwich with salmon, cereals, eggs, fruits, tea or coffee, juice, milk",
                 de: "Joghurt mit Früchten, Croissant, Sandwich mit Lachs, Müsli, Eier, Obst, Tee oder Kaffee, Saft, Milch"
             },
             "service-card-guests-1": {
-                ru: "Гости",
+                fr: "Invités",
                 en: "Guests",
                 de: "Freuen"
             },
             "service-card-guests-2": {
-                ru: "Гости",
+                fr: "Invités",
                 en: "Guests",
                 de: "Freuen"
             },
             "service-card-btn-1": {
-                ru: "Добавить",
+                fr: "Ajouter",
                 en: "Add",
                 de: "Hinzufügen"
             },
             "service-card-btn-2": {
-                ru: "Добавить",
+                fr: "Ajouter",
                 en: "Add",
                 de: "Hinzufügen"
             },
             "service-package-title": {
-                ru: "Полный пакет услуг",
+                fr: "Forfait Complet",
                 en: "Full Pacage",
                 de: "Komplettpaket"
             },
             "service-package-text": {
-                ru: "Завтрак, сауна, барбекю, Фурако, джакузи",
+                fr: "Petit déjeuner, sauna, BARBECUE, Furako, jacuzzi",
                 en: "Breakfast, sauna, BBQ, Furako, jacuzzi",
                 de: "Frühstück, Sauna, Grill, Furako, Whirlpool"
             },
             "service-summary-title": {
-                ru: "Сводка",
+                fr: "Résumé",
                 en: "Summary",
                 de: "Zusammenfassung"
             },
             "form-in-date": {
-                ru: "Дата заезда",
+                fr: "Enregistrement",
                 en: "Check-in",
                 de: "Anreisedatum"
             },
             "form-out-date": {
-                ru: "Дата выезда",
+                fr: "Départ",
                 en: "Check-out",
                 de: "Abreisedatum"
             },
             "form-number-guests": {
-                ru: "Гости",
+                fr: "Invités",
                 en: "Guests",
                 de: "Gäste"
             },
             "form-stay": {
-                ru: "остаться на:",
+                fr: "séjour:",
                 en: "stay:",
                 de: "Aufenthalt:"
             },
             "form-nights": {
-                ru: "ночи",
+                fr: "nuits",
                 en: "nights",
                 de: "bernachtungen"
             },
             "form-night": {
-                ru: "ночь",
+                fr: "nuit",
                 en: "night",
                 de: "Nacht"
             },
             "form-total": {
-                ru: "Общая стоимость",
+                fr: "Total des Dépenses",
                 en: "Total",
                 de: "Insgesamt"
             },
             "form-service-fee": {
-                ru: "Плата за обслуживание",
+                fr: "Frais de Service",
                 en: "Service Fee",
                 de: "Servicegebühr"
             },
             "form-breakfast": {
-                ru: "Завтрак",
+                fr: "Petit Déjeuner",
                 en: "Breakfast",
                 de: "Breakfast"
             },
             "form-btn": {
-                ru: "Бронировать",
+                fr: "Livre",
                 en: "Book",
                 de: "Buch"
             }
         };
         const contaсtPage = {
             "header__btn-subMenu": {
-                ru: "RU",
+                fr: "FR",
                 en: "EN",
                 de: "DE"
             },
             "header__title-1": {
-                ru: "Главная",
+                fr: "Accueil",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "header__title-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "header__title-3": {
-                ru: "Достопримечательности",
+                fr: "Attractions Touristiques",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "header__title-4": {
-                ru: "Специальные предложения",
+                fr: "Offres Spéciales",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "header__title-5": {
-                ru: "Атмосфера",
+                fr: "Ambiance",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "header__title-6": {
-                ru: "Вопросы",
+                fr: "FAQ",
                 en: "FAQ",
                 de: "Fragen"
             },
             "header__title-7": {
-                ru: "Контакты",
+                fr: "Coordonnées",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "header__title-8": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
             "header__title-9": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
+            "header__text-1": {
+                fr: "Libérez Votre Aventure: Le Premier Refuge De Glamping De Géorgie",
+                en: "Unleash Your Adventure: Georgia's Premier Glamping Haven",
+                de: "Lassen Sie Ihrem Abenteuer freien Lauf: Der beste Ort für einen glamourösen Urlaub in Georgia"
+            },
+            "header__text-2": {
+                fr: "Renouez avec la Nature et Redécouvrez-vous",
+                en: "Reconnect with Nature and Rediscover Yourself",
+                de: "Vereinige dich mit der Natur und entdecke dich neu"
+            },
             "footer-link-1": {
-                ru: "Главная",
+                fr: "Principale",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "footer-link-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "footer-link-3": {
-                ru: "Достопримечательности",
+                fr: "Curiosités",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "footer-link-4": {
-                ru: "Спецаильные предложения",
+                fr: "Offre spéciale",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "footer-link-5": {
-                ru: "Атмосфера",
+                fr: "Atmosphère",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "footer-link-6": {
-                ru: "Вопросы",
+                fr: "Questions",
                 en: "FAQ",
                 de: "Fragen"
             },
             "footer-link-7": {
-                ru: "Контакты",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "footer-sub-title-1": {
-                ru: "Адрес",
+                fr: "Adresse",
                 en: "Adress",
                 de: "Anschrift"
             },
             "footer-sub-title-2": {
-                ru: "Номер телефона",
+                fr: "Numéro de téléphone",
                 en: "Phone number",
                 de: "Telefonnummer"
             },
             "footer-sub-title-3": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "E-mail:",
                 de: "E-mail:"
             },
             "footer-sub-text-1": {
-                ru: "Грузия, Внутренняя Картли, муниципалитет Каспи,Кавтисхеви, 41.869560 44.448465",
+                fr: "Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi, 41.869560 44.448465",
                 en: "Georgia, Inner Kartli, Kaspi Municipality,Kavtiskhevi, 41.869560 44.448465",
                 de: "Georgien, Innere Kartlien, Kaspi Gemeinde,Kawtischewi, 41.869560 44.448465"
             },
             "contacts-title": {
-                ru: "Контакты.",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakt"
             },
             "contacts-text-1": {
-                ru: "Наш глэмпинг расположен в 30 км от Тбилиси.",
+                fr: "Notre Glamping est situé à 30 km de Tbilissi.",
                 en: "Our glamping is located 30 km from Tbilisi.",
                 de: "Unser Glamping liegt 30 km von Tiflis entfernt."
             },
             "contacts-text-2": {
-                ru: "Адрес: Грузия,Внутренняя Картли, муниципалитет Каспи, Кавтисхеви,",
+                fr: "Adresse: Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi,",
                 en: "Adress: Georgia,Inner Kartli, KaspiMunicipality, Kavtiskhevi,",
                 de: "Adresse: Georgien,Inneres Kartli, Gemeinde Kaspi, Kavt'iskhevi,"
             },
             "contacts-text-3": {
-                ru: "Номер телефона:",
+                fr: "Numéro de téléphone:",
                 en: "Phone number:",
                 de: "Telefonnummer:"
             },
             "contacts-text-4": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "Email:",
                 de: "Email:"
             },
             "contact-inforamation": {
-                ru: "Контактная информация",
+                fr: "Informations de Contact",
                 en: "Contact Information",
                 de: "Kontaktinformationen"
             },
             "form-first": {
-                ru: "Имя",
+                fr: "Prénom",
                 en: "First Name",
                 de: "Vorname"
             },
             "form-second": {
-                ru: "Фамилия",
+                fr: "forme-deuxième",
                 en: "Second Name",
                 de: "Nachname"
             },
             "form-email": {
-                ru: "Почта",
+                fr: "Courriel",
                 en: "Email",
                 de: "Email"
             },
             "form-phone": {
-                ru: "Номер телефона",
+                fr: "Numéro de Téléphone",
                 en: "Phone Number",
                 de: "Telefonnummer"
             },
             "form-btn": {
-                ru: "Принять и продолжить",
+                fr: "Vert et Continuer",
                 en: "Agree and Continue",
                 de: "Zustimmen und fortfahren:"
             },
             "service-summary-title": {
-                ru: "Сводка",
+                fr: "Résumé",
                 en: "Summary",
                 de: "Zusammenfassung"
             },
             "form-night": {
-                ru: "ночь",
+                fr: "nuit",
                 en: "night",
                 de: "Nacht"
             },
             "form-total": {
-                ru: "Общая стоимость",
+                fr: "Total des Dépenses",
                 en: "Total",
                 de: "Insgesamt"
             },
             "form-service-fee": {
-                ru: "Плата за обслуживание",
+                fr: "Frais de Service",
                 en: "Service Fee",
                 de: "Servicegebühr"
             },
             "form-breakfast": {
-                ru: "Завтрак",
+                fr: "Petit Déjeuner",
                 en: "Breakfast",
                 de: "Breakfast"
             },
             "card-title-1": {
-                ru: "Сверкающий купол",
+                fr: "Dôme de glamping",
                 en: "Glamping dome",
                 de: "Glamping Kuppel"
             }
         };
         const requestPage = {
             "header__btn-subMenu": {
-                ru: "RU",
+                fr: "FR",
                 en: "EN",
                 de: "DE"
             },
             "header__title-1": {
-                ru: "Главная",
+                fr: "Accueil",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "header__title-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "header__title-3": {
-                ru: "Достопримечательности",
+                fr: "Attractions Touristiques",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "header__title-4": {
-                ru: "Специальные предложения",
+                fr: "Offres Spéciales",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "header__title-5": {
-                ru: "Атмосфера",
+                fr: "Ambiance",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "header__title-6": {
-                ru: "Вопросы",
+                fr: "FAQ",
                 en: "FAQ",
                 de: "Fragen"
             },
             "header__title-7": {
-                ru: "Контакты",
+                fr: "Coordonnées",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "header__title-8": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
             "header__title-9": {
-                ru: "Забронировать",
+                fr: "Livres Maintenant",
                 en: "Books Now",
                 de: "Buchen"
             },
+            "header__text-1": {
+                fr: "Libérez Votre Aventure: Le Premier Refuge De Glamping De Géorgie",
+                en: "Unleash Your Adventure: Georgia's Premier Glamping Haven",
+                de: "Lassen Sie Ihrem Abenteuer freien Lauf: Der beste Ort für einen glamourösen Urlaub in Georgia"
+            },
+            "header__text-2": {
+                fr: "Renouez avec la Nature et Redécouvrez-vous",
+                en: "Reconnect with Nature and Rediscover Yourself",
+                de: "Vereinige dich mit der Natur und entdecke dich neu"
+            },
             "footer-link-1": {
-                ru: "Главная",
+                fr: "Principale",
                 en: "Home",
                 de: "Hauptsaechliche"
             },
             "footer-link-2": {
-                ru: "Размещение",
+                fr: "Hébergement",
                 en: "Accommodation",
                 de: "Platzierung"
             },
             "footer-link-3": {
-                ru: "Достопримечательности",
+                fr: "Curiosités",
                 en: "Attractions",
                 de: "Hauptsaechliche"
             },
             "footer-link-4": {
-                ru: "Спецаильные предложения",
+                fr: "Offre spéciale",
                 en: "Special Offers",
                 de: "Sonderangebot"
             },
             "footer-link-5": {
-                ru: "Атмосфера",
+                fr: "Atmosphère",
                 en: "Vibe",
                 de: "Die Atmosphäre"
             },
             "footer-link-6": {
-                ru: "Вопросы",
+                fr: "Questions",
                 en: "FAQ",
                 de: "Fragen"
             },
             "footer-link-7": {
-                ru: "Контакты",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakte"
             },
             "footer-sub-title-1": {
-                ru: "Адрес",
+                fr: "Adresse",
                 en: "Adress",
                 de: "Anschrift"
             },
             "footer-sub-title-2": {
-                ru: "Номер телефона",
+                fr: "Numéro de téléphone",
                 en: "Phone number",
                 de: "Telefonnummer"
             },
             "footer-sub-title-3": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "E-mail:",
                 de: "E-mail:"
             },
             "footer-sub-text-1": {
-                ru: "Грузия, Внутренняя Картли, муниципалитет Каспи,Кавтисхеви, 41.869560 44.448465",
+                fr: "Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi, 41.869560 44.448465",
                 en: "Georgia, Inner Kartli, Kaspi Municipality,Kavtiskhevi, 41.869560 44.448465",
                 de: "Georgien, Innere Kartlien, Kaspi Gemeinde,Kawtischewi, 41.869560 44.448465"
             },
             "contacts-title": {
-                ru: "Контакты.",
+                fr: "Relations",
                 en: "Contacts",
                 de: "Kontakt"
             },
             "contacts-text-1": {
-                ru: "Наш глэмпинг расположен в 30 км от Тбилиси.",
+                fr: "Notre Glamping est situé à 30 km de Tbilissi.",
                 en: "Our glamping is located 30 km from Tbilisi.",
                 de: "Unser Glamping liegt 30 km von Tiflis entfernt."
             },
             "contacts-text-2": {
-                ru: "Адрес: Грузия,Внутренняя Картли, муниципалитет Каспи, Кавтисхеви,",
+                fr: "Adresse: Géorgie, Inner Kartli, municipalité de Kaspi, Kavtishevi,",
                 en: "Adress: Georgia,Inner Kartli, KaspiMunicipality, Kavtiskhevi,",
                 de: "Adresse: Georgien,Inneres Kartli, Gemeinde Kaspi, Kavt'iskhevi,"
             },
             "contacts-text-3": {
-                ru: "Номер телефона:",
+                fr: "Numéro de téléphone:",
                 en: "Phone number:",
                 de: "Telefonnummer:"
             },
             "contacts-text-4": {
-                ru: "Электронная почта:",
+                fr: "E-mail:",
                 en: "Email:",
                 de: "Email:"
             },
@@ -6433,72 +6483,72 @@
                 de: "Card"
             },
             "form-name-card": {
-                ru: "Имя на карточке",
+                fr: "Numéro de carte",
                 en: "Name on Card",
                 de: "Name auf der Karte"
             },
             "form-expiration": {
-                ru: "Срок действия",
+                fr: "Date d'Expiration",
                 en: "Expiration Date",
                 de: "Ablaufdatum"
             },
             "form-phone": {
-                ru: "Номер телефона",
+                fr: "Numéro de Téléphone",
                 en: "Phone Number",
                 de: "Telefonnummer"
             },
             "card-title-1": {
-                ru: "Бронирование",
+                fr: "Demande de Réservation",
                 en: "Request Booking",
                 de: "Anfrage Buchung"
             },
             "card-gift-code-title": {
-                ru: "Используйте подарочную карту/промо-код",
+                fr: "Utilisez une carte-cadeau / un code promotionnel",
                 en: "Use a gift card/promo code",
                 de: "Verwenden Sie eine Geschenkkarte / einen Promo-Code"
             },
             "form-gift-code": {
-                ru: "Код подарка",
+                fr: "Code Cadeau",
                 en: "Gift Code",
                 de: "Geschenk-Code"
             },
             "gift-text": {
-                ru: "Подарочные карты возврату не подлежат, если принимающая сторона примет ваше бронирование",
+                fr: "Les cartes-cadeaux ne sont pas remboursables si l'hôte accepte votre réservation",
                 en: "Gift cards are non-refundable if the host accepts your booking",
                 de: "Geschenkkarten sind nicht erstattungsfähig, wenn der Gastgeber Ihre Buchung akzeptiert"
             },
             "form-btn": {
-                ru: "Принять и продолжить",
+                fr: "Acceptez et Continuez",
                 en: "Agree and Continue",
                 de: "Zustimmen und fortfahren:"
             },
             "service-summary-title": {
-                ru: "Сводка",
+                fr: "Résumé",
                 en: "Summary",
                 de: "Zusammenfassung"
             },
             "form-night": {
-                ru: "ночь",
+                fr: "nuit",
                 en: "night",
                 de: "Nacht"
             },
             "form-total": {
-                ru: "Общая стоимость",
+                fr: "Total des Dépenses",
                 en: "Total",
                 de: "Insgesamt"
             },
             "form-service-fee": {
-                ru: "Плата за обслуживание",
+                fr: "Frais de Service",
                 en: "Service Fee",
                 de: "Servicegebühr"
             },
             "form-breakfast": {
-                ru: "Завтрак",
+                fr: "Petit Déjeuner",
                 en: "Breakfast",
                 de: "Breakfast"
             },
-            "card-title-1": {
-                ru: "Сверкающий купол",
+            "card-title-1-1": {
+                fr: "Dôme de glamping",
                 en: "Glamping dome",
                 de: "Glamping Kuppel"
             }
@@ -6508,13 +6558,12 @@
         const subMenuTranslate = document.querySelector(".sub-menu");
         const subMenuItem = document.querySelectorAll("[data-btn]");
         const targetLang = document.querySelector(".menu__target-lang");
-        const allLangs = [ "ru", "en", "de" ];
+        const allLangs = [ "fr", "en", "de" ];
         let currentLang = localStorage.getItem("language") || chechBrowserLang() || "en";
         const namePage = document.querySelector("title");
         const currentPathName = window.location.pathname;
         const lastSegmentIndex = currentPathName.lastIndexOf("/");
         const currentFileName = currentPathName.substring(lastSegmentIndex + 1);
-        console.log(currentFileName);
         let currentText = {};
         function checkPagePathName() {
             switch (currentFileName) {
@@ -6577,7 +6626,7 @@
         }
         function checkActiveLangButton() {
             switch (currentLang) {
-              case "ru":
+              case "fr":
                 targetLang.innerHTML = currentLang;
                 break;
 
