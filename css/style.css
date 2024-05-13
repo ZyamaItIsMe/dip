@@ -3036,27 +3036,31 @@ textarea.input {
   max-width: 61.5rem;
 }
 
-@supports (margin-top: clamp( 2rem , 1.4343434343rem  +  2.8282828283vw , 3.75rem )) {
+.contacts {
+  background-color: #f6f5ea;
+}
+
+@supports (padding-top: clamp( 2rem , 1.4343434343rem  +  2.8282828283vw , 3.75rem )) {
   .contacts {
-    margin-top: clamp( 2rem , 1.4343434343rem  +  2.8282828283vw , 3.75rem );
+    padding-top: clamp( 2rem , 1.4343434343rem  +  2.8282828283vw , 3.75rem );
   }
 }
 
-@supports not (margin-top: clamp( 2rem , 1.4343434343rem  +  2.8282828283vw , 3.75rem )) {
+@supports not (padding-top: clamp( 2rem , 1.4343434343rem  +  2.8282828283vw , 3.75rem )) {
   .contacts {
-    margin-top: calc(2rem + 1.75 * (100vw - 20rem) / 61.875);
+    padding-top: calc(2rem + 1.75 * (100vw - 20rem) / 61.875);
   }
 }
 
-@supports (margin-bottom: clamp( 4rem , 2.8686868687rem  +  5.6565656566vw , 7.5rem )) {
+@supports (padding-bottom: clamp( 4rem , 2.8686868687rem  +  5.6565656566vw , 7.5rem )) {
   .contacts {
-    margin-bottom: clamp( 4rem , 2.8686868687rem  +  5.6565656566vw , 7.5rem );
+    padding-bottom: clamp( 4rem , 2.8686868687rem  +  5.6565656566vw , 7.5rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 4rem , 2.8686868687rem  +  5.6565656566vw , 7.5rem )) {
+@supports not (padding-bottom: clamp( 4rem , 2.8686868687rem  +  5.6565656566vw , 7.5rem )) {
   .contacts {
-    margin-bottom: calc(4rem + 3.5 * (100vw - 20rem) / 61.875);
+    padding-bottom: calc(4rem + 3.5 * (100vw - 20rem) / 61.875);
   }
 }
 
