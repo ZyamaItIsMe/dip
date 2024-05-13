@@ -6,8 +6,8 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240507142721" />
-	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?_v=20240513061058" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240513061058" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -23,22 +23,22 @@
 								<a data-lang="header__title-1" href="index.html" class="menu__link"></a>
 							</li>
 							<li class="menu__item">
-								<a data-lang="header__title-2" href="#accommodation" class="menu__link"></a>
+								<a data-lang="header__title-2" href="index.html#accommodation" class="menu__link"></a>
 							</li>
 							<li class="menu__item">
-								<a data-lang="header__title-3" href="" class="menu__link"></a>
+								<a data-lang="header__title-3" href="index.html#important" class="menu__link"></a>
 							</li>
 							<li class="menu__item">
-								<a data-lang="header__title-4" href="#offer" class="menu__link"></a>
+								<a data-lang="header__title-4" href="index.html#offer" class="menu__link"></a>
 							</li>
 							<li class="menu__item">
-								<a data-lang="header__title-5" href="" class="menu__link"></a>
+								<a data-lang="header__title-5" href="index.html#vibe" class="menu__link"></a>
 							</li>
 							<li class="menu__item">
-								<a data-lang="header__title-6" href="" class="menu__link"></a>
+								<a data-lang="header__title-6" href="index.html#faq" class="menu__link"></a>
 							</li>
 							<li class="menu__item">
-								<a data-lang="header__title-7" href="" class="menu__link"></a>
+								<a data-lang="header__title-7" href="index.html#contacts" class="menu__link"></a>
 							</li>
 						</ul>
 					</nav>
@@ -115,7 +115,7 @@
 					</div>
 					<div class="order-page__services services-order">
 						<h3 data-lang="service-title" class="services-order__title title-block"></h3>
-						<div class="services-order__card card-services">
+						<div data-extra="breakfast" class="services-order__card card-services">
 							<div class="card-services__picture">
 								<picture><source srcset="img/order/home-1.webp" type="image/webp"><img src="img/order/home-1.jpeg" alt="" /></picture>
 							</div>
@@ -125,20 +125,20 @@
 								<div class="card-services__guest card-services__guest_firts">
 									<p data-lang="service-card-guests-1" class="card-services__name"></p>
 									<div class="card-services__table">
-										<button class="card-services__minus"></button>
-										<div class="card-services__number">2</div>
-										<button class="card-services__plus"></button>
+										<button id="minus" class="card-services__minus"></button>
+										<div id="counter" class="card-services__number">2</div>
+										<button id="plus" class="card-services__plus"></button>
 									</div>
 								</div>
 								<div data-da=".card-services__guest_firts, 767.98, first" class="card-services__footer">
-									<div class="card-services__price">50$</div>
-									<button data-lang="service-card-btn-1" type="submit" class="card-services__button button"></button>
+									<div class="card-services__price"><span id="price-value">50</span>$</div>
+									<button id="btn-extra" data-lang="service-card-btn-1" type="submit" class="card-services__button button"></button>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="order-page__services services-order">
-						<div class="services-order__card card-services">
+						<div data-extra="full" class="services-order__card card-services">
 							<div class="card-services__picture">
 								<picture><source srcset="img/order/home-1.webp" type="image/webp"><img src="img/order/home-1.jpeg" alt="" /></picture>
 							</div>
@@ -148,14 +148,14 @@
 								<div class="card-services__guest card-services__guest_two">
 									<p data-lang="service-card-guests-2" class="card-services__name"></p>
 									<div class="card-services__table">
-										<button class="card-services__minus"></button>
-										<div class="card-services__number">2</div>
-										<button class="card-services__plus"></button>
+										<button id="minus" class="card-services__minus"></button>
+										<div id="counter" class="card-services__number">2</div>
+										<button id="plus" class="card-services__plus"></button>
 									</div>
 								</div>
 								<div data-da=".card-services__guest_two, 767.98, first" class="card-services__footer">
-									<div class="card-services__price">90$</div>
-									<button data-lang="service-card-btn-2" type="submit" class="card-services__button button"></button>
+									<div class="card-services__price"><span id="price-value">90</span>$</div>
+									<button id="btn-extra" data-lang="service-card-btn-2" type="submit" class="card-services__button button"></button>
 								</div>
 							</div>
 						</div>
@@ -167,19 +167,19 @@
 						<div class="form__date-guests">
 							<div class="form__line">
 								<label data-lang="form-in-date" for="date-1" class="form__label"></label>
-								<input id="date-1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
+								<input id="date-in" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" data-calendar-start />
 							</div>
 							<div class="form__line">
 								<label data-lang="form-out-date" for="date-2" class="form__label"></label>
-								<input id="date-2" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
+								<input id="date-out" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" data-calendar-end />
 							</div>
 							<div class="form__line form__line_column">
 								<label data-lang="form-number-guests" for="guests" class="form__label"></label>
-								<input id="guests" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
+								<input id="number-guests" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" />
 							</div>
 							<div class="form__nights">
 								<p>
-									<span data-lang="form-stay">stay:</span> <span>2</span>
+									<span data-lang="form-stay">stay:</span> <span id="numb-nights">2</span>
 									<span data-lang="form-nights">nights</span>
 								</p>
 							</div>
@@ -187,26 +187,26 @@
 						<div class="form__price">
 							<div class="form__one-nights">
 								<p>100$ x 1 <span data-lang="form-night">night</span></p>
-								<p class="form__sum">200$</p>
+								<p class="form__sum"><span id="total-price-nights">200</span>$</p>
 							</div>
 							<div class="form__service">
 								<p data-lang="form-service-fee"></p>
-								<p class="form__sum">30$</p>
+								<p class="form__sum"><span id="service-card-page">30</span>$</p>
 							</div>
 							<div class="form__breakfast">
-								<p data-lang="form-breakfast"></p>
-								<p class="form__sum">50$</p>
+								<p id="form-extra" data-lang="form-breakfast"></p>
+								<p class="form__sum"><span id="serv-price">50</span>$</p>
 							</div>
 						</div>
 						<div class="form__total">
 							<p data-lang="form-total"></p>
-							<p class="form__sum form__sum_all">230$</p>
+							<p class="form__sum form__sum_all"><span id="total-price">230</span>$</p>
 						</div>
 						<a data-lang="form-btn" href="contact-page.html" type="submit" class="form__button button"></a>
 					</form>
 				</div>
 			</div>
-			<section class="contacts">
+			<section id="contacts" class="contacts">
 				<div class="contacts__container">
 					<h2 data-lang="contacts-title" class="contacts__title title-block"></h2>
 					<div class="contacts__content">
@@ -218,9 +218,9 @@
 							<p data-lang="contacts-text-4"></p>
 						</div>
 						<div class="contacts__social">
-							<a href="" class="contacts__instagram _icon-instagram"></a>
-							<a href="" class="contacts__telegram _icon-telegram"></a>
-							<a href="" class="contacts__whatsapp _icon-whatsapp"></a>
+							<a target="_blank" href="https://instagram.com/" class="contacts__instagram _icon-instagram"></a>
+							<a target="_blank" href="https://web.telegram.org/" class="contacts__telegram _icon-telegram"></a>
+							<a target="_blank" href="https://web.whatsapp.com/" class="contacts__whatsapp _icon-whatsapp"></a>
 						</div>
 						<iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2971.0830324289163!2d44.44589007688265!3d41.86955997124271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDUyJzEwLjQiTiA0NMKwMjYnNTQuNSJF!5e0!3m2!1sru!2sru!4v1707481654689!5m2!1sru!2sru" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
@@ -232,20 +232,34 @@
 			<div class="footer__container">
 				<div class="footer__content">
 					<div class="footer__logo">
-						<img src="img/footer/logo-footer.svg" alt="Logo">
+						<img src="img/footer/logo-footer.svg" alt="Logo" />
 					</div>
 					<div class="footer__links links-footer">
-						<div class="links-footer__column">
-							<div data-lang="footer-link-1" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-							<div data-lang="footer-link-2" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-							<div data-lang="footer-link-3" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-							<div data-lang="footer-link-4" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-						</div>
-						<div class="links-footer__column">
-							<div data-lang="footer-link-5" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-							<div data-lang="footer-link-6" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-							<div data-lang="footer-link-7" class="links-footer__item"><a href="" class="links-footer__link"></a></div>
-						</div>
+						<ul class="links-footer__column">
+							<li class="links-footer__item">
+								<a data-lang="footer-link-1" href="index.html" class="links-footer__link"></a>
+							</li>
+							<li class="links-footer__item">
+								<a data-lang="footer-link-2" href="index.html#accommodation" class="links-footer__link"></a>
+							</li>
+							<li class="links-footer__item">
+								<a data-lang="footer-link-3" href="index.html#important" class="links-footer__link"></a>
+							</li>
+							<li class="links-footer__item">
+								<a data-lang="footer-link-4" href="index.html#offer" class="links-footer__link"></a>
+							</li>
+						</ul>
+						<ul class="links-footer__column">
+							<li class="links-footer__item">
+								<a data-lang="footer-link-5" href="index.html#vibe" class="links-footer__link"></a>
+							</li>
+							<li class="links-footer__item">
+								<a data-lang="footer-link-6" href="index.html#faq" class="links-footer__link"></a>
+							</li>
+							<li class="links-footer__item">
+								<a data-lang="footer-link-7" href="index.html#contacts" class="links-footer__link"></a>
+							</li>
+						</ul>
 					</div>
 					<div class="footer__info info-footer">
 						<div class="info-footer__block">
@@ -267,11 +281,12 @@
 						<a href="" class="footer__whatsapp _icon-whatsapp"></a>
 					</div>
 					<div class="footer__qrcode">
-						<img src="img/footer/qrcode.svg" alt="QR-Code">
+						<img src="img/footer/qrcode.svg" alt="QR-Code" />
 					</div>
 				</div>
 			</div>
 		</footer>
+
 	</div>
 	<!-- <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
@@ -283,7 +298,8 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20240507142721"></script>
+	<script src="js/app.min.js?_v=20240513061058"></script>
+
 </body>
 
 </html>
