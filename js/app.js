@@ -732,6 +732,49 @@
                 }
             }
         }
+        function getCurrentFileName() {
+            const currentPathName = window.location.pathname;
+            const lastSegmentIndex = currentPathName.lastIndexOf("/");
+            const currentFileName = currentPathName.substring(lastSegmentIndex + 1);
+            return currentFileName;
+        }
+        function dateInOutSaveLocalStorage() {
+            const inputDateInValue = document.querySelector("#date-in").value;
+            const inputDateOutValue = document.querySelector("#date-out").value;
+            const inputNumberGuestBookingValue = document.querySelector("#number-guests").value;
+            localStorage.setItem("inputDateInValue", inputDateInValue);
+            localStorage.setItem("inputDateOutValue", inputDateOutValue);
+            localStorage.setItem("inputNumberGuestBookingValue", inputNumberGuestBookingValue);
+        }
+        function dateInOutPasteLocalStorage(inValue, outValue, guestValue) {
+            inValue = localStorage.getItem("inputDateInValue");
+            outValue = localStorage.getItem("inputDateOutValue");
+            guestValue = localStorage.getItem("inputNumberGuestBookingValue");
+            if (document.querySelector("#date-in")) document.querySelector("#date-in").value = inValue;
+            if (document.querySelector("#date-out")) document.querySelector("#date-out").value = outValue;
+            if (document.querySelector("#number-guests")) document.querySelector("#number-guests").value = guestValue;
+        }
+        function calculateNightsPrice() {
+            const inputDate1 = localStorage.getItem("inputDateInValue");
+            const inputDate2 = localStorage.getItem("inputDateOutValue");
+            const dateIn = getDateFromString(inputDate1);
+            const dateOut = getDateFromString(inputDate2);
+            const differenceInMilliseconds = dateOut - dateIn;
+            const differenceInDays = differenceInMilliseconds / (1e3 * 60 * 60 * 24);
+            const priceWrapper = document.querySelector(".form__price");
+            if (priceWrapper) {
+                document.getElementById("numb-nights").innerHTML = differenceInDays;
+                document.getElementById("total-price-nights").innerHTML = differenceInDays * 100;
+                if (document.querySelector("#form-extra")) document.getElementById("total-price").innerHTML = Number(document.getElementById("total-price-nights").innerHTML) + Number(document.getElementById("service-card-page").innerHTML) + Number(document.querySelector("#serv-price").innerHTML); else document.getElementById("total-price").innerHTML = Number(document.getElementById("total-price-nights").innerHTML) + Number(document.getElementById("service-card-page").innerHTML);
+            }
+        }
+        function getDateFromString(dateString) {
+            const parts = dateString.split(".");
+            const day = parseInt(parts[0], 10);
+            const month = parseInt(parts[1], 10) - 1;
+            const year = parseInt(parts[2], 10);
+            return new Date(year, month, day);
+        }
         function formFieldsInit(options = {
             viewPass: false
         }) {
@@ -6554,16 +6597,199 @@
             }
         };
         var datepicker_min = __webpack_require__(448);
+        function datapicker() {
+            const inputCalIn = document.querySelector("[data-calendar-start]");
+            const inputCalOut = document.querySelector("[data-calendar-end]");
+            const currentFileName = getCurrentFileName();
+            function destroyDatepicker(picker) {
+                if (picker) {
+                    picker.remove();
+                    picker = null;
+                }
+            }
+            function getTodayDate() {
+                const today = new Date;
+                today.setHours(0, 0, 0, 0);
+                return today;
+            }
+            const datapickerpOptions = {
+                id: 1,
+                startDay: 1,
+                customDays: [ "S", "M", "T", "W", "T", "F", "S" ],
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                minDate: getTodayDate(),
+                onSelect: (instance, date) => {
+                    dateInOutSaveLocalStorage();
+                    calculateNightsPrice();
+                }
+            };
+            if (inputCalIn && inputCalOut) {
+                let start = datepicker_min("[data-calendar-start]", datapickerpOptions);
+                let end = datepicker_min("[data-calendar-end]", datapickerpOptions);
+                function updateDatePicker() {
+                    destroyDatepicker(start);
+                    destroyDatepicker(end);
+                    datapickerpOptions.minDate = getTodayDate();
+                    const position = window.innerWidth < 768 ? "c" : "bl";
+                    const updatedOptions = {
+                        ...datapickerpOptions,
+                        position
+                    };
+                    start = datepicker_min("[data-calendar-start]", updatedOptions);
+                    end = datepicker_min("[data-calendar-end]", updatedOptions);
+                }
+                window.addEventListener("resize", updateDatePicker);
+                document.addEventListener("DOMContentLoaded", updateDatePicker);
+            }
+            let savedinputDateInValue;
+            let savedinputDateOutValue;
+            let savedinputNumberGuestBookingValue;
+            const btnCardBooking = document.querySelectorAll(".card-booking__button");
+            if (btnCardBooking) btnCardBooking.forEach((item => {
+                item.addEventListener("click", dateInOutSaveLocalStorage);
+            }));
+            const btnCardPage = document.querySelector(".form__button");
+            if (btnCardPage) btnCardPage.addEventListener("click", dateInOutSaveLocalStorage);
+            if (currentFileName === "card-page.html" || "order.html") {
+                document.addEventListener("DOMContentLoaded", dateInOutPasteLocalStorage(savedinputDateInValue, savedinputDateOutValue, savedinputNumberGuestBookingValue));
+                calculateNightsPrice();
+            }
+        }
+        function paginationCards() {
+            const productsContainer = document.getElementById("booking-cards");
+            const pagination = document.getElementById("pagination");
+            const products = Array.from(productsContainer.children);
+            let currentPage = 1;
+            function displayProducts(pageNumber) {
+                productsContainer.innerHTML = "";
+                const itemsPerPage = 6;
+                const startIndex = (pageNumber - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const displayedProducts = products.slice(startIndex, endIndex);
+                displayedProducts.forEach((product => {
+                    productsContainer.appendChild(product.cloneNode(true));
+                }));
+            }
+            function updatePagination() {
+                const totalPages = Math.ceil(products.length / 6);
+                pagination.innerHTML = "";
+                let pagesToShow = [];
+                if (totalPages <= 4) pagesToShow = Array.from({
+                    length: totalPages
+                }, ((_, i) => i + 1)); else if (currentPage === 1) pagesToShow = [ 1, 2, "...", totalPages ]; else if (currentPage === totalPages) pagesToShow = [ 1, "...", totalPages - 1, totalPages ]; else pagesToShow = [ currentPage - 1, currentPage, "...", totalPages ];
+                const prevButton = document.createElement("button");
+                prevButton.classList.add("pagination-cards__prevButton");
+                prevButton.classList.add("_icon-arrow-btn");
+                prevButton.addEventListener("click", (() => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        displayProducts(currentPage);
+                        updatePagination();
+                    }
+                }));
+                pagination.appendChild(prevButton);
+                pagesToShow.forEach((pageNumber => {
+                    addPageButton(pageNumber);
+                }));
+                const nextButton = document.createElement("button");
+                nextButton.classList.add("pagination-cards__nextButton");
+                nextButton.classList.add("_icon-arrow-btn");
+                nextButton.addEventListener("click", (() => {
+                    const totalPages = Math.ceil(products.length / 6);
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        displayProducts(currentPage);
+                        updatePagination();
+                    }
+                }));
+                pagination.appendChild(nextButton);
+            }
+            function addPageButton(pageNumber) {
+                const button = document.createElement("div");
+                button.classList.add("pagination-cards__item");
+                if (pageNumber === "...") {
+                    button.textContent = "...";
+                    button.disabled = true;
+                } else if (pageNumber === currentPage) {
+                    button.textContent = pageNumber;
+                    button.disabled = true;
+                    button.classList.add("active-page");
+                } else {
+                    button.textContent = pageNumber;
+                    button.addEventListener("click", (() => {
+                        currentPage = pageNumber;
+                        displayProducts(currentPage);
+                        updatePagination();
+                    }));
+                }
+                pagination.appendChild(button);
+            }
+            displayProducts(currentPage);
+            updatePagination();
+        }
+        function anchor_anchor() {
+            document.addEventListener("DOMContentLoaded", (function() {
+                document.querySelectorAll(".scroll-to").forEach((anchor => {
+                    anchor.addEventListener("click", (function(e) {
+                        e.preventDefault();
+                        const blockID = this.getAttribute("href");
+                        const targetElement = document.querySelector(blockID);
+                        if (targetElement) {
+                            document.documentElement.classList.remove("menu-open");
+                            document.documentElement.classList.remove("lock");
+                            targetElement.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            });
+                        } else console.error("Element with id " + blockID + " not found.");
+                    }));
+                }));
+            }));
+        }
+        function counterOrder() {
+            window.addEventListener("click", (function(e) {
+                if (e.target.id == "minus" || e.target.id === "plus") {
+                    const counterWrapper = e.target.closest(".card-services__table");
+                    const counter = counterWrapper.querySelector("#counter");
+                    const cardExtra = e.target.closest(".card-services");
+                    let priceValue = cardExtra.querySelector("#price-value");
+                    if (e.target.id === "minus") if (parseInt(counter.innerText) > 1) {
+                        counter.innerText = --counter.innerText;
+                        if (cardExtra.dataset.extra === "breakfast") priceValue.innerText = parseInt(counter.innerText * 25); else if (cardExtra.dataset.extra === "full") priceValue.innerText = parseInt(counter.innerText * 45);
+                    }
+                    if (e.target.id === "plus") {
+                        counter.innerText = ++counter.innerText;
+                        if (cardExtra.dataset.extra === "breakfast") priceValue.innerText = parseInt(counter.innerText * 25); else if (cardExtra.dataset.extra === "full") priceValue.innerText = parseInt(counter.innerText * 45);
+                    }
+                }
+                if (e.target.id == "btn-extra") ;
+            }));
+        }
+        function localStorageGuestsLoadPage() {
+            document.querySelectorAll("#counter").forEach((item => {
+                item.innerText = localStorage.getItem("inputNumberGuestBookingValue");
+            }));
+            const cardExtra = document.querySelectorAll(".card-services");
+            const servPrice = document.querySelector("#serv-price");
+            cardExtra.forEach((card => {
+                if (card.dataset.extra === "breakfast") {
+                    card.querySelector("#price-value").innerText = parseInt(card.querySelector("#counter").innerText * 25);
+                    servPrice.innerText = card.querySelector("#price-value").innerText;
+                }
+                if (card.dataset.extra === "full") card.querySelector("#price-value").innerText = parseInt(card.querySelector("#counter").innerText * 45);
+            }));
+            calculateNightsPrice();
+        }
         const btnTranslate = document.querySelector(".menu__translate");
         const subMenuTranslate = document.querySelector(".sub-menu");
         const subMenuItem = document.querySelectorAll("[data-btn]");
         const targetLang = document.querySelector(".menu__target-lang");
         const allLangs = [ "fr", "en", "de" ];
         let currentLang = localStorage.getItem("language") || chechBrowserLang() || "en";
-        const namePage = document.querySelector("title");
-        const currentPathName = window.location.pathname;
-        const lastSegmentIndex = currentPathName.lastIndexOf("/");
-        const currentFileName = currentPathName.substring(lastSegmentIndex + 1);
+        const currentFileName = getCurrentFileName();
         let currentText = {};
         function checkPagePathName() {
             switch (currentFileName) {
@@ -6703,78 +6929,7 @@
                 }));
             }));
         }
-        if (namePage.innerHTML == "Booking") {
-            const productsContainer = document.getElementById("booking-cards");
-            const pagination = document.getElementById("pagination");
-            const products = Array.from(productsContainer.children);
-            let currentPage = 1;
-            function displayProducts(pageNumber) {
-                productsContainer.innerHTML = "";
-                const itemsPerPage = 6;
-                const startIndex = (pageNumber - 1) * itemsPerPage;
-                const endIndex = startIndex + itemsPerPage;
-                const displayedProducts = products.slice(startIndex, endIndex);
-                displayedProducts.forEach((product => {
-                    productsContainer.appendChild(product.cloneNode(true));
-                }));
-            }
-            function updatePagination() {
-                const totalPages = Math.ceil(products.length / 6);
-                pagination.innerHTML = "";
-                let pagesToShow = [];
-                if (totalPages <= 4) pagesToShow = Array.from({
-                    length: totalPages
-                }, ((_, i) => i + 1)); else if (currentPage === 1) pagesToShow = [ 1, 2, "...", totalPages ]; else if (currentPage === totalPages) pagesToShow = [ 1, "...", totalPages - 1, totalPages ]; else pagesToShow = [ currentPage - 1, currentPage, "...", totalPages ];
-                const prevButton = document.createElement("button");
-                prevButton.classList.add("pagination-cards__prevButton");
-                prevButton.classList.add("_icon-arrow-btn");
-                prevButton.addEventListener("click", (() => {
-                    if (currentPage > 1) {
-                        currentPage--;
-                        displayProducts(currentPage);
-                        updatePagination();
-                    }
-                }));
-                pagination.appendChild(prevButton);
-                pagesToShow.forEach((pageNumber => {
-                    addPageButton(pageNumber);
-                }));
-                const nextButton = document.createElement("button");
-                nextButton.classList.add("pagination-cards__nextButton");
-                nextButton.classList.add("_icon-arrow-btn");
-                nextButton.addEventListener("click", (() => {
-                    const totalPages = Math.ceil(products.length / 6);
-                    if (currentPage < totalPages) {
-                        currentPage++;
-                        displayProducts(currentPage);
-                        updatePagination();
-                    }
-                }));
-                pagination.appendChild(nextButton);
-            }
-            function addPageButton(pageNumber) {
-                const button = document.createElement("div");
-                button.classList.add("pagination-cards__item");
-                if (pageNumber === "...") {
-                    button.textContent = "...";
-                    button.disabled = true;
-                } else if (pageNumber === currentPage) {
-                    button.textContent = pageNumber;
-                    button.disabled = true;
-                    button.classList.add("active-page");
-                } else {
-                    button.textContent = pageNumber;
-                    button.addEventListener("click", (() => {
-                        currentPage = pageNumber;
-                        displayProducts(currentPage);
-                        updatePagination();
-                    }));
-                }
-                pagination.appendChild(button);
-            }
-            displayProducts(currentPage);
-            updatePagination();
-        }
+        if (currentFileName == "book.html") paginationCards();
         document.addEventListener("DOMContentLoaded", (function() {
             tabImages();
         }));
@@ -6803,37 +6958,11 @@
                 }));
             }));
         }
-        if (currentFileName == "book.html") {
-            function destroyDatepicker(picker) {
-                if (picker) {
-                    picker.remove();
-                    picker = null;
-                }
-            }
-            const dpOptions = {
-                id: 1,
-                startDay: 1,
-                customDays: [ "S", "M", "T", "W", "T", "F", "S" ],
-                formatter: (input, date, instance) => {
-                    const value = date.toLocaleDateString();
-                    input.value = value;
-                }
-            };
-            let start = datepicker_min("[data-calendar-start]", dpOptions);
-            let end = datepicker_min("[data-calendar-end]", dpOptions);
-            function updateDatePicker() {
-                destroyDatepicker(start);
-                destroyDatepicker(end);
-                const position = window.innerWidth < 768 ? "c" : "bl";
-                const updatedOptions = {
-                    ...dpOptions,
-                    position
-                };
-                start = datepicker_min("[data-calendar-start]", updatedOptions);
-                end = datepicker_min("[data-calendar-end]", updatedOptions);
-            }
-            window.addEventListener("resize", updateDatePicker);
-            updateDatePicker();
+        if (currentFileName === "book.html" || "card-page.html") datapicker();
+        if (currentFileName == "index.html") anchor_anchor();
+        if (currentFileName == "order.html") {
+            localStorageGuestsLoadPage();
+            counterOrder();
         }
         window["FLS"] = true;
         isWebp();
