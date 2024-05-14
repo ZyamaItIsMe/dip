@@ -742,9 +742,11 @@
             const inputDateInValue = document.querySelector("#date-in").value;
             const inputDateOutValue = document.querySelector("#date-out").value;
             const inputNumberGuestBookingValue = document.querySelector("#number-guests").value;
-            localStorage.setItem("inputDateInValue", inputDateInValue);
-            localStorage.setItem("inputDateOutValue", inputDateOutValue);
-            localStorage.setItem("inputNumberGuestBookingValue", inputNumberGuestBookingValue);
+            if (inputDateInValue && inputDateOutValue && inputNumberGuestBookingValue) {
+                localStorage.setItem("inputDateInValue", inputDateInValue);
+                localStorage.setItem("inputDateOutValue", inputDateOutValue);
+                localStorage.setItem("inputNumberGuestBookingValue", inputNumberGuestBookingValue);
+            }
         }
         function dateInOutPasteLocalStorage(inValue, outValue, guestValue) {
             inValue = localStorage.getItem("inputDateInValue");
@@ -769,11 +771,13 @@
             }
         }
         function getDateFromString(dateString) {
-            const parts = dateString.split(".");
-            const day = parseInt(parts[0], 10);
-            const month = parseInt(parts[1], 10) - 1;
-            const year = parseInt(parts[2], 10);
-            return new Date(year, month, day);
+            if (dateString) {
+                const parts = dateString.split(".");
+                const day = parseInt(parts[0], 10);
+                const month = parseInt(parts[1], 10) - 1;
+                const year = parseInt(parts[2], 10);
+                return new Date(year, month, day);
+            }
         }
         function formFieldsInit(options = {
             viewPass: false
@@ -6601,138 +6605,142 @@
             const inputCalIn = document.querySelector("[data-calendar-start]");
             const inputCalOut = document.querySelector("[data-calendar-end]");
             const currentFileName = getCurrentFileName();
-            function destroyDatepicker(picker) {
-                if (picker) {
-                    picker.remove();
-                    picker = null;
+            if (inputCalIn && inputCalOut) {
+                function destroyDatepicker(picker) {
+                    if (picker) {
+                        picker.remove();
+                        picker = null;
+                    }
                 }
-            }
-            function getTodayDate() {
-                const today = new Date;
-                today.setHours(0, 0, 0, 0);
-                return today;
-            }
-            const datapickerpOptions = {
-                id: 1,
-                startDay: 1,
-                customDays: [ "S", "M", "T", "W", "T", "F", "S" ],
-                formatter: (input, date, instance) => {
-                    const value = date.toLocaleDateString();
-                    input.value = value;
-                },
-                minDate: getTodayDate(),
-                onSelect: (instance, date) => {
-                    dateInOutSaveLocalStorage();
+                function getTodayDate() {
+                    const today = new Date;
+                    today.setHours(0, 0, 0, 0);
+                    return today;
+                }
+                const datapickerpOptions = {
+                    id: 1,
+                    startDay: 1,
+                    customDays: [ "S", "M", "T", "W", "T", "F", "S" ],
+                    formatter: (input, date, instance) => {
+                        const value = date.toLocaleDateString();
+                        input.value = value;
+                    },
+                    minDate: getTodayDate(),
+                    onSelect: (instance, date) => {
+                        dateInOutSaveLocalStorage();
+                        calculateNightsPrice();
+                    }
+                };
+                if (inputCalIn && inputCalOut) {
+                    let start = datepicker_min("[data-calendar-start]", datapickerpOptions);
+                    let end = datepicker_min("[data-calendar-end]", datapickerpOptions);
+                    function updateDatePicker() {
+                        destroyDatepicker(start);
+                        destroyDatepicker(end);
+                        datapickerpOptions.minDate = getTodayDate();
+                        const position = window.innerWidth < 768 ? "c" : "bl";
+                        const updatedOptions = {
+                            ...datapickerpOptions,
+                            position
+                        };
+                        start = datepicker_min("[data-calendar-start]", updatedOptions);
+                        end = datepicker_min("[data-calendar-end]", updatedOptions);
+                    }
+                    window.addEventListener("resize", updateDatePicker);
+                    document.addEventListener("DOMContentLoaded", updateDatePicker);
+                }
+                let savedinputDateInValue;
+                let savedinputDateOutValue;
+                let savedinputNumberGuestBookingValue;
+                const btnCardBooking = document.querySelectorAll(".card-booking__button");
+                if (btnCardBooking) btnCardBooking.forEach((item => {
+                    item.addEventListener("click", dateInOutSaveLocalStorage);
+                }));
+                const btnCardPage = document.querySelector(".form__button");
+                if (btnCardPage) btnCardPage.addEventListener("click", dateInOutSaveLocalStorage);
+                if (currentFileName === "card-page.html" || "order.html") {
+                    document.addEventListener("DOMContentLoaded", dateInOutPasteLocalStorage(savedinputDateInValue, savedinputDateOutValue, savedinputNumberGuestBookingValue));
                     calculateNightsPrice();
                 }
-            };
-            if (inputCalIn && inputCalOut) {
-                let start = datepicker_min("[data-calendar-start]", datapickerpOptions);
-                let end = datepicker_min("[data-calendar-end]", datapickerpOptions);
-                function updateDatePicker() {
-                    destroyDatepicker(start);
-                    destroyDatepicker(end);
-                    datapickerpOptions.minDate = getTodayDate();
-                    const position = window.innerWidth < 768 ? "c" : "bl";
-                    const updatedOptions = {
-                        ...datapickerpOptions,
-                        position
-                    };
-                    start = datepicker_min("[data-calendar-start]", updatedOptions);
-                    end = datepicker_min("[data-calendar-end]", updatedOptions);
-                }
-                window.addEventListener("resize", updateDatePicker);
-                document.addEventListener("DOMContentLoaded", updateDatePicker);
-            }
-            let savedinputDateInValue;
-            let savedinputDateOutValue;
-            let savedinputNumberGuestBookingValue;
-            const btnCardBooking = document.querySelectorAll(".card-booking__button");
-            if (btnCardBooking) btnCardBooking.forEach((item => {
-                item.addEventListener("click", dateInOutSaveLocalStorage);
-            }));
-            const btnCardPage = document.querySelector(".form__button");
-            if (btnCardPage) btnCardPage.addEventListener("click", dateInOutSaveLocalStorage);
-            if (currentFileName === "card-page.html" || "order.html") {
-                document.addEventListener("DOMContentLoaded", dateInOutPasteLocalStorage(savedinputDateInValue, savedinputDateOutValue, savedinputNumberGuestBookingValue));
-                calculateNightsPrice();
             }
         }
         function paginationCards() {
             const productsContainer = document.getElementById("booking-cards");
-            const pagination = document.getElementById("pagination");
-            const products = Array.from(productsContainer.children);
-            let currentPage = 1;
-            function displayProducts(pageNumber) {
-                productsContainer.innerHTML = "";
-                const itemsPerPage = 6;
-                const startIndex = (pageNumber - 1) * itemsPerPage;
-                const endIndex = startIndex + itemsPerPage;
-                const displayedProducts = products.slice(startIndex, endIndex);
-                displayedProducts.forEach((product => {
-                    productsContainer.appendChild(product.cloneNode(true));
-                }));
-            }
-            function updatePagination() {
-                const totalPages = Math.ceil(products.length / 6);
-                pagination.innerHTML = "";
-                let pagesToShow = [];
-                if (totalPages <= 4) pagesToShow = Array.from({
-                    length: totalPages
-                }, ((_, i) => i + 1)); else if (currentPage === 1) pagesToShow = [ 1, 2, "...", totalPages ]; else if (currentPage === totalPages) pagesToShow = [ 1, "...", totalPages - 1, totalPages ]; else pagesToShow = [ currentPage - 1, currentPage, "...", totalPages ];
-                const prevButton = document.createElement("button");
-                prevButton.classList.add("pagination-cards__prevButton");
-                prevButton.classList.add("_icon-arrow-btn");
-                prevButton.addEventListener("click", (() => {
-                    if (currentPage > 1) {
-                        currentPage--;
-                        displayProducts(currentPage);
-                        updatePagination();
-                    }
-                }));
-                pagination.appendChild(prevButton);
-                pagesToShow.forEach((pageNumber => {
-                    addPageButton(pageNumber);
-                }));
-                const nextButton = document.createElement("button");
-                nextButton.classList.add("pagination-cards__nextButton");
-                nextButton.classList.add("_icon-arrow-btn");
-                nextButton.addEventListener("click", (() => {
-                    const totalPages = Math.ceil(products.length / 6);
-                    if (currentPage < totalPages) {
-                        currentPage++;
-                        displayProducts(currentPage);
-                        updatePagination();
-                    }
-                }));
-                pagination.appendChild(nextButton);
-            }
-            function addPageButton(pageNumber) {
-                const button = document.createElement("div");
-                button.classList.add("pagination-cards__item");
-                if (pageNumber === "...") {
-                    button.textContent = "...";
-                    button.disabled = true;
-                } else if (pageNumber === currentPage) {
-                    button.textContent = pageNumber;
-                    button.disabled = true;
-                    button.classList.add("active-page");
-                } else {
-                    button.textContent = pageNumber;
-                    button.addEventListener("click", (() => {
-                        currentPage = pageNumber;
-                        displayProducts(currentPage);
-                        updatePagination();
+            if (productsContainer) {
+                const pagination = document.getElementById("pagination");
+                const products = Array.from(productsContainer.children);
+                let currentPage = 1;
+                function displayProducts(pageNumber) {
+                    productsContainer.innerHTML = "";
+                    const itemsPerPage = 6;
+                    const startIndex = (pageNumber - 1) * itemsPerPage;
+                    const endIndex = startIndex + itemsPerPage;
+                    const displayedProducts = products.slice(startIndex, endIndex);
+                    displayedProducts.forEach((product => {
+                        productsContainer.appendChild(product.cloneNode(true));
                     }));
                 }
-                pagination.appendChild(button);
+                function updatePagination() {
+                    const totalPages = Math.ceil(products.length / 6);
+                    pagination.innerHTML = "";
+                    let pagesToShow = [];
+                    if (totalPages <= 4) pagesToShow = Array.from({
+                        length: totalPages
+                    }, ((_, i) => i + 1)); else if (currentPage === 1) pagesToShow = [ 1, 2, "...", totalPages ]; else if (currentPage === totalPages) pagesToShow = [ 1, "...", totalPages - 1, totalPages ]; else pagesToShow = [ currentPage - 1, currentPage, "...", totalPages ];
+                    const prevButton = document.createElement("button");
+                    prevButton.classList.add("pagination-cards__prevButton");
+                    prevButton.classList.add("_icon-arrow-btn");
+                    prevButton.addEventListener("click", (() => {
+                        if (currentPage > 1) {
+                            currentPage--;
+                            displayProducts(currentPage);
+                            updatePagination();
+                        }
+                    }));
+                    pagination.appendChild(prevButton);
+                    pagesToShow.forEach((pageNumber => {
+                        addPageButton(pageNumber);
+                    }));
+                    const nextButton = document.createElement("button");
+                    nextButton.classList.add("pagination-cards__nextButton");
+                    nextButton.classList.add("_icon-arrow-btn");
+                    nextButton.addEventListener("click", (() => {
+                        const totalPages = Math.ceil(products.length / 6);
+                        if (currentPage < totalPages) {
+                            currentPage++;
+                            displayProducts(currentPage);
+                            updatePagination();
+                        }
+                    }));
+                    pagination.appendChild(nextButton);
+                }
+                function addPageButton(pageNumber) {
+                    const button = document.createElement("div");
+                    button.classList.add("pagination-cards__item");
+                    if (pageNumber === "...") {
+                        button.textContent = "...";
+                        button.disabled = true;
+                    } else if (pageNumber === currentPage) {
+                        button.textContent = pageNumber;
+                        button.disabled = true;
+                        button.classList.add("active-page");
+                    } else {
+                        button.textContent = pageNumber;
+                        button.addEventListener("click", (() => {
+                            currentPage = pageNumber;
+                            displayProducts(currentPage);
+                            updatePagination();
+                        }));
+                    }
+                    pagination.appendChild(button);
+                }
+                displayProducts(currentPage);
+                updatePagination();
             }
-            displayProducts(currentPage);
-            updatePagination();
         }
         function anchor_anchor() {
             document.addEventListener("DOMContentLoaded", (function() {
-                document.querySelectorAll(".scroll-to").forEach((anchor => {
+                if (document.querySelectorAll(".scroll-to")) document.querySelectorAll(".scroll-to").forEach((anchor => {
                     anchor.addEventListener("click", (function(e) {
                         e.preventDefault();
                         const blockID = this.getAttribute("href");
@@ -6929,7 +6937,7 @@
                 }));
             }));
         }
-        if (currentFileName == "book.html") paginationCards();
+        paginationCards();
         document.addEventListener("DOMContentLoaded", (function() {
             tabImages();
         }));
@@ -6958,12 +6966,10 @@
                 }));
             }));
         }
-        if (currentFileName === "book.html" || "card-page.html") datapicker();
-        if (currentFileName == "index.html") anchor_anchor();
-        if (currentFileName == "order.html") {
-            localStorageGuestsLoadPage();
-            counterOrder();
-        }
+        datapicker();
+        anchor_anchor();
+        localStorageGuestsLoadPage();
+        counterOrder();
         window["FLS"] = true;
         isWebp();
         menuInit();
