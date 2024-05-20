@@ -7281,25 +7281,27 @@
                 const titleElement = document.querySelector(".view-block__title");
                 if (titleElement) titleElement.setAttribute("data-lang", card.title);
                 const mainImageElement = document.getElementById("mainImage");
-                const mainPicture = mainImageElement.querySelector("picture");
-                const mainImg = mainPicture.querySelector("img");
-                mainPicture.querySelector("source").srcset = card.pictures.main.srcset;
-                mainPicture.querySelector("source").type = card.pictures.main.type;
-                mainImg.src = card.pictures.main.imgSrc;
-                mainImg.alt = card.pictures.main.alt;
-                const smallPicturesContainer = document.querySelector(".view-block__small-pictures");
-                const smallPicturesElements = smallPicturesContainer.querySelectorAll(".view-block__small-picture");
-                card.pictures.other.forEach(((picture, index) => {
-                    if (index < smallPicturesElements.length) {
-                        const smallPictureElement = smallPicturesElements[index];
-                        const smallPicture = smallPictureElement.querySelector("picture");
-                        const smallImg = smallPicture.querySelector("img");
-                        smallPicture.querySelector("source").srcset = picture.srcset;
-                        smallPicture.querySelector("source").type = picture.type;
-                        smallImg.src = picture.imgSrc;
-                        smallImg.alt = picture.alt;
-                    }
-                }));
+                if (mainImageElement) {
+                    const mainPicture = mainImageElement.querySelector("picture");
+                    const mainImg = mainPicture.querySelector("img");
+                    mainPicture.querySelector("source").srcset = card.pictures.main.srcset;
+                    mainPicture.querySelector("source").type = card.pictures.main.type;
+                    mainImg.src = card.pictures.main.imgSrc;
+                    mainImg.alt = card.pictures.main.alt;
+                    const smallPicturesContainer = document.querySelector(".view-block__small-pictures");
+                    const smallPicturesElements = smallPicturesContainer.querySelectorAll(".view-block__small-picture");
+                    card.pictures.other.forEach(((picture, index) => {
+                        if (index < smallPicturesElements.length) {
+                            const smallPictureElement = smallPicturesElements[index];
+                            const smallPicture = smallPictureElement.querySelector("picture");
+                            const smallImg = smallPicture.querySelector("img");
+                            smallPicture.querySelector("source").srcset = picture.srcset;
+                            smallPicture.querySelector("source").type = picture.type;
+                            smallImg.src = picture.imgSrc;
+                            smallImg.alt = picture.alt;
+                        }
+                    }));
+                }
                 const permissionsItems = document.querySelectorAll(".permissions-view__item");
                 permissionsItems.forEach(((item, index) => {
                     if (index < card.convenience.length) {
@@ -7311,7 +7313,7 @@
                     }
                 }));
                 const listContainer = document.querySelector(".information-card-page__list");
-                card.listItems.forEach((item => {
+                if (listContainer) card.listItems.forEach((item => {
                     const listItem = document.createElement("li");
                     listItem.className = "information-card-page__item information-card-page__item_dotted";
                     listItem.setAttribute("data-lang", item);
@@ -7326,8 +7328,17 @@
                     orderImg.src = card.pictures.main.imgSrc;
                     orderImg.alt = card.pictures.main.alt;
                 }
+                const cardServicesPictures = document.querySelectorAll(".card-services__picture");
+                if (cardServicesPictures) cardServicesPictures.forEach((cardServicesPicture => {
+                    const servicesPicture = cardServicesPicture.querySelector("picture");
+                    const servicesImg = servicesPicture.querySelector("img");
+                    servicesPicture.querySelector("source").srcset = card.pictures.main.srcset;
+                    servicesPicture.querySelector("source").type = card.pictures.main.type;
+                    servicesImg.src = card.pictures.main.imgSrc;
+                    servicesImg.alt = card.pictures.main.alt;
+                }));
                 const itemContactPagePictures = document.querySelectorAll(".item-contact-page__picture");
-                itemContactPagePictures.forEach((itemContactPagePicture => {
+                if (itemContactPagePictures) itemContactPagePictures.forEach((itemContactPagePicture => {
                     const contactPicture = itemContactPagePicture.querySelector("picture");
                     const contactImg = contactPicture.querySelector("img");
                     contactPicture.querySelector("source").srcset = card.pictures.main.srcset;
