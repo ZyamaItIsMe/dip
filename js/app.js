@@ -742,15 +742,11 @@
             const inputDateInValue = document.querySelector("#date-in").value;
             const inputDateOutValue = document.querySelector("#date-out").value;
             const inputNumberGuestBookingValue = document.querySelector("#number-guests").value;
+            console.log(inputNumberGuestBookingValue);
             if (inputDateInValue && inputDateOutValue && inputNumberGuestBookingValue) {
                 localStorage.setItem("inputDateInValue", inputDateInValue);
                 localStorage.setItem("inputDateOutValue", inputDateOutValue);
                 localStorage.setItem("inputNumberGuestBookingValue", inputNumberGuestBookingValue);
-            }
-            if (this.closest(".card-booking")) {
-                const parentCard = this.closest(".card-booking");
-                const dataCard = parentCard.getAttribute("data-card");
-                localStorage.setItem("dataCard", dataCard);
             }
         }
         function dateInOutPasteLocalStorage(inValue, outValue, guestValue) {
@@ -783,6 +779,11 @@
                 const year = parseInt(parts[2], 10);
                 return new Date(year, month, day);
             }
+        }
+        function saveCard() {
+            const parentCard = this.closest(".card-booking");
+            const dataCard = parentCard.getAttribute("data-card");
+            localStorage.setItem("dataCard", dataCard);
         }
         function formFieldsInit(options = {
             viewPass: false
@@ -6707,10 +6708,6 @@
                 let savedinputDateInValue;
                 let savedinputDateOutValue;
                 let savedinputNumberGuestBookingValue;
-                const btnCardBooking = document.querySelectorAll(".card-booking__button");
-                if (btnCardBooking) btnCardBooking.forEach((item => {
-                    item.addEventListener("click", dateInOutSaveLocalStorage);
-                }));
                 const btnCardPage = document.querySelector(".form__button");
                 if (btnCardPage) btnCardPage.addEventListener("click", dateInOutSaveLocalStorage);
                 if (currentFileName === "card-page.html" || "order.html") {
@@ -7075,10 +7072,6 @@
                 }));
             }));
         }
-        datapicker();
-        anchor_anchor();
-        localStorageGuestsLoadPage();
-        counterOrder();
         const btnNext = document.querySelector("#btn-next");
         if (btnNext) btnNext.addEventListener("click", (function() {
             const priceOneNight = document.querySelector("#total-price-nights").innerHTML;
@@ -7121,30 +7114,39 @@
         validations();
         document.addEventListener("DOMContentLoaded", (function() {
             fetch("cards.json").then((response => {
-                console.log("Fetching JSON file");
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 return response.json();
             })).then((data => {
-                console.log("JSON data loaded:", data);
                 const bookingCardsContainer = document.getElementById("booking-cards");
                 data.cards.forEach((card => {
-                    console.log("Processing card:", card);
                     const cardElement = document.createElement("div");
                     cardElement.classList.add("cards-block__card", "card-booking");
                     cardElement.setAttribute("data-card", card.id);
-                    cardElement.innerHTML = `\n\t\t\t\t <div class="card-booking__picture">\n\t\t\t\t\t<picture>\n\t\t\t\t\t  <source srcset="${card.pictures.main.srcset}" type="${card.pictures.main.type}">\n\t\t\t\t\t  <img src="${card.pictures.main.imgSrc}" alt="${card.pictures.main.alt}" />\n\t\t\t\t\t</picture>\n\t\t\t\t\t<div class="card-booking__name-card">\n\t\t\t\t\t  <h4 class="card-booking__title-card" data-lang="${card.title}"></h4>\n\t\t\t\t\t</div>\n\t\t\t\t </div>\n\t\t\t\t <div class="card-booking__content">\n\t\t\t\t\t<div class="card-booking__convenience convenience-card">\n\t\t\t\t\t  ${card.convenience.map((item => `\n\t\t\t\t\t\t <div class="convenience-card__item">\n\t\t\t\t\t\t\t<img src="${item.icon}" alt="" />\n\t\t\t\t\t\t\t<div class="convenience-card__text" data-lang="${item.text}"></div>\n\t\t\t\t\t\t </div>\n\t\t\t\t\t  `)).join("")}\n\t\t\t\t\t</div>\n\t\t\t\t\t<ul class="card-booking__list list-card-booking">\n\t\t\t\t\t  ${card.listItems.map((item => `\n\t\t\t\t\t\t <li class="list-card-booking__item list-card-booking__item_dotted" data-lang="${item}"></li>\n\t\t\t\t\t  `)).join("")}\n\t\t\t\t\t</ul>\n\t\t\t\t\t<div class="card-booking__order">\n\t\t\t\t\t  <div class="card-booking__price" data-lang="${card.price}"></div>\n\t\t\t\t\t  <a href="card-page.html" class="card-booking__button button" data-lang="${card.button}"></a>\n\t\t\t\t\t</div>\n\t\t\t\t </div>\n\t\t\t  `;
+                    cardElement.innerHTML = `\n\t\t\t\t <div class="card-booking__picture">\n\t\t\t\t\t<picture>\n\t\t\t\t\t  <source srcset="${card.pictures.main.srcset}" type="${card.pictures.main.type}">\n\t\t\t\t\t  <img src="${card.pictures.main.imgSrc}" alt="${card.pictures.main.alt}" />\n\t\t\t\t\t</picture>\n\t\t\t\t\t<div class="card-booking__name-card">\n\t\t\t\t\t  <h4 class="card-booking__title-card" data-lang="${card.title}"></h4>\n\t\t\t\t\t</div>\n\t\t\t\t </div>\n\t\t\t\t <div class="card-booking__content">\n\t\t\t\t\t<div class="card-booking__convenience convenience-card">\n\t\t\t\t\t  ${card.convenience.map((item => `\n\t\t\t\t\t\t <div class="convenience-card__item">\n\t\t\t\t\t\t\t<img src="${item.icon}" alt="" />\n\t\t\t\t\t\t\t<div class="convenience-card__text" data-lang="${item.text}"></div>\n\t\t\t\t\t\t </div>\n\t\t\t\t\t  `)).join("")}\n\t\t\t\t\t</div>\n\t\t\t\t\t<ul class="card-booking__list list-card-booking">\n\t\t\t\t\t  ${card.listItems.map((item => `\n\t\t\t\t\t\t <li class="list-card-booking__item list-card-booking__item_dotted" data-lang="${item}"></li>\n\t\t\t\t\t  `)).join("")}\n\t\t\t\t\t</ul>\n\t\t\t\t\t<div class="card-booking__order">\n\t\t\t\t\t  <div class="card-booking__price" data-lang="${card.price}"></div>\n\t\t\t\t\t  <a data-card-btn href="card-page.html" class="card-booking__button button" data-lang="${card.button}"></a>\n\t\t\t\t\t</div>\n\t\t\t\t </div>\n\t\t\t  `;
                     if (bookingCardsContainer) bookingCardsContainer.insertAdjacentElement("afterbegin", cardElement);
                     checkPagePathName();
                     changeLang();
                     checkActiveLangButton();
                     paginationCards();
+                    const btnCardBooking = document.querySelectorAll("[data-card-btn]");
+                    if (btnCardBooking) btnCardBooking.forEach((item => {
+                        item.addEventListener("click", (function() {
+                            saveCard.call(this, event);
+                            dateInOutSaveLocalStorage.call(this, event);
+                        }));
+                    }));
                 }));
             })).catch((error => console.error("Error loading the cards:", error)));
         }));
+        paginationCards();
         document.addEventListener("DOMContentLoaded", (function() {
             const dataCard = localStorage.getItem("dataCard");
             if (dataCard) console.log(`Data card ID: ${dataCard}`); else console.log("No data card ID found in localStorage.");
         }));
+        datapicker();
+        anchor_anchor();
+        localStorageGuestsLoadPage();
+        counterOrder();
         window["FLS"] = true;
         isWebp();
         menuInit();
