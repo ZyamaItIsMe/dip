@@ -742,7 +742,6 @@
             const inputDateInValue = document.querySelector("#date-in").value;
             const inputDateOutValue = document.querySelector("#date-out").value;
             const inputNumberGuestBookingValue = document.querySelector("#number-guests").value;
-            console.log(inputNumberGuestBookingValue);
             if (inputDateInValue && inputDateOutValue && inputNumberGuestBookingValue) {
                 localStorage.setItem("inputDateInValue", inputDateInValue);
                 localStorage.setItem("inputDateOutValue", inputDateOutValue);
@@ -5800,9 +5799,14 @@
                 de: "Email:"
             },
             "card-title-1": {
-                fr: "Dôme Géodésique:",
-                en: "Geodesic Dome:",
+                fr: "Dôme géodésique",
+                en: "Geodesic dome",
                 de: "Geodätische Kuppel"
+            },
+            "card-sauna-title": {
+                fr: "Le Sauna",
+                en: "Sauna",
+                de: "Sauna"
             },
             "card-convenience-bed": {
                 fr: "taille roi",
@@ -5928,6 +5932,106 @@
                 fr: "Total des Dépenses",
                 en: "Total",
                 de: "Insgesamt"
+            },
+            "card-convenience-guests-1": {
+                fr: "2 invités",
+                en: "2 guest",
+                de: "2 gäste"
+            },
+            "card-convenience-area-1": {
+                fr: "sur. 50 m2",
+                en: "50 m² area",
+                de: "50 m2 Fl"
+            },
+            "card-convenience-size-1": {
+                fr: "taille roi",
+                en: "king size",
+                de: "king size"
+            },
+            "card-convenience-bed-1": {
+                fr: "lit suppl.",
+                en: "extra bed",
+                de: "Zustellbett"
+            },
+            "card-convenience-furako": {
+                fr: "furako",
+                en: "furako",
+                de: "furako"
+            },
+            "card-convenience-bbq": {
+                fr: "BBQ",
+                en: "BBQ",
+                de: "BBQ"
+            },
+            "card-convenience-guests-2": {
+                fr: "2 invités",
+                en: "2 guest",
+                de: "2 gäste"
+            },
+            "card-convenience-area-2": {
+                fr: "sur. 50 m2",
+                en: "50 m² area",
+                de: "50 m2 Fl"
+            },
+            "card-convenience-size-2": {
+                fr: "taille roi",
+                en: "king size",
+                de: "Kingsize"
+            },
+            "card-convenience-bed-2": {
+                fr: "lit suppl.",
+                en: "extra bed",
+                de: "Zustellbett"
+            },
+            "card-convenience-sauna": {
+                fr: "le sauna",
+                en: "sauna",
+                de: "sauna"
+            },
+            "card-convenience-food": {
+                fr: "nourriture",
+                en: "food",
+                de: "Lebensmittel"
+            },
+            "card-sauna-list-item-1": {
+                fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
+                en: "2 Double beds: King size, mattress Snow White linens",
+                de: "2 Doppelbetten: Kingsize, Matratze Schneeweiße Bettwäsche"
+            },
+            "card-sauna-list-item-2": {
+                fr: "Chauffage: pistolet à air chaud",
+                en: "Heating: heat gun",
+                de: "Heizung: Heißluftpistole"
+            },
+            "card-sauna-list-item-3": {
+                fr: "Un service à thé Eau potable, thé, vaisselle, verres, couverts, etc. vous pouvez prendre - PAS de frais supplémentaires",
+                en: "A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges",
+                de: "Ein Teeservice Trinkwasser, Tee, Geschirr, Gläser, Besteck usw. sie können nehmen - KEINE zusätzlichen Gebühren"
+            },
+            "card-sauna-list-item-4": {
+                fr: "Coin feu de camp avec une belle vue sur les collines",
+                en: "Campfire area with a beautiful view of the hills",
+                de: "Lagerfeuerplatz mit schöner Aussicht auf die Hügel"
+            },
+            "card-sauna-list-item-5": {
+                fr: "Sur le territoire du glamping en usage commun:",
+                en: "On the territory of the glamping in common use:",
+                de: "Auf dem Territorium des Glamping im gemeinsamen Gebrauch:"
+            },
+            "card-sauna-list-item-6": {
+                fr: "cuisine d'été (micro-ondes, réfrigérateur, cuisinière, barbecue grill, chaudron, vaisselle, etc.)",
+                en: "summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron,dishes, etc.)",
+                de: "sommerküche (Mikrowelle, Kühlschrank, Herd, Grill, Kessel, Geschirr usw.).)"
+            },
+            "card-sauna-list-item-7": {
+                fr: "salon avec feu ouvert",
+                en: "lounge with open fire",
+                de: "lounge mit offenem Kamin"
+            },
+            "card-sauna-list-item-8": {
+                fr: "douche (eau chaude et froide), toilettes",
+                en: "shower (hot, cold water), toilet",
+                de: "dusche (warmes, kaltes Wasser), WC"
             }
         };
         const orderPage = {
@@ -7141,7 +7245,62 @@
         paginationCards();
         document.addEventListener("DOMContentLoaded", (function() {
             const dataCard = localStorage.getItem("dataCard");
-            if (dataCard) console.log(`Data card ID: ${dataCard}`); else console.log("No data card ID found in localStorage.");
+            if (!dataCard) {
+                console.log("No data card ID found in localStorage.");
+                return;
+            }
+            fetch("cards.json").then((response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.json();
+            })).then((data => {
+                const card = data.cards.find((card => card.id == dataCard));
+                if (!card) {
+                    console.log("Card not found in JSON data.");
+                    return;
+                }
+                const titleElement = document.querySelector(".view-block__title");
+                if (titleElement) titleElement.setAttribute("data-lang", card.title);
+                const mainImageElement = document.getElementById("mainImage");
+                const mainPicture = mainImageElement.querySelector("picture");
+                const mainImg = mainPicture.querySelector("img");
+                mainPicture.querySelector("source").srcset = card.pictures.main.srcset;
+                mainPicture.querySelector("source").type = card.pictures.main.type;
+                mainImg.src = card.pictures.main.imgSrc;
+                mainImg.alt = card.pictures.main.alt;
+                const smallPicturesContainer = document.querySelector(".view-block__small-pictures");
+                const smallPicturesElements = smallPicturesContainer.querySelectorAll(".view-block__small-picture");
+                card.pictures.other.forEach(((picture, index) => {
+                    if (index < smallPicturesElements.length) {
+                        const smallPictureElement = smallPicturesElements[index];
+                        const smallPicture = smallPictureElement.querySelector("picture");
+                        const smallImg = smallPicture.querySelector("img");
+                        smallPicture.querySelector("source").srcset = picture.srcset;
+                        smallPicture.querySelector("source").type = picture.type;
+                        smallImg.src = picture.imgSrc;
+                        smallImg.alt = picture.alt;
+                    }
+                }));
+                const permissionsItems = document.querySelectorAll(".permissions-view__item");
+                permissionsItems.forEach(((item, index) => {
+                    if (index < card.convenience.length) {
+                        const convenience = card.convenience[index];
+                        const img = item.querySelector("img");
+                        const text = item.querySelector(".permissions-view__text");
+                        img.src = convenience.icon;
+                        text.setAttribute("data-lang", convenience.text);
+                    }
+                }));
+                const listContainer = document.querySelector(".information-card-page__list");
+                card.listItems.forEach((item => {
+                    const listItem = document.createElement("li");
+                    listItem.className = "information-card-page__item information-card-page__item_dotted";
+                    listItem.setAttribute("data-lang", item);
+                    listContainer.appendChild(listItem);
+                }));
+                checkPagePathName();
+                changeLang();
+                checkActiveLangButton();
+            })).catch((error => console.error("Error loading the cards:", error)));
         }));
         datapicker();
         anchor_anchor();
