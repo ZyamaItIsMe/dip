@@ -11,56 +11,56 @@
         },
         "other": [
           {
-            "srcset": "img/accommodation/home-1-1.webp",
+            "srcset": "img/accommodation/home-2.webp",
             "type": "image/webp",
-            "imgSrc": "img/accommodation/home-1-1.png",
+            "imgSrc": "img/accommodation/home-2.png",
             "alt": "Картинка 1"
           },
           {
-            "srcset": "img/accommodation/home-1-2.webp",
+            "srcset": "img/accommodation/home-2.webp",
             "type": "image/webp",
-            "imgSrc": "img/accommodation/home-1-2.png",
+            "imgSrc": "img/accommodation/home-2.png",
             "alt": "Картинка 2"
           },
           {
-            "srcset": "img/accommodation/home-1-3.webp",
+            "srcset": "img/accommodation/home-2.webp",
             "type": "image/webp",
-            "imgSrc": "img/accommodation/home-1-3.png",
+            "imgSrc": "img/accommodation/home-2.png",
             "alt": "Картинка 3"
           },
           {
-            "srcset": "img/accommodation/home-1-4.webp",
+            "srcset": "img/accommodation/home-2.webp",
             "type": "image/webp",
-            "imgSrc": "img/accommodation/home-1-4.png",
+            "imgSrc": "img/accommodation/home-2.png",
             "alt": "Картинка 4"
           },
           {
-            "srcset": "img/accommodation/home-1-5.webp",
+            "srcset": "img/accommodation/home-2.webp",
             "type": "image/webp",
-            "imgSrc": "img/accommodation/home-1-5.png",
+            "imgSrc": "img/accommodation/home-2.png",
             "alt": "Картинка 5"
           },
           {
-            "srcset": "img/accommodation/home-1-6.webp",
+            "srcset": "img/accommodation/home-2.webp",
             "type": "image/webp",
-            "imgSrc": "img/accommodation/home-1-6.png",
+            "imgSrc": "img/accommodation/home-2.png",
             "alt": "Картинка 6"
           },
           {
-            "srcset": "img/accommodation/home-1-7.webp",
+            "srcset": "img/accommodation/home-2.webp",
             "type": "image/webp",
-            "imgSrc": "img/accommodation/home-1-7.png",
+            "imgSrc": "img/accommodation/home-2.png",
             "alt": "Картинка 7"
           },
           {
-            "srcset": "img/accommodation/home-1-8.webp",
+            "srcset": "img/accommodation/home-2.webp",
             "type": "image/webp",
-            "imgSrc": "img/accommodation/home-1-8.png",
+            "imgSrc": "img/accommodation/home-2.png",
             "alt": "Картинка 8"
           }
         ]
       },
-      "title": "card-geodesic-dome-title",
+      "title": "card-title-1",
       "convenience": [
         { "icon": "img/page-booking/icons/guests.svg", "text": "card-convenience-guests-1" },
         { "icon": "img/page-booking/icons/area.svg", "text": "card-convenience-area-1" },
@@ -84,58 +84,58 @@
       "id": 2,
       "pictures": {
         "main": {
-          "srcset": "img/page-booking/home-2.webp",
+          "srcset": "img/accommodation/sauna.webp",
           "type": "image/webp",
-          "imgSrc": "img/page-booking/home-2.png",
+          "imgSrc": "img/accommodation/sauna.png",
           "alt": "Картинка"
         },
         "other": [
           {
-            "srcset": "img/page-booking/home-2-1.webp",
+            "srcset": "img/accommodation/home-3.webp",
             "type": "image/webp",
-            "imgSrc": "img/page-booking/home-2-1.png",
+            "imgSrc": "img/accommodation/home-3.png",
             "alt": "Картинка 1"
           },
           {
-            "srcset": "img/page-booking/home-2-2.webp",
+            "srcset": "img/accommodation/home-3.webp",
             "type": "image/webp",
-            "imgSrc": "img/page-booking/home-2-2.png",
+            "imgSrc": "img/accommodation/home-3.png",
             "alt": "Картинка 2"
           },
           {
-            "srcset": "img/page-booking/home-2-3.webp",
+            "srcset": "img/accommodation/home-3.webp",
             "type": "image/webp",
-            "imgSrc": "img/page-booking/home-2-3.png",
+            "imgSrc": "img/accommodation/home-3.png",
             "alt": "Картинка 3"
           },
           {
-            "srcset": "img/page-booking/home-2-4.webp",
+            "srcset": "img/accommodation/home-3.webp",
             "type": "image/webp",
-            "imgSrc": "img/page-booking/home-2-4.png",
+            "imgSrc": "img/accommodation/home-3.png",
             "alt": "Картинка 4"
           },
           {
-            "srcset": "img/page-booking/home-2-5.webp",
+            "srcset": "img/accommodation/home-3.webp",
             "type": "image/webp",
-            "imgSrc": "img/page-booking/home-2-5.png",
+            "imgSrc": "img/accommodation/home-3.png",
             "alt": "Картинка 5"
           },
           {
-            "srcset": "img/page-booking/home-2-6.webp",
+            "srcset": "img/accommodation/home-3.webp",
             "type": "image/webp",
-            "imgSrc": "img/page-booking/home-2-6.png",
+            "imgSrc": "img/accommodation/home-3.png",
             "alt": "Картинка 6"
           },
           {
-            "srcset": "img/page-booking/home-2-7.webp",
+            "srcset": "img/accommodation/home-3.webp",
             "type": "image/webp",
-            "imgSrc": "img/page-booking/home-2-7.png",
+            "imgSrc": "img/accommodation/home-3.png",
             "alt": "Картинка 7"
           },
           {
-            "srcset": "img/page-booking/home-2-8.webp",
+            "srcset": "img/accommodation/home-3.webp",
             "type": "image/webp",
-            "imgSrc": "img/page-booking/home-2-8.png",
+            "imgSrc": "img/accommodation/home-3.png",
             "alt": "Картинка 8"
           }
         ]
