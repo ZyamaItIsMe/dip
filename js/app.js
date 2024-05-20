@@ -6531,6 +6531,16 @@
                 fr: "Dôme de glamping",
                 en: "Glamping dome",
                 de: "Glamping Kuppel"
+            },
+            "card-title-1": {
+                fr: "Dôme géodésique",
+                en: "Geodesic dome",
+                de: "Geodätische Kuppel"
+            },
+            "card-sauna-title": {
+                fr: "Le Sauna",
+                en: "Sauna",
+                de: "Sauna"
             }
         };
         const requestPage = {
@@ -6754,10 +6764,20 @@
                 en: "Full Pacage",
                 de: "Volles Paket"
             },
-            "card-title-1-1": {
-                fr: "Dôme de glamping",
-                en: "Glamping dome",
-                de: "Glamping Kuppel"
+            "card-title": {
+                fr: "Demande de Réservation",
+                en: "Request Booking",
+                de: "Anfrage Buchung"
+            },
+            "card-title-1": {
+                fr: "Dôme géodésique",
+                en: "Geodesic dome",
+                de: "Geodätische Kuppel"
+            },
+            "card-sauna-title": {
+                fr: "Le Sauna",
+                en: "Sauna",
+                de: "Sauna"
             }
         };
         var datepicker_min = __webpack_require__(448);
@@ -7297,6 +7317,26 @@
                     listItem.setAttribute("data-lang", item);
                     listContainer.appendChild(listItem);
                 }));
+                const cardOrderPicture = document.querySelector(".card-order__picture");
+                if (cardOrderPicture) {
+                    const orderPicture = cardOrderPicture.querySelector("picture");
+                    const orderImg = orderPicture.querySelector("img");
+                    orderPicture.querySelector("source").srcset = card.pictures.main.srcset;
+                    orderPicture.querySelector("source").type = card.pictures.main.type;
+                    orderImg.src = card.pictures.main.imgSrc;
+                    orderImg.alt = card.pictures.main.alt;
+                }
+                const itemContactPagePictures = document.querySelectorAll(".item-contact-page__picture");
+                itemContactPagePictures.forEach((itemContactPagePicture => {
+                    const contactPicture = itemContactPagePicture.querySelector("picture");
+                    const contactImg = contactPicture.querySelector("img");
+                    contactPicture.querySelector("source").srcset = card.pictures.main.srcset;
+                    contactPicture.querySelector("source").type = card.pictures.main.type;
+                    contactImg.src = card.pictures.main.imgSrc;
+                    contactImg.alt = card.pictures.main.alt;
+                }));
+                const contactPageTitle = document.querySelector(".item-contact-page__title");
+                if (contactPageTitle) contactPageTitle.setAttribute("data-lang", card.title);
                 checkPagePathName();
                 changeLang();
                 checkActiveLangButton();
