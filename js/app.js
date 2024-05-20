@@ -747,6 +747,11 @@
                 localStorage.setItem("inputDateOutValue", inputDateOutValue);
                 localStorage.setItem("inputNumberGuestBookingValue", inputNumberGuestBookingValue);
             }
+            if (this.closest(".card-booking")) {
+                const parentCard = this.closest(".card-booking");
+                const dataCard = parentCard.getAttribute("data-card");
+                localStorage.setItem("dataCard", dataCard);
+            }
         }
         function dateInOutPasteLocalStorage(inValue, outValue, guestValue) {
             inValue = localStorage.getItem("inputDateInValue");
@@ -4392,6 +4397,11 @@
         const da = new DynamicAdapt("max");
         da.init();
         const indexPage = {
+            head__title: {
+                fr: "Maison",
+                en: "Home",
+                de: "Heim"
+            },
             "header__btn-subMenu": {
                 fr: "FR",
                 en: "EN",
@@ -5049,6 +5059,11 @@
             }
         };
         const certificatesPage = {
+            head__title: {
+                fr: "Certificat",
+                en: "Certificate",
+                de: "Zertifikat"
+            },
             "header__btn-subMenu": {
                 fr: "FR",
                 en: "EN",
@@ -5311,6 +5326,11 @@
             }
         };
         const bookingPage = {
+            head__title: {
+                fr: "Réservation",
+                en: "Booking",
+                de: "Buchung"
+            },
             "header__btn-subMenu": {
                 fr: "FR",
                 en: "EN",
@@ -5633,6 +5653,11 @@
             }
         };
         const cardPage = {
+            head__title: {
+                fr: "Carte",
+                en: "Card",
+                de: "Karte"
+            },
             "header__btn-subMenu": {
                 fr: "FR",
                 en: "EN",
@@ -5905,6 +5930,11 @@
             }
         };
         const orderPage = {
+            head__title: {
+                fr: "Commande",
+                en: "Order",
+                de: "Bestellen"
+            },
             "header__btn-subMenu": {
                 fr: "FR",
                 en: "EN",
@@ -6175,6 +6205,11 @@
                 en: "Breakfast",
                 de: "Breakfast"
             },
+            "form-full": {
+                fr: "Emballage complet",
+                en: "Full Pacage",
+                de: "Volles Paket"
+            },
             "form-btn": {
                 fr: "Livre",
                 en: "Book",
@@ -6182,6 +6217,11 @@
             }
         };
         const contaсtPage = {
+            head__title: {
+                fr: "Coordonnées",
+                en: "Contact",
+                de: "Kontakt"
+            },
             "header__btn-subMenu": {
                 fr: "FR",
                 en: "EN",
@@ -6377,6 +6417,11 @@
                 en: "Breakfast",
                 de: "Breakfast"
             },
+            "form-full": {
+                fr: "Emballage complet",
+                en: "Full Pacage",
+                de: "Volles Paket"
+            },
             "card-title-1": {
                 fr: "Dôme de glamping",
                 en: "Glamping dome",
@@ -6384,6 +6429,11 @@
             }
         };
         const requestPage = {
+            head__title: {
+                fr: "Demande",
+                en: "Request",
+                de: "Anfrage"
+            },
             "header__btn-subMenu": {
                 fr: "FR",
                 en: "EN",
@@ -6594,6 +6644,11 @@
                 en: "Breakfast",
                 de: "Breakfast"
             },
+            "form-full": {
+                fr: "Emballage complet",
+                en: "Full Pacage",
+                de: "Volles Paket"
+            },
             "card-title-1-1": {
                 fr: "Dôme de glamping",
                 en: "Glamping dome",
@@ -6759,11 +6814,13 @@
         }
         function counterOrder() {
             window.addEventListener("click", (function(e) {
+                let cardExtra;
+                let priceValue;
                 if (e.target.id == "minus" || e.target.id === "plus") {
                     const counterWrapper = e.target.closest(".card-services__table");
                     const counter = counterWrapper.querySelector("#counter");
-                    const cardExtra = e.target.closest(".card-services");
-                    let priceValue = cardExtra.querySelector("#price-value");
+                    cardExtra = e.target.closest(".card-services");
+                    priceValue = cardExtra.querySelector("#price-value");
                     if (e.target.id === "minus") if (parseInt(counter.innerText) > 1) {
                         counter.innerText = --counter.innerText;
                         if (cardExtra.dataset.extra === "breakfast") priceValue.innerText = parseInt(counter.innerText * 25); else if (cardExtra.dataset.extra === "full") priceValue.innerText = parseInt(counter.innerText * 45);
@@ -6773,7 +6830,26 @@
                         if (cardExtra.dataset.extra === "breakfast") priceValue.innerText = parseInt(counter.innerText * 25); else if (cardExtra.dataset.extra === "full") priceValue.innerText = parseInt(counter.innerText * 45);
                     }
                 }
-                if (e.target.id == "btn-extra") ;
+                if (e.target.id == "btn-extra") {
+                    cardExtra = e.target.closest(".card-services");
+                    const formExtraName = document.querySelector("#form-extra");
+                    const formExtraPrice = document.querySelector("#serv-price");
+                    if (formExtraName && formExtraPrice) if (cardExtra.dataset.extra === "breakfast") {
+                        const nameCardExtra = cardExtra.querySelector(".card-services__title");
+                        priceValue = cardExtra.querySelector("#price-value");
+                        formExtraName.innerText = nameCardExtra.innerText;
+                        formExtraPrice.innerText = priceValue.innerText;
+                        formExtraName.dataset.lang = "form-breakfast";
+                        calculateNightsPrice();
+                    } else if (cardExtra.dataset.extra === "full") {
+                        const nameCardExtra = cardExtra.querySelector(".card-services__title");
+                        priceValue = cardExtra.querySelector("#price-value");
+                        formExtraName.innerText = nameCardExtra.innerText;
+                        formExtraPrice.innerText = priceValue.innerText;
+                        formExtraName.dataset.lang = "form-full";
+                        calculateNightsPrice();
+                    }
+                }
             }));
         }
         function localStorageGuestsLoadPage() {
@@ -6790,6 +6866,40 @@
                 if (card.dataset.extra === "full") card.querySelector("#price-value").innerText = parseInt(card.querySelector("#counter").innerText * 45);
             }));
             calculateNightsPrice();
+        }
+        function validations() {
+            function validateMax(input) {
+                const max = 4;
+                if (input.valueAsNumber > max) input.value = max;
+            }
+            function validateTextInput(input) {
+                const namePattern = /^[a-zA-Za-яА-ЯёЁ]{1,16}$/;
+                if (!namePattern.test(input.value)) {
+                    alert("Используйте только буквы до 16 символов");
+                    input.value = "";
+                }
+            }
+            function validateEmail(input) {
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,16}$/;
+                if (!emailPattern.test(input.value)) {
+                    alert("Введите корректный адрес электронной почты");
+                    input.value = "";
+                }
+            }
+            document.addEventListener("DOMContentLoaded", (function() {
+                if (document.getElementById("number-guests")) document.getElementById("number-guests").oninput = function() {
+                    validateMax(this);
+                };
+                if (document.getElementById("name")) document.getElementById("name").onblur = function() {
+                    validateTextInput(this);
+                };
+                if (document.getElementById("second")) document.getElementById("second").onblur = function() {
+                    validateTextInput(this);
+                };
+                if (document.getElementById("email")) document.getElementById("email").onblur = function() {
+                    validateEmail(this);
+                };
+            }));
         }
         const btnTranslate = document.querySelector(".menu__translate");
         const subMenuTranslate = document.querySelector(".sub-menu");
@@ -6970,6 +7080,69 @@
         anchor_anchor();
         localStorageGuestsLoadPage();
         counterOrder();
+        const btnNext = document.querySelector("#btn-next");
+        if (btnNext) btnNext.addEventListener("click", (function() {
+            const priceOneNight = document.querySelector("#total-price-nights").innerHTML;
+            const priceExtra = document.querySelector("#serv-price").innerHTML;
+            const priceExtraName = document.querySelector("#form-extra").innerHTML;
+            const priceTotal = document.querySelector("#total-price").innerHTML;
+            const dataLangValue = document.querySelector("#form-extra").dataset.lang;
+            localStorage.setItem("priceOneNight", priceOneNight);
+            localStorage.setItem("dataLangValue", dataLangValue);
+            localStorage.setItem("priceExtra", priceExtra);
+            localStorage.setItem("priceExtraName", priceExtraName);
+            localStorage.setItem("priceTotal", priceTotal);
+        }));
+        const wrapperForm = document.querySelector(".item-contact-page");
+        if (wrapperForm) {
+            wrapperForm.querySelector(".item-contact-page__price").innerHTML = localStorage.getItem("priceOneNight") + `$`;
+            wrapperForm.querySelector("#text-extra").innerHTML = localStorage.getItem("priceExtraName");
+            wrapperForm.querySelector("#text-extra").dataset.lang = localStorage.getItem("dataLangValue");
+            wrapperForm.querySelector("#price-extra").innerHTML = localStorage.getItem("priceExtra") + `$`;
+            wrapperForm.querySelector(".item-contact-page__price_final").innerHTML = localStorage.getItem("priceTotal") + `$`;
+        }
+        const formDate = document.querySelector("#date-text");
+        const formGuests = document.querySelector("#num-guests");
+        if (formDate) {
+            const monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+            const startDateStr = localStorage.getItem("inputDateInValue");
+            const endDateStr = localStorage.getItem("inputDateOutValue");
+            const quanityGuests = localStorage.getItem("inputNumberGuestBookingValue");
+            function parseDate(dateStr) {
+                const parts = dateStr.split(".");
+                return new Date(parts[2], parts[1] - 1, parts[0]);
+            }
+            const startDate = parseDate(startDateStr);
+            const endDate = parseDate(endDateStr);
+            let formattedDate;
+            if (startDate.getMonth() === endDate.getMonth()) formattedDate = `${monthNames[startDate.getMonth()]} ${startDate.getDate()} - ${endDate.getDate()}`; else formattedDate = `${monthNames[startDate.getMonth()]} ${startDate.getDate()} - ${monthNames[endDate.getMonth()]} ${endDate.getDate()}`;
+            formDate.textContent = formattedDate;
+            formGuests.innerHTML = quanityGuests;
+        }
+        validations();
+        document.addEventListener("DOMContentLoaded", (function() {
+            fetch("js/cards.json").then((response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.json();
+            })).then((data => {
+                const bookingCardsContainer = document.getElementById("booking-cards");
+                data.cards.forEach((card => {
+                    const cardElement = document.createElement("div");
+                    cardElement.classList.add("cards-block__card", "card-booking");
+                    cardElement.setAttribute("data-card", card.id);
+                    cardElement.innerHTML = `\n\t\t\t\t <div class="card-booking__picture">\n\t\t\t\t\t<picture>\n\t\t\t\t\t  <source srcset="${card.pictures.main.srcset}" type="${card.pictures.main.type}">\n\t\t\t\t\t  <img src="${card.pictures.main.imgSrc}" alt="${card.pictures.main.alt}" />\n\t\t\t\t\t</picture>\n\t\t\t\t\t<div class="card-booking__name-card">\n\t\t\t\t\t  <h4 class="card-booking__title-card" data-lang="${card.title}"></h4>\n\t\t\t\t\t</div>\n\t\t\t\t </div>\n\t\t\t\t <div class="card-booking__content">\n\t\t\t\t\t<div class="card-booking__convenience convenience-card">\n\t\t\t\t\t  ${card.convenience.map((item => `\n\t\t\t\t\t\t <div class="convenience-card__item">\n\t\t\t\t\t\t\t<img src="${item.icon}" alt="" />\n\t\t\t\t\t\t\t<div class="convenience-card__text" data-lang="${item.text}"></div>\n\t\t\t\t\t\t </div>\n\t\t\t\t\t  `)).join("")}\n\t\t\t\t\t</div>\n\t\t\t\t\t<ul class="card-booking__list list-card-booking">\n\t\t\t\t\t  ${card.listItems.map((item => `\n\t\t\t\t\t\t <li class="list-card-booking__item list-card-booking__item_dotted" data-lang="${item}"></li>\n\t\t\t\t\t  `)).join("")}\n\t\t\t\t\t</ul>\n\t\t\t\t\t<div class="card-booking__order">\n\t\t\t\t\t  <div class="card-booking__price" data-lang="${card.price}"></div>\n\t\t\t\t\t  <a href="card-page.html" class="card-booking__button button" data-lang="${card.button}"></a>\n\t\t\t\t\t</div>\n\t\t\t\t </div>\n\t\t\t  `;
+                    if (bookingCardsContainer) bookingCardsContainer.appendChild(cardElement);
+                    checkPagePathName();
+                    changeLang();
+                    checkActiveLangButton();
+                    paginationCards();
+                }));
+            })).catch((error => console.error("Error loading the cards:", error)));
+        }));
+        document.addEventListener("DOMContentLoaded", (function() {
+            const dataCard = localStorage.getItem("dataCard");
+            if (dataCard) console.log(`Data card ID: ${dataCard}`); else console.log("No data card ID found in localStorage.");
+        }));
         window["FLS"] = true;
         isWebp();
         menuInit();
