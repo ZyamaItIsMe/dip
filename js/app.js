@@ -7047,7 +7047,6 @@
                 }));
             }));
         }
-        paginationCards();
         document.addEventListener("DOMContentLoaded", (function() {
             tabImages();
         }));
