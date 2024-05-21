@@ -6,8 +6,8 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?_v=20240520165500" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20240520165500" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?_v=20240521181445" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240521181445" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -85,23 +85,23 @@
 						<div class="form__name">
 							<div class="form__line form__line_mb-none">
 								<label data-lang="form-first" for="name" class="form__label"></label>
-								<input id="name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" maxlength="16" />
+								<input id="name" autocomplete="off" type="text" name="form[]" placeholder="" class="form__input" maxlength="16" data-error="Используйте только буквы до 16 символов" data-pattern="^[a-zA-Za-яА-ЯёЁ]{1,16}$" />
 							</div>
 							<div class="form__line form__line_mb-none">
 								<label data-lang="form-second" for="second" class="form__label"></label>
-								<input id="second" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form__input" maxlength="16" />
+								<input id="second" autocomplete="off" type="text" name="form[]" placeholder="" class="form__input" maxlength="16" data-error="Используйте только буквы до 16 символов" data-pattern="^[a-zA-Za-яА-ЯёЁ]{1,16}$" />
 							</div>
 						</div>
 						<div class="form__email">
 							<div class="form__line">
 								<label data-lang="form-email" for="email" class="form__label"></label>
-								<input id="email" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="" class="form__input" required />
+								<input id="email" autocomplete="off" type="email" name="form[]" placeholder="" class="form__input" data-error="Введите корректный адрес электронной почты" data-pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
 							</div>
 						</div>
 						<div class="form__phone-number">
 							<div class="form__line">
 								<label data-lang="form-phone" for="email" class="form__label"></label>
-								<input id="phone" autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="" class="form__input" pattern="+?(d{1,3})?[-s]?((d{2,3})|d{2,3})[-s]?d{3}[-s]?d{2}[-s]?d{2}" />
+								<input id="phone" autocomplete="off" type="tel" name="form[]" placeholder="" class="form__input" data-error="Введите корректный номер телефона в формате +7 (XXX) XXX-XX-XX" data-pattern="^\+7(\d{10}|\s\(\d{3}\)\s\d{3}-\d{2}-\d{2})$" />
 							</div>
 						</div>
 						<div class="form__text">
@@ -121,7 +121,9 @@
 								</div>
 								<div class="item-contact-page__info">
 									<div data-lang="card-title-1" class="item-contact-page__title"></div>
-									<div class="item-contact-page__date"><span id="date-text">Oct 17 - 19</span>, <span id="num-guests">2</span> guests</div>
+									<div class="item-contact-page__date">
+										<span id="date-text">Oct 17 - 19</span>, <span id="num-guests">2</span> guests
+									</div>
 								</div>
 							</div>
 							<ul class="item-contact-page__list">
@@ -242,7 +244,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20240520165500"></script>
+	<script src="js/app.min.js?_v=20240521181445"></script>
 
 </body>
 
