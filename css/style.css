@@ -1579,6 +1579,11 @@ textarea.input {
   }
 }
 
+.error-message {
+  font-size: 0.8125rem;
+  color: red;
+}
+
 .no-webp .header{
   background: url("../img/header/bg.jpg") 0 0/cover no-repeat; }
 
