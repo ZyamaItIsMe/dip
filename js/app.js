@@ -779,11 +779,6 @@
                 return new Date(year, month, day);
             }
         }
-        function saveCard() {
-            const parentCard = this.closest(".card-booking");
-            const dataCard = parentCard.getAttribute("data-card");
-            localStorage.setItem("dataCard", dataCard);
-        }
         function formFieldsInit(options = {
             viewPass: false
         }) {
@@ -5650,6 +5645,11 @@
                 fr: "à partir de 100$",
                 en: "from 100$",
                 de: "from 100$"
+            },
+            "card-title-1": {
+                fr: "Dôme Géodésique",
+                en: "Geodesic Dome",
+                de: "Geodätische Kuppel"
             }
         };
         const cardPage = {
@@ -6840,80 +6840,6 @@
                 }
             }
         }
-        function paginationCards() {
-            const productsContainer = document.getElementById("booking-cards");
-            if (productsContainer) {
-                const pagination = document.getElementById("pagination");
-                const products = Array.from(productsContainer.children);
-                let currentPage = 1;
-                function displayProducts(pageNumber) {
-                    productsContainer.innerHTML = "";
-                    const itemsPerPage = 6;
-                    const startIndex = (pageNumber - 1) * itemsPerPage;
-                    const endIndex = startIndex + itemsPerPage;
-                    const displayedProducts = products.slice(startIndex, endIndex);
-                    displayedProducts.forEach((product => {
-                        productsContainer.appendChild(product.cloneNode(true));
-                    }));
-                }
-                function updatePagination() {
-                    const totalPages = Math.ceil(products.length / 6);
-                    pagination.innerHTML = "";
-                    let pagesToShow = [];
-                    if (totalPages <= 4) pagesToShow = Array.from({
-                        length: totalPages
-                    }, ((_, i) => i + 1)); else if (currentPage === 1) pagesToShow = [ 1, 2, "...", totalPages ]; else if (currentPage === totalPages) pagesToShow = [ 1, "...", totalPages - 1, totalPages ]; else pagesToShow = [ currentPage - 1, currentPage, "...", totalPages ];
-                    const prevButton = document.createElement("button");
-                    prevButton.classList.add("pagination-cards__prevButton");
-                    prevButton.classList.add("_icon-arrow-btn");
-                    prevButton.addEventListener("click", (() => {
-                        if (currentPage > 1) {
-                            currentPage--;
-                            displayProducts(currentPage);
-                            updatePagination();
-                        }
-                    }));
-                    pagination.appendChild(prevButton);
-                    pagesToShow.forEach((pageNumber => {
-                        addPageButton(pageNumber);
-                    }));
-                    const nextButton = document.createElement("button");
-                    nextButton.classList.add("pagination-cards__nextButton");
-                    nextButton.classList.add("_icon-arrow-btn");
-                    nextButton.addEventListener("click", (() => {
-                        const totalPages = Math.ceil(products.length / 6);
-                        if (currentPage < totalPages) {
-                            currentPage++;
-                            displayProducts(currentPage);
-                            updatePagination();
-                        }
-                    }));
-                    pagination.appendChild(nextButton);
-                }
-                function addPageButton(pageNumber) {
-                    const button = document.createElement("div");
-                    button.classList.add("pagination-cards__item");
-                    if (pageNumber === "...") {
-                        button.textContent = "...";
-                        button.disabled = true;
-                    } else if (pageNumber === currentPage) {
-                        button.textContent = pageNumber;
-                        button.disabled = true;
-                        button.classList.add("active-page");
-                    } else {
-                        button.textContent = pageNumber;
-                        button.addEventListener("click", (() => {
-                            currentPage = pageNumber;
-                            displayProducts(currentPage);
-                            updatePagination();
-                        }));
-                    }
-                    pagination.appendChild(button);
-                }
-                displayProducts(currentPage);
-                updatePagination();
-            }
-        }
         function anchor_anchor() {
             document.addEventListener("DOMContentLoaded", (function() {
                 if (document.querySelectorAll(".scroll-to")) document.querySelectorAll(".scroll-to").forEach((anchor => {
@@ -6989,37 +6915,294 @@
             calculateNightsPrice();
         }
         function validations() {
+            function showError(input, message) {
+                const existingError = input.parentNode.querySelector(".error-message");
+                if (existingError) existingError.remove();
+                const errorDiv = document.createElement("div");
+                errorDiv.className = "error-message";
+                errorDiv.textContent = message;
+                input.classList.add("input-error");
+                input.parentNode.insertBefore(errorDiv, input.nextSibling);
+            }
+            function clearError(input) {
+                const existingError = input.parentNode.querySelector(".error-message");
+                if (existingError) existingError.remove();
+                input.classList.remove("input-error");
+            }
+            function validatePattern(input) {
+                const pattern = new RegExp(input.dataset.pattern);
+                const errorMessage = input.dataset.error;
+                if (!pattern.test(input.value)) {
+                    showError(input, errorMessage);
+                    return false;
+                } else {
+                    clearError(input);
+                    return true;
+                }
+            }
             function validateMax(input) {
-                const max = 4;
-                if (input.valueAsNumber > max) input.value = max;
-            }
-            function validateTextInput(input) {
-                const namePattern = /^[a-zA-Za-яА-ЯёЁ]{1,16}$/;
-                if (!namePattern.test(input.value)) {
-                    alert("Используйте только буквы до 16 символов");
-                    input.value = "";
+                const max = parseInt(input.dataset.max, 10);
+                if (input.valueAsNumber > max) {
+                    showError(input, `Максимальное значение: ${max}`);
+                    input.value = max;
+                    return false;
+                } else {
+                    clearError(input);
+                    return true;
                 }
             }
-            function validateEmail(input) {
-                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,16}$/;
-                if (!emailPattern.test(input.value)) {
-                    alert("Введите корректный адрес электронной почты");
-                    input.value = "";
-                }
+            function validateInput(input, onBlur = false) {
+                if (input.dataset.pattern) if (onBlur) return validatePattern(input); else clearError(input); else if (input.dataset.max) return validateMax(input);
+                return true;
             }
             document.addEventListener("DOMContentLoaded", (function() {
-                if (document.getElementById("number-guests")) document.getElementById("number-guests").oninput = function() {
-                    validateMax(this);
-                };
-                if (document.getElementById("name")) document.getElementById("name").onblur = function() {
-                    validateTextInput(this);
-                };
-                if (document.getElementById("second")) document.getElementById("second").onblur = function() {
-                    validateTextInput(this);
-                };
-                if (document.getElementById("email")) document.getElementById("email").onblur = function() {
-                    validateEmail(this);
-                };
+                if (document.querySelectorAll("input")) {
+                    document.querySelectorAll("input").forEach((input => {
+                        input.addEventListener("blur", (() => validateInput(input, true)));
+                        input.addEventListener("input", (() => validateInput(input)));
+                    }));
+                    if (document.querySelector("form")) document.querySelector("form").addEventListener("submit", (function(event) {
+                        let valid = true;
+                        document.querySelectorAll("input").forEach((input => {
+                            if (!validateInput(input, true)) valid = false;
+                        }));
+                        if (!valid) event.preventDefault();
+                    }));
+                }
+            }));
+        }
+        function paginationCards() {
+            const productsContainer = document.getElementById("booking-cards");
+            if (productsContainer) {
+                const pagination = document.getElementById("pagination");
+                const products = Array.from(productsContainer.children);
+                let currentPage = 1;
+                function displayProducts(pageNumber) {
+                    productsContainer.innerHTML = "";
+                    const itemsPerPage = 6;
+                    const startIndex = (pageNumber - 1) * itemsPerPage;
+                    const endIndex = startIndex + itemsPerPage;
+                    const displayedProducts = products.slice(startIndex, endIndex);
+                    displayedProducts.forEach((product => {
+                        productsContainer.appendChild(product.cloneNode(true));
+                    }));
+                }
+                function updatePagination() {
+                    const totalPages = Math.ceil(products.length / 6);
+                    pagination.innerHTML = "";
+                    let pagesToShow = [];
+                    if (totalPages <= 4) pagesToShow = Array.from({
+                        length: totalPages
+                    }, ((_, i) => i + 1)); else if (currentPage === 1) pagesToShow = [ 1, 2, "...", totalPages ]; else if (currentPage === totalPages) pagesToShow = [ 1, "...", totalPages - 1, totalPages ]; else pagesToShow = [ currentPage - 1, currentPage, "...", totalPages ];
+                    const prevButton = document.createElement("button");
+                    prevButton.classList.add("pagination-cards__prevButton");
+                    prevButton.classList.add("_icon-arrow-btn");
+                    prevButton.addEventListener("click", (() => {
+                        if (currentPage > 1) {
+                            currentPage--;
+                            displayProducts(currentPage);
+                            updatePagination();
+                        }
+                    }));
+                    pagination.appendChild(prevButton);
+                    pagesToShow.forEach((pageNumber => {
+                        addPageButton(pageNumber);
+                    }));
+                    const nextButton = document.createElement("button");
+                    nextButton.classList.add("pagination-cards__nextButton");
+                    nextButton.classList.add("_icon-arrow-btn");
+                    nextButton.addEventListener("click", (() => {
+                        const totalPages = Math.ceil(products.length / 6);
+                        if (currentPage < totalPages) {
+                            currentPage++;
+                            displayProducts(currentPage);
+                            updatePagination();
+                        }
+                    }));
+                    pagination.appendChild(nextButton);
+                }
+                function addPageButton(pageNumber) {
+                    const button = document.createElement("div");
+                    button.classList.add("pagination-cards__item");
+                    if (pageNumber === "...") {
+                        button.textContent = "...";
+                        button.disabled = true;
+                    } else if (pageNumber === currentPage) {
+                        button.textContent = pageNumber;
+                        button.disabled = true;
+                        button.classList.add("active-page");
+                    } else {
+                        button.textContent = pageNumber;
+                        button.addEventListener("click", (() => {
+                            currentPage = pageNumber;
+                            displayProducts(currentPage);
+                            updatePagination();
+                        }));
+                    }
+                    pagination.appendChild(button);
+                }
+                displayProducts(currentPage);
+                updatePagination();
+            }
+        }
+        function dataCard() {
+            document.addEventListener("DOMContentLoaded", (function() {
+                fetch("cards.json").then((response => {
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return response.json();
+                })).then((data => {
+                    const bookingCardsContainer = document.getElementById("booking-cards");
+                    let renderCards;
+                    if (bookingCardsContainer) {
+                        renderCards = cards => {
+                            if (bookingCardsContainer) bookingCardsContainer.innerHTML = "";
+                            if (cards.length === 0) {
+                                const noAvailabilityMessage = document.createElement("div");
+                                noAvailabilityMessage.textContent = "Нет свободных домов на эти даты";
+                                bookingCardsContainer.appendChild(noAvailabilityMessage);
+                                return;
+                            }
+                            cards.forEach((card => {
+                                const cardElement = document.createElement("div");
+                                cardElement.classList.add("cards-block__card", "card-booking");
+                                cardElement.setAttribute("data-card", card.id);
+                                cardElement.innerHTML = `\n\t\t\t\t\t\t\t\t\t\t  <div class="card-booking__picture">\n\t\t\t\t\t\t\t\t\t\t\t\t<picture>\n\t\t\t\t\t\t\t\t\t\t\t\t\t <source srcset="${card.pictures.main.srcset}" type="${card.pictures.main.type}">\n\t\t\t\t\t\t\t\t\t\t\t\t\t <img src="${card.pictures.main.imgSrc}" alt="${card.pictures.main.alt}">\n\t\t\t\t\t\t\t\t\t\t\t\t</picture>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class="card-booking__name-card">\n\t\t\t\t\t\t\t\t\t\t\t\t\t <h4 class="card-booking__title-card" data-lang="${card.title}"></h4>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t  </div>\n\t\t\t\t\t\t\t\t\t\t  <div class="card-booking__content">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class="card-booking__convenience convenience-card">\n\t\t\t\t\t\t\t\t\t\t\t\t\t ${card.convenience.map((item => `\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t  <div class="convenience-card__item">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src="${item.icon}" alt="">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class="convenience-card__text" data-lang="${item.text}"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t  </div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t `)).join("")}\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<ul class="card-booking__list list-card-booking">\n\t\t\t\t\t\t\t\t\t\t\t\t\t ${card.listItems.map((item => `\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t  <li class="list-card-booking__item list-card-booking__item_dotted" data-lang="${item}"></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t `)).join("")}\n\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class="card-booking__order">\n\t\t\t\t\t\t\t\t\t\t\t\t\t <div class="card-booking__price" data-lang="${card.price}"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t <a data-card-btn href="card-page.html" class="card-booking__button button" data-lang="${card.button}"></a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t  </div>\n\t\t\t\t\t\t\t\t\t `;
+                                if (bookingCardsContainer) bookingCardsContainer.insertAdjacentElement("afterbegin", cardElement);
+                                paginationCards();
+                                const buttons = document.querySelectorAll(".card-booking__button");
+                                if (buttons) buttons.forEach((button => {
+                                    button.addEventListener("click", (function(event) {
+                                        const parentCard = this.closest(".card-booking");
+                                        const dataCard = parentCard.getAttribute("data-card");
+                                        console.log("Button clicked, data-card:", dataCard);
+                                        localStorage.setItem("dataCard", dataCard);
+                                    }));
+                                }));
+                            }));
+                        };
+                        renderCards(data.cards);
+                    }
+                    checkPagePathName();
+                    changeLang();
+                    checkActiveLangButton();
+                    const parseDate = dateStr => {
+                        const [day, month, year] = dateStr.split(".").map((part => parseInt(part, 10)));
+                        return new Date(year, month - 1, day);
+                    };
+                    if (document.querySelector(".search-reserve__button")) document.querySelector(".search-reserve__button").addEventListener("click", (() => {
+                        const checkinDateStr = localStorage.getItem("inputDateInValue");
+                        const checkoutDateStr = localStorage.getItem("inputDateOutValue");
+                        if (!checkinDateStr || !checkoutDateStr) {
+                            alert("Пожалуйста, выберите корректные даты заезда и выезда.");
+                            return;
+                        }
+                        const checkinDate = parseDate(checkinDateStr);
+                        const checkoutDate = parseDate(checkoutDateStr);
+                        if (isNaN(checkinDate) || isNaN(checkoutDate)) {
+                            alert("Пожалуйста, выберите корректные даты заезда и выезда.");
+                            return;
+                        }
+                        const filteredCards = data.cards.filter((card => {
+                            const cardCheckin = parseDate(card.checkin);
+                            const cardCheckout = parseDate(card.checkout);
+                            return cardCheckin <= checkoutDate && cardCheckout >= checkinDate;
+                        }));
+                        renderCards(filteredCards);
+                        checkPagePathName();
+                        changeLang();
+                        checkActiveLangButton();
+                    }));
+                })).catch((error => console.error("Error loading the cards:", error)));
+            }));
+            document.addEventListener("DOMContentLoaded", (function() {
+                const dataCard = localStorage.getItem("dataCard");
+                if (!dataCard) {
+                    console.log("No data card ID found in localStorage.");
+                    return;
+                }
+                fetch("cards.json").then((response => {
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return response.json();
+                })).then((data => {
+                    const card = data.cards.find((card => card.id == dataCard));
+                    if (!card) {
+                        console.log("Card not found in JSON data.");
+                        return;
+                    }
+                    const titleElement = document.querySelector(".view-block__title");
+                    if (titleElement) titleElement.setAttribute("data-lang", card.title);
+                    const mainImageElement = document.getElementById("mainImage");
+                    if (mainImageElement) {
+                        const mainPicture = mainImageElement.querySelector("picture");
+                        const mainImg = mainPicture.querySelector("img");
+                        mainPicture.querySelector("source").srcset = card.pictures.main.srcset;
+                        mainPicture.querySelector("source").type = card.pictures.main.type;
+                        mainImg.src = card.pictures.main.imgSrc;
+                        mainImg.alt = card.pictures.main.alt;
+                        const smallPicturesContainer = document.querySelector(".view-block__small-pictures");
+                        const smallPicturesElements = smallPicturesContainer.querySelectorAll(".view-block__small-picture");
+                        card.pictures.other.forEach(((picture, index) => {
+                            if (index < smallPicturesElements.length) {
+                                const smallPictureElement = smallPicturesElements[index];
+                                const smallPicture = smallPictureElement.querySelector("picture");
+                                const smallImg = smallPicture.querySelector("img");
+                                smallPicture.querySelector("source").srcset = picture.srcset;
+                                smallPicture.querySelector("source").type = picture.type;
+                                smallImg.src = picture.imgSrc;
+                                smallImg.alt = picture.alt;
+                            }
+                        }));
+                    }
+                    const permissionsItems = document.querySelectorAll(".permissions-view__item");
+                    permissionsItems.forEach(((item, index) => {
+                        if (index < card.convenience.length) {
+                            const convenience = card.convenience[index];
+                            const img = item.querySelector("img");
+                            const text = item.querySelector(".permissions-view__text");
+                            img.src = convenience.icon;
+                            text.setAttribute("data-lang", convenience.text);
+                        }
+                    }));
+                    const listContainer = document.querySelector(".information-card-page__list");
+                    if (listContainer) card.listItems.forEach((item => {
+                        const listItem = document.createElement("li");
+                        listItem.className = "information-card-page__item information-card-page__item_dotted";
+                        listItem.setAttribute("data-lang", item);
+                        listContainer.appendChild(listItem);
+                    }));
+                    const cardOrderPicture = document.querySelector(".card-order__picture");
+                    if (cardOrderPicture) {
+                        const orderPicture = cardOrderPicture.querySelector("picture");
+                        const orderImg = orderPicture.querySelector("img");
+                        orderPicture.querySelector("source").srcset = card.pictures.main.srcset;
+                        orderPicture.querySelector("source").type = card.pictures.main.type;
+                        orderImg.src = card.pictures.main.imgSrc;
+                        orderImg.alt = card.pictures.main.alt;
+                    }
+                    const cardServicesPictures = document.querySelectorAll(".card-services__picture");
+                    if (cardServicesPictures) cardServicesPictures.forEach((cardServicesPicture => {
+                        const servicesPicture = cardServicesPicture.querySelector("picture");
+                        const servicesImg = servicesPicture.querySelector("img");
+                        servicesPicture.querySelector("source").srcset = card.pictures.main.srcset;
+                        servicesPicture.querySelector("source").type = card.pictures.main.type;
+                        servicesImg.src = card.pictures.main.imgSrc;
+                        servicesImg.alt = card.pictures.main.alt;
+                    }));
+                    const itemContactPagePictures = document.querySelectorAll(".item-contact-page__picture");
+                    if (itemContactPagePictures) itemContactPagePictures.forEach((itemContactPagePicture => {
+                        const contactPicture = itemContactPagePicture.querySelector("picture");
+                        const contactImg = contactPicture.querySelector("img");
+                        contactPicture.querySelector("source").srcset = card.pictures.main.srcset;
+                        contactPicture.querySelector("source").type = card.pictures.main.type;
+                        contactImg.src = card.pictures.main.imgSrc;
+                        contactImg.alt = card.pictures.main.alt;
+                    }));
+                    const contactPageTitle = document.querySelector(".item-contact-page__title");
+                    if (contactPageTitle) contactPageTitle.setAttribute("data-lang", card.title);
+                    checkPagePathName();
+                    changeLang();
+                    checkActiveLangButton();
+                })).catch((error => console.error("Error loading the cards:", error)));
             }));
         }
         const btnTranslate = document.querySelector(".menu__translate");
@@ -7236,123 +7419,7 @@
             formGuests.innerHTML = quanityGuests;
         }
         validations();
-        document.addEventListener("DOMContentLoaded", (function() {
-            fetch("cards.json").then((response => {
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return response.json();
-            })).then((data => {
-                const bookingCardsContainer = document.getElementById("booking-cards");
-                data.cards.forEach((card => {
-                    const cardElement = document.createElement("div");
-                    cardElement.classList.add("cards-block__card", "card-booking");
-                    cardElement.setAttribute("data-card", card.id);
-                    cardElement.innerHTML = `\n\t\t\t\t <div class="card-booking__picture">\n\t\t\t\t\t<picture>\n\t\t\t\t\t  <source srcset="${card.pictures.main.srcset}" type="${card.pictures.main.type}">\n\t\t\t\t\t  <img src="${card.pictures.main.imgSrc}" alt="${card.pictures.main.alt}" />\n\t\t\t\t\t</picture>\n\t\t\t\t\t<div class="card-booking__name-card">\n\t\t\t\t\t  <h4 class="card-booking__title-card" data-lang="${card.title}"></h4>\n\t\t\t\t\t</div>\n\t\t\t\t </div>\n\t\t\t\t <div class="card-booking__content">\n\t\t\t\t\t<div class="card-booking__convenience convenience-card">\n\t\t\t\t\t  ${card.convenience.map((item => `\n\t\t\t\t\t\t <div class="convenience-card__item">\n\t\t\t\t\t\t\t<img src="${item.icon}" alt="" />\n\t\t\t\t\t\t\t<div class="convenience-card__text" data-lang="${item.text}"></div>\n\t\t\t\t\t\t </div>\n\t\t\t\t\t  `)).join("")}\n\t\t\t\t\t</div>\n\t\t\t\t\t<ul class="card-booking__list list-card-booking">\n\t\t\t\t\t  ${card.listItems.map((item => `\n\t\t\t\t\t\t <li class="list-card-booking__item list-card-booking__item_dotted" data-lang="${item}"></li>\n\t\t\t\t\t  `)).join("")}\n\t\t\t\t\t</ul>\n\t\t\t\t\t<div class="card-booking__order">\n\t\t\t\t\t  <div class="card-booking__price" data-lang="${card.price}"></div>\n\t\t\t\t\t  <a data-card-btn href="card-page.html" class="card-booking__button button" data-lang="${card.button}"></a>\n\t\t\t\t\t</div>\n\t\t\t\t </div>\n\t\t\t  `;
-                    if (bookingCardsContainer) bookingCardsContainer.insertAdjacentElement("afterbegin", cardElement);
-                    checkPagePathName();
-                    changeLang();
-                    checkActiveLangButton();
-                    paginationCards();
-                    const btnCardBooking = document.querySelectorAll("[data-card-btn]");
-                    if (btnCardBooking) btnCardBooking.forEach((item => {
-                        item.addEventListener("click", (function() {
-                            saveCard.call(this, event);
-                            dateInOutSaveLocalStorage.call(this, event);
-                        }));
-                    }));
-                }));
-            })).catch((error => console.error("Error loading the cards:", error)));
-        }));
-        paginationCards();
-        document.addEventListener("DOMContentLoaded", (function() {
-            const dataCard = localStorage.getItem("dataCard");
-            if (!dataCard) {
-                console.log("No data card ID found in localStorage.");
-                return;
-            }
-            fetch("cards.json").then((response => {
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return response.json();
-            })).then((data => {
-                const card = data.cards.find((card => card.id == dataCard));
-                if (!card) {
-                    console.log("Card not found in JSON data.");
-                    return;
-                }
-                const titleElement = document.querySelector(".view-block__title");
-                if (titleElement) titleElement.setAttribute("data-lang", card.title);
-                const mainImageElement = document.getElementById("mainImage");
-                if (mainImageElement) {
-                    const mainPicture = mainImageElement.querySelector("picture");
-                    const mainImg = mainPicture.querySelector("img");
-                    mainPicture.querySelector("source").srcset = card.pictures.main.srcset;
-                    mainPicture.querySelector("source").type = card.pictures.main.type;
-                    mainImg.src = card.pictures.main.imgSrc;
-                    mainImg.alt = card.pictures.main.alt;
-                    const smallPicturesContainer = document.querySelector(".view-block__small-pictures");
-                    const smallPicturesElements = smallPicturesContainer.querySelectorAll(".view-block__small-picture");
-                    card.pictures.other.forEach(((picture, index) => {
-                        if (index < smallPicturesElements.length) {
-                            const smallPictureElement = smallPicturesElements[index];
-                            const smallPicture = smallPictureElement.querySelector("picture");
-                            const smallImg = smallPicture.querySelector("img");
-                            smallPicture.querySelector("source").srcset = picture.srcset;
-                            smallPicture.querySelector("source").type = picture.type;
-                            smallImg.src = picture.imgSrc;
-                            smallImg.alt = picture.alt;
-                        }
-                    }));
-                }
-                const permissionsItems = document.querySelectorAll(".permissions-view__item");
-                permissionsItems.forEach(((item, index) => {
-                    if (index < card.convenience.length) {
-                        const convenience = card.convenience[index];
-                        const img = item.querySelector("img");
-                        const text = item.querySelector(".permissions-view__text");
-                        img.src = convenience.icon;
-                        text.setAttribute("data-lang", convenience.text);
-                    }
-                }));
-                const listContainer = document.querySelector(".information-card-page__list");
-                if (listContainer) card.listItems.forEach((item => {
-                    const listItem = document.createElement("li");
-                    listItem.className = "information-card-page__item information-card-page__item_dotted";
-                    listItem.setAttribute("data-lang", item);
-                    listContainer.appendChild(listItem);
-                }));
-                const cardOrderPicture = document.querySelector(".card-order__picture");
-                if (cardOrderPicture) {
-                    const orderPicture = cardOrderPicture.querySelector("picture");
-                    const orderImg = orderPicture.querySelector("img");
-                    orderPicture.querySelector("source").srcset = card.pictures.main.srcset;
-                    orderPicture.querySelector("source").type = card.pictures.main.type;
-                    orderImg.src = card.pictures.main.imgSrc;
-                    orderImg.alt = card.pictures.main.alt;
-                }
-                const cardServicesPictures = document.querySelectorAll(".card-services__picture");
-                if (cardServicesPictures) cardServicesPictures.forEach((cardServicesPicture => {
-                    const servicesPicture = cardServicesPicture.querySelector("picture");
-                    const servicesImg = servicesPicture.querySelector("img");
-                    servicesPicture.querySelector("source").srcset = card.pictures.main.srcset;
-                    servicesPicture.querySelector("source").type = card.pictures.main.type;
-                    servicesImg.src = card.pictures.main.imgSrc;
-                    servicesImg.alt = card.pictures.main.alt;
-                }));
-                const itemContactPagePictures = document.querySelectorAll(".item-contact-page__picture");
-                if (itemContactPagePictures) itemContactPagePictures.forEach((itemContactPagePicture => {
-                    const contactPicture = itemContactPagePicture.querySelector("picture");
-                    const contactImg = contactPicture.querySelector("img");
-                    contactPicture.querySelector("source").srcset = card.pictures.main.srcset;
-                    contactPicture.querySelector("source").type = card.pictures.main.type;
-                    contactImg.src = card.pictures.main.imgSrc;
-                    contactImg.alt = card.pictures.main.alt;
-                }));
-                const contactPageTitle = document.querySelector(".item-contact-page__title");
-                if (contactPageTitle) contactPageTitle.setAttribute("data-lang", card.title);
-                checkPagePathName();
-                changeLang();
-                checkActiveLangButton();
-            })).catch((error => console.error("Error loading the cards:", error)));
-        }));
+        dataCard();
         datapicker();
         anchor_anchor();
         localStorageGuestsLoadPage();
