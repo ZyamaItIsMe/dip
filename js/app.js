@@ -6915,60 +6915,62 @@
             calculateNightsPrice();
         }
         function validations() {
-            function showError(input, message) {
-                const existingError = input.parentNode.querySelector(".error-message");
-                if (existingError) existingError.remove();
-                const errorDiv = document.createElement("div");
-                errorDiv.className = "error-message";
-                errorDiv.textContent = message;
-                input.classList.add("input-error");
-                input.parentNode.insertBefore(errorDiv, input.nextSibling);
-            }
-            function clearError(input) {
-                const existingError = input.parentNode.querySelector(".error-message");
-                if (existingError) existingError.remove();
-                input.classList.remove("input-error");
-            }
-            function validatePattern(input) {
-                const pattern = new RegExp(input.dataset.pattern);
-                const errorMessage = input.dataset.error;
-                if (!pattern.test(input.value)) {
-                    showError(input, errorMessage);
-                    return false;
-                } else {
-                    clearError(input);
-                    return true;
-                }
-            }
-            function validateMax(input) {
-                const max = parseInt(input.dataset.max, 10);
-                if (input.valueAsNumber > max) {
-                    showError(input, `Максимальное значение: ${max}`);
-                    input.value = max;
-                    return false;
-                } else {
-                    clearError(input);
-                    return true;
-                }
-            }
-            function validateInput(input, onBlur = false) {
-                if (input.dataset.pattern) if (onBlur) return validatePattern(input); else clearError(input); else if (input.dataset.max) return validateMax(input);
-                return true;
-            }
             document.addEventListener("DOMContentLoaded", (function() {
-                if (document.querySelectorAll("input")) {
-                    document.querySelectorAll("input").forEach((input => {
-                        input.addEventListener("blur", (() => validateInput(input, true)));
-                        input.addEventListener("input", (() => validateInput(input)));
-                    }));
-                    if (document.querySelector("form")) document.querySelector("form").addEventListener("submit", (function(event) {
-                        let valid = true;
-                        document.querySelectorAll("input").forEach((input => {
-                            if (!validateInput(input, true)) valid = false;
-                        }));
-                        if (!valid) event.preventDefault();
-                    }));
+                function showError(input, message) {
+                    const existingError = input.parentNode.querySelector(".error-message");
+                    if (existingError) existingError.remove();
+                    const errorDiv = document.createElement("div");
+                    errorDiv.className = "error-message";
+                    errorDiv.textContent = message;
+                    input.classList.add("input-error");
+                    input.parentNode.insertBefore(errorDiv, input.nextSibling);
                 }
+                function clearError(input) {
+                    const existingError = input.parentNode.querySelector(".error-message");
+                    if (existingError) existingError.remove();
+                    input.classList.remove("input-error");
+                }
+                function validatePattern(input) {
+                    const pattern = new RegExp(input.dataset.pattern);
+                    const errorMessage = input.dataset.error;
+                    if (!pattern.test(input.value)) {
+                        showError(input, errorMessage);
+                        return false;
+                    } else {
+                        clearError(input);
+                        return true;
+                    }
+                }
+                function validateMax(input) {
+                    const max = parseInt(input.dataset.max, 10);
+                    if (input.valueAsNumber > max) {
+                        showError(input, `Максимальное значение: ${max}`);
+                        input.value = max;
+                        return false;
+                    } else {
+                        clearError(input);
+                        return true;
+                    }
+                }
+                function validateInput(input, onBlur = false) {
+                    if (input.dataset.pattern) if (onBlur) return validatePattern(input); else clearError(input); else if (input.dataset.max) return validateMax(input);
+                    return true;
+                }
+                function validateForm() {
+                    let valid = true;
+                    document.querySelectorAll("input").forEach((input => {
+                        if (input.id !== "gift" && !validateInput(input, true)) valid = false;
+                    }));
+                    return valid;
+                }
+                if (document.querySelectorAll("input")) document.querySelectorAll("input").forEach((input => {
+                    input.addEventListener("blur", (() => validateInput(input, true)));
+                    input.addEventListener("input", (() => validateInput(input)));
+                }));
+                const formButton = document.querySelector(".form__button");
+                if (formButton) formButton.addEventListener("click", (function(event) {
+                    if (!validateForm()) event.preventDefault();
+                }));
             }));
         }
         function paginationCards() {
