@@ -7616,6 +7616,9 @@
                         listItem.className = "information-card-page__item information-card-page__item_dotted";
                         listItem.setAttribute("data-lang", item);
                         listContainer.appendChild(listItem);
+                        checkPagePathName();
+                        changeLang();
+                        checkActiveLangButton();
                     }));
                     const cardOrderPicture = document.querySelector(".card-order__picture");
                     if (cardOrderPicture) {
