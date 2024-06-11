@@ -228,27 +228,27 @@
           }
         ]
       },
-      "title": "card-sauna-title",
+      "title": "card-home-3-title",
       "convenience": [
-        { "icon": "img/page-booking/icons/guests.svg", "text": "card-convenience-guests-2" },
-        { "icon": "img/page-booking/icons/area.svg", "text": "card-convenience-area-2" },
-        { "icon": "img/page-booking/icons/king.svg", "text": "card-convenience-size-2" },
-        { "icon": "img/page-booking/icons/bed.svg", "text": "card-convenience-bed-2" },
-        { "icon": "img/page-booking/icons/sauna.svg", "text": "card-convenience-sauna" },
-        { "icon": "img/page-booking/icons/food.svg", "text": "card-convenience-food" }
+        { "icon": "img/page-booking/icons/guests.svg", "text": "card-home-3-guests-2" },
+        { "icon": "img/page-booking/icons/area.svg", "text": "card-home-3-area-2" },
+        { "icon": "img/page-booking/icons/king.svg", "text": "card-home-3-size-2" },
+        { "icon": "img/page-booking/icons/bed.svg", "text": "card-home-3-bed-2" },
+        { "icon": "img/page-booking/icons/sauna.svg", "text": "card-home-3-sauna" },
+        { "icon": "img/page-booking/icons/food.svg", "text": "card-home-3-food" }
       ],
       "listItems": [
-        "card-sauna-list-item-1",
-        "card-sauna-list-item-2",
-        "card-sauna-list-item-3",
-        "card-sauna-list-item-4",
-        "card-sauna-list-item-5",
-        "card-sauna-list-item-6",
-        "card-sauna-list-item-7",
-        "card-sauna-list-item-8"
+        "card-home-3-list-item-1",
+        "card-home-3-list-item-2",
+        "card-home-3-list-item-3",
+        "card-home-3-list-item-4",
+        "card-home-3-list-item-5",
+        "card-home-3-list-item-6",
+        "card-home-3-list-item-7",
+        "card-home-3-list-item-8"
       ],
-      "price": "card-sauna-price",
-      "button": "card-sauna-btn"
+      "price": "card-home-3-price",
+      "button": "card-home-3-btn"
     }
   ]
 }
