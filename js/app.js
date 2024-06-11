@@ -4166,13 +4166,10 @@
                     spaceBetween: 0,
                     autoHeight: true,
                     speed: 800,
-                    loop: true,
                     pagination: {
-                        el: ".swiper-pagination",
+                        el: ".vibe-block__pagination",
                         clickable: true,
-                        type: "bullets",
-                        dynamicBullets: true,
-                        dynamicMainBullets: 3
+                        type: "bullets"
                     },
                     breakpoints: {
                         320: {},
@@ -5656,6 +5653,11 @@
                 en: "Starry Nights Lodge",
                 de: "Sternennächte Lodge"
             },
+            "card-title-1": {
+                fr: "Loge des Nuits Étoilées",
+                en: "Starry Nights Lodge",
+                de: "Sternennächte Lodge"
+            },
             "card-home-3-list-item-1": {
                 fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
                 en: "2 Double beds: King size, mattress Snow White linens",
@@ -5826,6 +5828,11 @@
                 en: "Mountain View Glamp",
                 de: "Bergblick Glamping"
             },
+            "card-title-1": {
+                fr: "Glamp Vue sur la Montagne",
+                en: "Mountain View Glamp",
+                de: "Bergblick Glamping"
+            },
             "card-home-5-list-item-1": {
                 fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
                 en: "2 Double beds: King size, mattress Snow White linens",
@@ -5911,6 +5918,11 @@
                 en: "Lakeside Serenity",
                 de: "Seeseitenruhe"
             },
+            "card-title-1": {
+                fr: "Sérénité au Bord du Lac",
+                en: "Lakeside Serenity",
+                de: "Seeseitenruhe"
+            },
             "card-home-6-list-item-1": {
                 fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
                 en: "2 Double beds: King size, mattress Snow White linens",
@@ -5992,6 +6004,11 @@
                 de: "Lebensmittel"
             },
             "card-home-7-title": {
+                fr: "Cabane du Bonheur au Coucher du Soleil",
+                en: "Sunset Bliss Cabin",
+                de: "Sonnenuntergang Glück Hütte"
+            },
+            "card-title-1": {
                 fr: "Cabane du Bonheur au Coucher du Soleil",
                 en: "Sunset Bliss Cabin",
                 de: "Sonnenuntergang Glück Hütte"
@@ -7265,6 +7282,83 @@
                 }
             }
         }
+        function paginationCards() {
+            const productsContainer = document.getElementById("booking-cards");
+            if (productsContainer) {
+                const pagination = document.getElementById("pagination");
+                const products = Array.from(productsContainer.children);
+                let currentPage = 1;
+                function displayProducts(pageNumber) {
+                    productsContainer.innerHTML = "";
+                    const itemsPerPage = 6;
+                    const startIndex = (pageNumber - 1) * itemsPerPage;
+                    const endIndex = startIndex + itemsPerPage;
+                    const displayedProducts = products.slice(startIndex, endIndex);
+                    displayedProducts.forEach((product => {
+                        productsContainer.appendChild(product.cloneNode(true));
+                    }));
+                }
+                function updatePagination() {
+                    const totalPages = Math.ceil(products.length / 6);
+                    pagination.innerHTML = "";
+                    let pagesToShow = [];
+                    if (totalPages <= 4) pagesToShow = Array.from({
+                        length: totalPages
+                    }, ((_, i) => i + 1)); else if (currentPage === 1) pagesToShow = [ 1, 2, "...", totalPages ]; else if (currentPage === totalPages) pagesToShow = [ 1, "...", totalPages - 1, totalPages ]; else pagesToShow = [ currentPage - 1, currentPage, "...", totalPages ];
+                    const prevButton = document.createElement("button");
+                    prevButton.classList.add("pagination-cards__prevButton");
+                    prevButton.classList.add("_icon-arrow-btn");
+                    prevButton.addEventListener("click", (() => {
+                        if (currentPage > 1) {
+                            currentPage--;
+                            displayProducts(currentPage);
+                            updatePagination();
+                        }
+                    }));
+                    pagination.appendChild(prevButton);
+                    pagesToShow.forEach((pageNumber => {
+                        addPageButton(pageNumber);
+                    }));
+                    const nextButton = document.createElement("button");
+                    nextButton.classList.add("pagination-cards__nextButton");
+                    nextButton.classList.add("_icon-arrow-btn");
+                    nextButton.addEventListener("click", (() => {
+                        const totalPages = Math.ceil(products.length / 6);
+                        if (currentPage < totalPages) {
+                            currentPage++;
+                            displayProducts(currentPage);
+                            updatePagination();
+                        }
+                    }));
+                    pagination.appendChild(nextButton);
+                    checkPagePathName();
+                    changeLang();
+                    checkActiveLangButton();
+                }
+                function addPageButton(pageNumber) {
+                    const button = document.createElement("div");
+                    button.classList.add("pagination-cards__item");
+                    if (pageNumber === "...") {
+                        button.textContent = "...";
+                        button.disabled = true;
+                    } else if (pageNumber === currentPage) {
+                        button.textContent = pageNumber;
+                        button.disabled = true;
+                        button.classList.add("active-page");
+                    } else {
+                        button.textContent = pageNumber;
+                        button.addEventListener("click", (() => {
+                            currentPage = pageNumber;
+                            displayProducts(currentPage);
+                            updatePagination();
+                        }));
+                    }
+                    pagination.appendChild(button);
+                }
+                displayProducts(currentPage);
+                updatePagination();
+            }
+        }
         function anchor_anchor() {
             document.addEventListener("DOMContentLoaded", (function() {
                 if (document.querySelectorAll(".scroll-to")) document.querySelectorAll(".scroll-to").forEach((anchor => {
@@ -7397,80 +7491,6 @@
                     if (!validateForm()) event.preventDefault();
                 }));
             }));
-        }
-        function paginationCards() {
-            const productsContainer = document.getElementById("booking-cards");
-            if (productsContainer) {
-                const pagination = document.getElementById("pagination");
-                const products = Array.from(productsContainer.children);
-                let currentPage = 1;
-                function displayProducts(pageNumber) {
-                    productsContainer.innerHTML = "";
-                    const itemsPerPage = 6;
-                    const startIndex = (pageNumber - 1) * itemsPerPage;
-                    const endIndex = startIndex + itemsPerPage;
-                    const displayedProducts = products.slice(startIndex, endIndex);
-                    displayedProducts.forEach((product => {
-                        productsContainer.appendChild(product.cloneNode(true));
-                    }));
-                }
-                function updatePagination() {
-                    const totalPages = Math.ceil(products.length / 6);
-                    pagination.innerHTML = "";
-                    let pagesToShow = [];
-                    if (totalPages <= 4) pagesToShow = Array.from({
-                        length: totalPages
-                    }, ((_, i) => i + 1)); else if (currentPage === 1) pagesToShow = [ 1, 2, "...", totalPages ]; else if (currentPage === totalPages) pagesToShow = [ 1, "...", totalPages - 1, totalPages ]; else pagesToShow = [ currentPage - 1, currentPage, "...", totalPages ];
-                    const prevButton = document.createElement("button");
-                    prevButton.classList.add("pagination-cards__prevButton");
-                    prevButton.classList.add("_icon-arrow-btn");
-                    prevButton.addEventListener("click", (() => {
-                        if (currentPage > 1) {
-                            currentPage--;
-                            displayProducts(currentPage);
-                            updatePagination();
-                        }
-                    }));
-                    pagination.appendChild(prevButton);
-                    pagesToShow.forEach((pageNumber => {
-                        addPageButton(pageNumber);
-                    }));
-                    const nextButton = document.createElement("button");
-                    nextButton.classList.add("pagination-cards__nextButton");
-                    nextButton.classList.add("_icon-arrow-btn");
-                    nextButton.addEventListener("click", (() => {
-                        const totalPages = Math.ceil(products.length / 6);
-                        if (currentPage < totalPages) {
-                            currentPage++;
-                            displayProducts(currentPage);
-                            updatePagination();
-                        }
-                    }));
-                    pagination.appendChild(nextButton);
-                }
-                function addPageButton(pageNumber) {
-                    const button = document.createElement("div");
-                    button.classList.add("pagination-cards__item");
-                    if (pageNumber === "...") {
-                        button.textContent = "...";
-                        button.disabled = true;
-                    } else if (pageNumber === currentPage) {
-                        button.textContent = pageNumber;
-                        button.disabled = true;
-                        button.classList.add("active-page");
-                    } else {
-                        button.textContent = pageNumber;
-                        button.addEventListener("click", (() => {
-                            currentPage = pageNumber;
-                            displayProducts(currentPage);
-                            updatePagination();
-                        }));
-                    }
-                    pagination.appendChild(button);
-                }
-                displayProducts(currentPage);
-                updatePagination();
-            }
         }
         function dataCard() {
             document.addEventListener("DOMContentLoaded", (function() {
