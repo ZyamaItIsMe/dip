@@ -6479,6 +6479,256 @@
                 fr: "douche (eau chaude et froide), toilettes",
                 en: "shower (hot, cold water), toilet",
                 de: "dusche (warmes, kaltes Wasser), WC"
+            },
+            "card-home-3-title": {
+                fr: "Loge des Nuits Étoilées",
+                en: "Starry Nights Lodge",
+                de: "Sternennächte Lodge"
+            },
+            "card-title-1": {
+                fr: "Loge des Nuits Étoilées",
+                en: "Starry Nights Lodge",
+                de: "Sternennächte Lodge"
+            },
+            "card-home-3-list-item-1": {
+                fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
+                en: "2 Double beds: King size, mattress Snow White linens",
+                de: "2 Doppelbetten: Kingsize, Matratze Schneeweiße Bettwäsche"
+            },
+            "card-home-3-list-item-2": {
+                fr: "Chauffage: pistolet à air chaud",
+                en: "Heating: heat gun",
+                de: "Heizung: Heißluftpistole"
+            },
+            "card-home-3-list-item-3": {
+                fr: "Un service à thé Eau potable, thé, vaisselle, verres, couverts, etc. vous pouvez prendre - PAS de frais supplémentaires",
+                en: "A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges",
+                de: "Ein Teeservice Trinkwasser, Tee, Geschirr, Gläser, Besteck usw. sie können nehmen - KEINE zusätzlichen Gebühren"
+            },
+            "card-home-3-list-item-4": {
+                fr: "Coin feu de camp avec une belle vue sur les collines",
+                en: "Campfire area with a beautiful view of the hills",
+                de: "Lagerfeuerplatz mit schöner Aussicht auf die Hügel"
+            },
+            "card-home-3-list-item-5": {
+                fr: "Sur le territoire du glamping en usage commun:",
+                en: "On the territory of the glamping in common use:",
+                de: "Auf dem Territorium des Glamping im gemeinsamen Gebrauch:"
+            },
+            "card-home-3-list-item-6": {
+                fr: "cuisine d'été (micro-ondes, réfrigérateur, cuisinière, barbecue grill, chaudron, vaisselle, etc.)",
+                en: "summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron,dishes, etc.)",
+                de: "sommerküche (Mikrowelle, Kühlschrank, Herd, Grill, Kessel, Geschirr usw.).)"
+            },
+            "card-home-3-list-item-7": {
+                fr: "salon avec feu ouvert",
+                en: "lounge with open fire",
+                de: "lounge mit offenem Kamin"
+            },
+            "card-home-3-list-item-8": {
+                fr: "douche (eau chaude et froide), toilettes",
+                en: "shower (hot, cold water), toilet",
+                de: "dusche (warmes, kaltes Wasser), WC"
+            },
+            "card-home-4-title": {
+                fr: "Retraite du Havre Forestier",
+                en: "Forest Haven Retreat",
+                de: "Waldparadies Rückzugsort"
+            },
+            "card-title-1": {
+                fr: "Retraite du Havre Forestier",
+                en: "Forest Haven Retreat",
+                de: "Waldparadies Rückzugsort"
+            },
+            "card-home-4-list-item-1": {
+                fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
+                en: "2 Double beds: King size, mattress Snow White linens",
+                de: "2 Doppelbetten: Kingsize, Matratze Schneeweiße Bettwäsche"
+            },
+            "card-home-4-list-item-2": {
+                fr: "Chauffage: pistolet à air chaud",
+                en: "Heating: heat gun",
+                de: "Heizung: Heißluftpistole"
+            },
+            "card-home-4-list-item-3": {
+                fr: "Un service à thé Eau potable, thé, vaisselle, verres, couverts, etc. vous pouvez prendre - PAS de frais supplémentaires",
+                en: "A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges",
+                de: "Ein Teeservice Trinkwasser, Tee, Geschirr, Gläser, Besteck usw. sie können nehmen - KEINE zusätzlichen Gebühren"
+            },
+            "card-home-4-list-item-4": {
+                fr: "Coin feu de camp avec une belle vue sur les collines",
+                en: "Campfire area with a beautiful view of the hills",
+                de: "Lagerfeuerplatz mit schöner Aussicht auf die Hügel"
+            },
+            "card-home-4-list-item-5": {
+                fr: "Sur le territoire du glamping en usage commun:",
+                en: "On the territory of the glamping in common use:",
+                de: "Auf dem Territorium des Glamping im gemeinsamen Gebrauch:"
+            },
+            "card-home-4-list-item-6": {
+                fr: "cuisine d'été (micro-ondes, réfrigérateur, cuisinière, barbecue grill, chaudron, vaisselle, etc.)",
+                en: "summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron,dishes, etc.)",
+                de: "sommerküche (Mikrowelle, Kühlschrank, Herd, Grill, Kessel, Geschirr usw.).)"
+            },
+            "card-home-4-list-item-7": {
+                fr: "salon avec feu ouvert",
+                en: "lounge with open fire",
+                de: "lounge mit offenem Kamin"
+            },
+            "card-home-4-list-item-8": {
+                fr: "douche (eau chaude et froide), toilettes",
+                en: "shower (hot, cold water), toilet",
+                de: "dusche (warmes, kaltes Wasser), WC"
+            },
+            "card-home-5-title": {
+                fr: "Glamp Vue sur la Montagne",
+                en: "Mountain View Glamp",
+                de: "Bergblick Glamping"
+            },
+            "card-title-1": {
+                fr: "Glamp Vue sur la Montagne",
+                en: "Mountain View Glamp",
+                de: "Bergblick Glamping"
+            },
+            "card-home-5-list-item-1": {
+                fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
+                en: "2 Double beds: King size, mattress Snow White linens",
+                de: "2 Doppelbetten: Kingsize, Matratze Schneeweiße Bettwäsche"
+            },
+            "card-home-5-list-item-2": {
+                fr: "Chauffage: pistolet à air chaud",
+                en: "Heating: heat gun",
+                de: "Heizung: Heißluftpistole"
+            },
+            "card-home-5-list-item-3": {
+                fr: "Un service à thé Eau potable, thé, vaisselle, verres, couverts, etc. vous pouvez prendre - PAS de frais supplémentaires",
+                en: "A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges",
+                de: "Ein Teeservice Trinkwasser, Tee, Geschirr, Gläser, Besteck usw. sie können nehmen - KEINE zusätzlichen Gebühren"
+            },
+            "card-home-5-list-item-4": {
+                fr: "Coin feu de camp avec une belle vue sur les collines",
+                en: "Campfire area with a beautiful view of the hills",
+                de: "Lagerfeuerplatz mit schöner Aussicht auf die Hügel"
+            },
+            "card-home-5-list-item-5": {
+                fr: "Sur le territoire du glamping en usage commun:",
+                en: "On the territory of the glamping in common use:",
+                de: "Auf dem Territorium des Glamping im gemeinsamen Gebrauch:"
+            },
+            "card-home-5-list-item-6": {
+                fr: "cuisine d'été (micro-ondes, réfrigérateur, cuisinière, barbecue grill, chaudron, vaisselle, etc.)",
+                en: "summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron,dishes, etc.)",
+                de: "sommerküche (Mikrowelle, Kühlschrank, Herd, Grill, Kessel, Geschirr usw.).)"
+            },
+            "card-home-5-list-item-7": {
+                fr: "salon avec feu ouvert",
+                en: "lounge with open fire",
+                de: "lounge mit offenem Kamin"
+            },
+            "card-home-5-list-item-8": {
+                fr: "douche (eau chaude et froide), toilettes",
+                en: "shower (hot, cold water), toilet",
+                de: "dusche (warmes, kaltes Wasser), WC"
+            },
+            "card-home-6-title": {
+                fr: "Sérénité au Bord du Lac",
+                en: "Lakeside Serenity",
+                de: "Seeseitenruhe"
+            },
+            "card-title-1": {
+                fr: "Sérénité au Bord du Lac",
+                en: "Lakeside Serenity",
+                de: "Seeseitenruhe"
+            },
+            "card-home-6-list-item-1": {
+                fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
+                en: "2 Double beds: King size, mattress Snow White linens",
+                de: "2 Doppelbetten: Kingsize, Matratze Schneeweiße Bettwäsche"
+            },
+            "card-home-6-list-item-2": {
+                fr: "Chauffage: pistolet à air chaud",
+                en: "Heating: heat gun",
+                de: "Heizung: Heißluftpistole"
+            },
+            "card-home-6-list-item-3": {
+                fr: "Un service à thé Eau potable, thé, vaisselle, verres, couverts, etc. vous pouvez prendre - PAS de frais supplémentaires",
+                en: "A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges",
+                de: "Ein Teeservice Trinkwasser, Tee, Geschirr, Gläser, Besteck usw. sie können nehmen - KEINE zusätzlichen Gebühren"
+            },
+            "card-home-6-list-item-4": {
+                fr: "Coin feu de camp avec une belle vue sur les collines",
+                en: "Campfire area with a beautiful view of the hills",
+                de: "Lagerfeuerplatz mit schöner Aussicht auf die Hügel"
+            },
+            "card-home-6-list-item-5": {
+                fr: "Sur le territoire du glamping en usage commun:",
+                en: "On the territory of the glamping in common use:",
+                de: "Auf dem Territorium des Glamping im gemeinsamen Gebrauch:"
+            },
+            "card-home-6-list-item-6": {
+                fr: "cuisine d'été (micro-ondes, réfrigérateur, cuisinière, barbecue grill, chaudron, vaisselle, etc.)",
+                en: "summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron,dishes, etc.)",
+                de: "sommerküche (Mikrowelle, Kühlschrank, Herd, Grill, Kessel, Geschirr usw.).)"
+            },
+            "card-home-6-list-item-7": {
+                fr: "salon avec feu ouvert",
+                en: "lounge with open fire",
+                de: "lounge mit offenem Kamin"
+            },
+            "card-home-6-list-item-8": {
+                fr: "douche (eau chaude et froide), toilettes",
+                en: "shower (hot, cold water), toilet",
+                de: "dusche (warmes, kaltes Wasser), WC"
+            },
+            "card-home-7-title": {
+                fr: "Cabane du Bonheur au Coucher du Soleil",
+                en: "Sunset Bliss Cabin",
+                de: "Sonnenuntergang Glück Hütte"
+            },
+            "card-title-1": {
+                fr: "Cabane du Bonheur au Coucher du Soleil",
+                en: "Sunset Bliss Cabin",
+                de: "Sonnenuntergang Glück Hütte"
+            },
+            "card-home-7-list-item-1": {
+                fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
+                en: "2 Double beds: King size, mattress Snow White linens",
+                de: "2 Doppelbetten: Kingsize, Matratze Schneeweiße Bettwäsche"
+            },
+            "card-home-7-list-item-2": {
+                fr: "Chauffage: pistolet à air chaud",
+                en: "Heating: heat gun",
+                de: "Heizung: Heißluftpistole"
+            },
+            "card-home-7-list-item-3": {
+                fr: "Un service à thé Eau potable, thé, vaisselle, verres, couverts, etc. vous pouvez prendre - PAS de frais supplémentaires",
+                en: "A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges",
+                de: "Ein Teeservice Trinkwasser, Tee, Geschirr, Gläser, Besteck usw. sie können nehmen - KEINE zusätzlichen Gebühren"
+            },
+            "card-home-7-list-item-4": {
+                fr: "Coin feu de camp avec une belle vue sur les collines",
+                en: "Campfire area with a beautiful view of the hills",
+                de: "Lagerfeuerplatz mit schöner Aussicht auf die Hügel"
+            },
+            "card-home-7-list-item-5": {
+                fr: "Sur le territoire du glamping en usage commun:",
+                en: "On the territory of the glamping in common use:",
+                de: "Auf dem Territorium des Glamping im gemeinsamen Gebrauch:"
+            },
+            "card-home-7-list-item-6": {
+                fr: "cuisine d'été (micro-ondes, réfrigérateur, cuisinière, barbecue grill, chaudron, vaisselle, etc.)",
+                en: "summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron,dishes, etc.)",
+                de: "sommerküche (Mikrowelle, Kühlschrank, Herd, Grill, Kessel, Geschirr usw.).)"
+            },
+            "card-home-7-list-item-7": {
+                fr: "salon avec feu ouvert",
+                en: "lounge with open fire",
+                de: "lounge mit offenem Kamin"
+            },
+            "card-home-7-list-item-8": {
+                fr: "douche (eau chaude et froide), toilettes",
+                en: "shower (hot, cold water), toilet",
+                de: "dusche (warmes, kaltes Wasser), WC"
             }
         };
         const orderPage = {
