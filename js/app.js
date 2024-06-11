@@ -5650,6 +5650,96 @@
                 fr: "Dôme Géodésique",
                 en: "Geodesic Dome",
                 de: "Geodätische Kuppel"
+            },
+            "card-home-3-title": {
+                fr: "Loge des Nuits Étoilées",
+                en: "Starry Nights Lodge",
+                de: "Sternennächte Lodge"
+            },
+            "card-title-1": {
+                fr: "Loge des Nuits Étoilées",
+                en: "Starry Nights Lodge",
+                de: "Sternennächte Lodge"
+            },
+            "card-home-3-list-item-1": {
+                fr: "2 Lits doubles: King size, matelas Draps blancs comme neige",
+                en: "2 Double beds: King size, mattress Snow White linens",
+                de: "2 Doppelbetten: Kingsize, Matratze Schneeweiße Bettwäsche"
+            },
+            "card-home-3-list-item-2": {
+                fr: "Chauffage: pistolet à air chaud",
+                en: "Heating: heat gun",
+                de: "Heizung: Heißluftpistole"
+            },
+            "card-home-3-list-item-3": {
+                fr: "Un service à thé Eau potable, thé, vaisselle, verres, couverts, etc. vous pouvez prendre - PAS de frais supplémentaires",
+                en: "A tea set Drinking water, tea, crockery, glasses, cutlery, etc. you can take - NO extra charges",
+                de: "Ein Teeservice Trinkwasser, Tee, Geschirr, Gläser, Besteck usw. sie können nehmen - KEINE zusätzlichen Gebühren"
+            },
+            "card-home-3-list-item-4": {
+                fr: "Coin feu de camp avec une belle vue sur les collines",
+                en: "Campfire area with a beautiful view of the hills",
+                de: "Lagerfeuerplatz mit schöner Aussicht auf die Hügel"
+            },
+            "card-home-3-list-item-5": {
+                fr: "Sur le territoire du glamping en usage commun:",
+                en: "On the territory of the glamping in common use:",
+                de: "Auf dem Territorium des Glamping im gemeinsamen Gebrauch:"
+            },
+            "card-home-3-list-item-6": {
+                fr: "cuisine d'été (micro-ondes, réfrigérateur, cuisinière, barbecue grill, chaudron, vaisselle, etc.)",
+                en: "summer cuisine (microwave, refrigerator, stove, barbecue grill, cauldron,dishes, etc.)",
+                de: "sommerküche (Mikrowelle, Kühlschrank, Herd, Grill, Kessel, Geschirr usw.).)"
+            },
+            "card-home-3-list-item-7": {
+                fr: "salon avec feu ouvert",
+                en: "lounge with open fire",
+                de: "lounge mit offenem Kamin"
+            },
+            "card-home-3-list-item-8": {
+                fr: "douche (eau chaude et froide), toilettes",
+                en: "shower (hot, cold water), toilet",
+                de: "dusche (warmes, kaltes Wasser), WC"
+            },
+            "card-home-3-price": {
+                fr: "à partir de 100$",
+                en: "from 100$",
+                de: "from 100$"
+            },
+            "card-home-3-btn": {
+                fr: "Choisir",
+                en: "Choose",
+                de: "Choose"
+            },
+            "card-home-3-guests-2": {
+                fr: "2 invités",
+                en: "2 guest",
+                de: "2 gäste"
+            },
+            "card-home-3-area-2": {
+                fr: "sur. 50 m2",
+                en: "50 m² area",
+                de: "50 m2 Fl"
+            },
+            "card-home-3-size-2": {
+                fr: "taille roi",
+                en: "king size",
+                de: "Kingsize"
+            },
+            "card-home-3-bed-2": {
+                fr: "lit suppl.",
+                en: "extra bed",
+                de: "Zustellbett"
+            },
+            "card-home-3-sauna": {
+                fr: "le sauna",
+                en: "sauna",
+                de: "sauna"
+            },
+            "card-home-3-food": {
+                fr: "nourriture",
+                en: "food",
+                de: "Lebensmittel"
             }
         };
         const cardPage = {
