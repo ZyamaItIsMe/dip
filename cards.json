@@ -2,8 +2,8 @@
   "cards": [
     {
       "id": 1,
-      "checkin": "22.05.2024",
-      "checkout": "25.05.2024",
+      "checkin": "15.06.2024",
+      "checkout": "25.06.2024",
       "pictures": {
         "main": {
           "srcset": "img/accommodation/home-1.webp",
@@ -84,8 +84,8 @@
     },
     {
       "id": 2,
-      "checkin": "01.06.2024",
-      "checkout": "06.06.2024",
+      "checkin": "18.06.2024",
+      "checkout": "29.06.2024",
       "pictures": {
         "main": {
           "srcset": "img/accommodation/sauna.webp",
@@ -168,8 +168,8 @@
     },
     {
       "id": 3,
-      "checkin": "01.06.2024",
-      "checkout": "06.06.2024",
+      "checkin": "16.06.2024",
+      "checkout": "28.06.2024",
       "pictures": {
         "main": {
           "srcset": "img/accommodation/home-4.webp",
@@ -249,6 +249,342 @@
       ],
       "price": "card-home-3-price",
       "button": "card-home-3-btn"
+    },
+    {
+      "id": 4,
+      "checkin": "20.06.2024",
+      "checkout": "28.06.2024",
+      "pictures": {
+        "main": {
+          "srcset": "img/accommodation/home-5.webp",
+          "type": "image/webp",
+          "imgSrc": "img/accommodation/home-5.jpg",
+          "alt": "Картинка"
+        },
+        "other": [
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 1"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 2"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 3"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 4"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 5"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 6"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 7"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 8"
+          }
+        ]
+      },
+      "title": "card-home-4-title",
+      "convenience": [
+        { "icon": "img/page-booking/icons/guests.svg", "text": "card-home-4-guests-2" },
+        { "icon": "img/page-booking/icons/area.svg", "text": "card-home-4-area-2" },
+        { "icon": "img/page-booking/icons/king.svg", "text": "card-home-4-size-2" },
+        { "icon": "img/page-booking/icons/bed.svg", "text": "card-home-4-bed-2" },
+        { "icon": "img/page-booking/icons/sauna.svg", "text": "card-home-4-sauna" },
+        { "icon": "img/page-booking/icons/food.svg", "text": "card-home-4-food" }
+      ],
+      "listItems": [
+        "card-home-4-list-item-1",
+        "card-home-4-list-item-2",
+        "card-home-4-list-item-3",
+        "card-home-4-list-item-4",
+        "card-home-4-list-item-5",
+        "card-home-4-list-item-6",
+        "card-home-4-list-item-7",
+        "card-home-4-list-item-8"
+      ],
+      "price": "card-home-4-price",
+      "button": "card-home-4-btn"
+    },
+    {
+      "id": 5,
+      "checkin": "21.06.2024",
+      "checkout": "30.06.2024",
+      "pictures": {
+        "main": {
+          "srcset": "img/accommodation/home-6.webp",
+          "type": "image/webp",
+          "imgSrc": "img/accommodation/home-5.jpg",
+          "alt": "Картинка"
+        },
+        "other": [
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 1"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 2"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 3"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 4"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 5"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 6"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 7"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 8"
+          }
+        ]
+      },
+      "title": "card-home-5-title",
+      "convenience": [
+        { "icon": "img/page-booking/icons/guests.svg", "text": "card-home-5-guests-2" },
+        { "icon": "img/page-booking/icons/area.svg", "text": "card-home-5-area-2" },
+        { "icon": "img/page-booking/icons/king.svg", "text": "card-home-5-size-2" },
+        { "icon": "img/page-booking/icons/bed.svg", "text": "card-home-5-bed-2" },
+        { "icon": "img/page-booking/icons/sauna.svg", "text": "card-home-5-sauna" },
+        { "icon": "img/page-booking/icons/food.svg", "text": "card-home-5-food" }
+      ],
+      "listItems": [
+        "card-home-5-list-item-1",
+        "card-home-5-list-item-2",
+        "card-home-5-list-item-3",
+        "card-home-5-list-item-4",
+        "card-home-5-list-item-5",
+        "card-home-5-list-item-6",
+        "card-home-5-list-item-7",
+        "card-home-5-list-item-8"
+      ],
+      "price": "card-home-5-price",
+      "button": "card-home-5-btn"
+    },
+    {
+      "id": 6,
+      "checkin": "24.06.2024",
+      "checkout": "02.07.2024",
+      "pictures": {
+        "main": {
+          "srcset": "img/accommodation/home-7.webp",
+          "type": "image/webp",
+          "imgSrc": "img/accommodation/home-5.jpg",
+          "alt": "Картинка"
+        },
+        "other": [
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 1"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 2"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 3"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 4"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 5"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 6"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 7"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 8"
+          }
+        ]
+      },
+      "title": "card-home-6-title",
+      "convenience": [
+        { "icon": "img/page-booking/icons/guests.svg", "text": "card-home-6-guests-2" },
+        { "icon": "img/page-booking/icons/area.svg", "text": "card-home-6-area-2" },
+        { "icon": "img/page-booking/icons/king.svg", "text": "card-home-6-size-2" },
+        { "icon": "img/page-booking/icons/bed.svg", "text": "card-home-6-bed-2" },
+        { "icon": "img/page-booking/icons/sauna.svg", "text": "card-home-6-sauna" },
+        { "icon": "img/page-booking/icons/food.svg", "text": "card-home-6-food" }
+      ],
+      "listItems": [
+        "card-home-6-list-item-1",
+        "card-home-6-list-item-2",
+        "card-home-6-list-item-3",
+        "card-home-6-list-item-4",
+        "card-home-6-list-item-5",
+        "card-home-6-list-item-6",
+        "card-home-6-list-item-7",
+        "card-home-6-list-item-8"
+      ],
+      "price": "card-home-6-price",
+      "button": "card-home-6-btn"
+    },
+    {
+      "id": 7,
+      "checkin": "28.06.2024",
+      "checkout": "04.07.2024",
+      "pictures": {
+        "main": {
+          "srcset": "img/accommodation/home-8.webp",
+          "type": "image/webp",
+          "imgSrc": "img/accommodation/home-5.jpg",
+          "alt": "Картинка"
+        },
+        "other": [
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 1"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 2"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 3"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 4"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 5"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 6"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 7"
+          },
+          {
+            "srcset": "img/accommodation/home-3.webp",
+            "type": "image/webp",
+            "imgSrc": "img/accommodation/home-3.png",
+            "alt": "Картинка 8"
+          }
+        ]
+      },
+      "title": "card-home-7-title",
+      "convenience": [
+        { "icon": "img/page-booking/icons/guests.svg", "text": "card-home-7-guests-2" },
+        { "icon": "img/page-booking/icons/area.svg", "text": "card-home-7-area-2" },
+        { "icon": "img/page-booking/icons/king.svg", "text": "card-home-7-size-2" },
+        { "icon": "img/page-booking/icons/bed.svg", "text": "card-home-7-bed-2" },
+        { "icon": "img/page-booking/icons/sauna.svg", "text": "card-home-7-sauna" },
+        { "icon": "img/page-booking/icons/food.svg", "text": "card-home-7-food" }
+      ],
+      "listItems": [
+        "card-home-7-list-item-1",
+        "card-home-7-list-item-2",
+        "card-home-7-list-item-3",
+        "card-home-7-list-item-4",
+        "card-home-7-list-item-5",
+        "card-home-7-list-item-6",
+        "card-home-7-list-item-7",
+        "card-home-7-list-item-8"
+      ],
+      "price": "card-home-7-price",
+      "button": "card-home-7-btn"
     }
   ]
 }
