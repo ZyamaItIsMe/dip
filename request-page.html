@@ -6,8 +6,8 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?_v=20240521184029" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20240521184029" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?_v=20240615072432" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240615072432" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -85,28 +85,28 @@
 						<div class="form__name-card">
 							<div class="form__line form__line_mb-none">
 								<label data-lang="form-card" for="card" class="form__label"></label>
-								<input id="card" autocomplete="off" type="text" name="form[]" data-error="Введите корректный номер кредитной карты (16 цифр)" data-pattern="^\d{16}$" placeholder="" class="form__input" />
+								<input id="card" autocomplete="off" type="text" name="form[]" data-error="Введите корректный номер кредитной карты (16 цифр)" data-pattern="^\d{16}$" placeholder="" class="form__input" lang="input-card" />
 							</div>
 							<div class="form__line">
 								<label data-lang="form-name-card" for="name-card" class="form__label"></label>
-								<input id="name-card" autocomplete="off" type="text" name="form[]" data-error="Используйте только буквы и пробелы" data-pattern="^[a-zA-Z\s]+$" placeholder="" class="form__input" />
+								<input id="name-card" autocomplete="off" type="text" name="form[]" data-error="Используйте только буквы и пробелы" data-pattern="^[a-zA-Z\s]+$" placeholder="" class="form__input" lang="name-card" />
 							</div>
 						</div>
 						<div class="form__date-card">
 							<div class="form__line form__line_mb-none">
 								<label data-lang="form-expiration" for="date" class="form__label"></label>
-								<input id="date" autocomplete="off" type="text" name="form[]" data-error="Введите корректную дату в формате MM/YY" data-pattern="^(0[1-9]|1[0-2])\/\d{2}$" placeholder="MM/YY" class="form__input" />
+								<input id="date" autocomplete="off" type="text" name="form[]" data-error="Введите корректную дату в формате MM/YY" data-pattern="^(0[1-9]|1[0-2])\/\d{2}$" placeholder="MM/YY" class="form__input" lang="input-date" />
 							</div>
 							<div class="form__line">
 								<label data-lang="" for="cvc" class="form__label">CVC</label>
-								<input id="cvc" autocomplete="off" type="text" name="form[]" data-error="Введите корректный CVC код (3 цифры)" data-pattern="^\d{3}$" placeholder="" class="form__input" />
+								<input id="cvc" autocomplete="off" type="text" name="form[]" data-error="Введите корректный CVC код (3 цифры)" data-pattern="^\d{3}$" placeholder="" class="form__input" lang="input-cvc" />
 							</div>
 						</div>
 						<div class="form__gift">
 							<h3 data-lang="card-gift-code-title" class="form__sub-title"></h3>
 							<div class="form__line form__line_mb-none">
 								<label data-lang="form-gift-code" for="date" class="form__label"></label>
-								<input id="gift" autocomplete="off" type="text" name="form[]" data-error="Введите корректный подарочный код в формате XXXX-XXXX-XXXX или XXXXXXXXXXXX" data-pattern="^(\d{4}-\d{4}-\d{4}|\d{12})$" placeholder="XXXX-XXXX-XXXX" class="form__input" />
+								<input id="gift" autocomplete="off" type="text" name="form[]" data-error="Введите корректный подарочный код в формате XXXX-XXXX-XXXX или XXXXXXXXXXXX" data-pattern="^(\d{4}-\d{4}-\d{4}|\d{12})$" placeholder="XXXX-XXXX-XXXX" class="form__input" lang="input-promo" />
 							</div>
 							<div data-lang="gift-text" class="form__info"></div>
 						</div>
@@ -246,7 +246,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20240521184029"></script>
+	<script src="js/app.min.js?_v=20240615072432"></script>
 
 </body>
 
