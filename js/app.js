@@ -7538,6 +7538,26 @@
                 fr: "Cabane du Bonheur au Coucher du Soleil",
                 en: "Sunset Bliss Cabin",
                 de: "Sonnenuntergang Glück Hütte"
+            },
+            "input-name": {
+                fr: "Utilisez uniquement des lettres jusqu'à 16 caractères",
+                en: "Use only letters up to 16 characters",
+                de: "Verwenden Sie nur Buchstaben mit bis zu 16 Zeichen"
+            },
+            "input-second-name": {
+                fr: "Utilisez uniquement des lettres jusqu'à 16 caractères",
+                en: "Use only letters up to 16 characters",
+                de: "Verwenden Sie nur Buchstaben mit bis zu 16 Zeichen"
+            },
+            "input-email": {
+                fr: "Entrez une adresse e-mail valide",
+                en: "Enter a valid email address",
+                de: "Geben Sie eine gültige E-Mail-Adresse ein"
+            },
+            "input-phone": {
+                fr: "Entrez le bon numéro de téléphone au format +7 (XXX) XXX-XX-XX",
+                en: "Enter the correct phone number in the format +7 (XXX) XXX-XX-XX",
+                de: "Geben Sie die richtige Telefonnummer im Format +7 (XXX) XXX-XX-XX ein"
             }
         };
         const requestPage = {
@@ -7825,6 +7845,31 @@
                 fr: "Cabane du Bonheur au Coucher du Soleil",
                 en: "Sunset Bliss Cabin",
                 de: "Sonnenuntergang Glück Hütte"
+            },
+            "input-card": {
+                fr: "Entrez le bon numéro de carte de crédit (16 chiffres)",
+                en: "Enter the correct credit card number (16 digits)",
+                de: "Geben Sie die korrekte Kreditkartennummer ein (16 Ziffern)"
+            },
+            "name-card": {
+                fr: "Utilisez uniquement des lettres et des espaces",
+                en: "Use only letters and spaces",
+                de: "Verwenden Sie nur Buchstaben und Leerzeichen"
+            },
+            "input-date": {
+                fr: "Entrez la date correcte au format MM/AA",
+                en: "Enter the correct date in MM/YY format",
+                de: "Geben Sie das korrekte Datum im Format MM / JJ ein"
+            },
+            "input-cvc": {
+                fr: "Entrez le code CVC correct (3 chiffres)",
+                en: "Enter the correct CVC code (3 digits)",
+                de: "Geben Sie den korrekten CVC-Code ein (3 Ziffern)"
+            },
+            "input-promo": {
+                fr: "Entrez le bon code cadeau au format XXXX-XXXX-XXXX ou XXXXXXXXXX",
+                en: "Enter the correct gift code in the format XXXX-XXXX-XXXX or XXXXXXXXXX",
+                de: "Geben Sie den richtigen Geschenkcode im Format XXXX-XXXX-XXXX oder XXXXXXXXXX ein"
             }
         };
         var datepicker_min = __webpack_require__(448);
@@ -8046,8 +8091,12 @@
                     const errorDiv = document.createElement("div");
                     errorDiv.className = "error-message";
                     errorDiv.textContent = message;
+                    if (input.hasAttribute("lang")) errorDiv.setAttribute("data-lang", input.getAttribute("lang"));
                     input.classList.add("input-error");
                     input.parentNode.insertBefore(errorDiv, input.nextSibling);
+                    checkPagePathName();
+                    changeLang();
+                    checkActiveLangButton();
                 }
                 function clearError(input) {
                     const existingError = input.parentNode.querySelector(".error-message");
@@ -8087,12 +8136,12 @@
                     }));
                     return valid;
                 }
-                if (document.querySelectorAll("input")) document.querySelectorAll("input").forEach((input => {
+                document.querySelectorAll("input").forEach((input => {
                     input.addEventListener("blur", (() => validateInput(input, true)));
                     input.addEventListener("input", (() => validateInput(input)));
                 }));
                 const formButton = document.querySelector(".form__button");
-                if (formButton) formButton.addEventListener("click", (function(event) {
+                formButton.addEventListener("click", (function(event) {
                     if (!validateForm()) event.preventDefault();
                 }));
             }));
